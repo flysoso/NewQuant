@@ -22,6 +22,11 @@ namespace NewQuant
 
         ~MathExpression(){}
 
+        T operator[](const Parameter<T> &p) const
+        {
+            return be->operator[](p);
+        }
+
         T operator () () const
         {
             return be->eval();

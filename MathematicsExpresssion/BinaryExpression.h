@@ -24,6 +24,11 @@ namespace NewQuant
 
         ~BinaryExpression(){}
 
+        T operator[](const Parameter<T> &p) const
+        {
+            return op(expr1[p], expr2[p]);
+        }
+
         T eval() const
         {
             return op(expr1.eval(), expr2.eval());

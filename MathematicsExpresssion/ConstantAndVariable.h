@@ -21,6 +21,11 @@ namespace NewQuant
 
         ~Constant(){}
 
+        T operator[](const Parameter<T> &p) const
+        {
+            return value;
+        }
+
         T eval() const
         {
             return value;
@@ -118,6 +123,11 @@ namespace NewQuant
         Variable(const Variable<T> &x) : order(x.order){}
 
         ~Variable(){}
+
+        T operator[](const Parameter<T> &p) const
+        {
+            return p(order);
+        }
 
         T eval() const;
         T eval(const T &x) const;

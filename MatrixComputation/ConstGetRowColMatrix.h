@@ -89,15 +89,20 @@ public:
 
     TYPE operator () (const int &i) const
     {
-        assert(r > 0 && r <= MatrixExpression<TYPE>::nrows);
-        assert(c > 0 && c <= MatrixExpression<TYPE>::ncols);
         switch (type)
         {
         case get_row:
+            assert(i > 0 && i <= MatrixExpression<TYPE>::ncols);
             return UnitaryMatrixExpression<TYPE, MATRIX>::mat(row_col, i);
         case get_col:
+            assert(i > 0 && i <= MatrixExpression<TYPE>::nrows);
             return UnitaryMatrixExpression<TYPE, MATRIX>::mat(i, row_col);
         }
+    }
+
+    int Search(const GeneralMatrix<TYPE> &gm) const
+    {
+        return UnitaryMatrixExpression<TYPE, MATRIX>::mat.Search(gm);
     }
 };
 

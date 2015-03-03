@@ -4,6 +4,7 @@
 #include <assert.h>
 
 #include "FunctionObject.h"
+#include "Parameter.h"
 
 namespace NewQuant
 {
@@ -15,6 +16,8 @@ namespace NewQuant
         //BaseExpression(const BaseExpression<T> &be){}
     public:
         ~BaseExpression(){}
+
+        virtual T operator[](const Parameter<T> &) const = 0;
 
         virtual T eval() const = 0;
         virtual T eval(const T &x) const = 0;

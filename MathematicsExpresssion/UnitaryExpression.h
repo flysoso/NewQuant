@@ -23,6 +23,11 @@ namespace NewQuant
 
         ~UnitaryExpression(){}
 
+        T operator[](const Parameter<T> &p) const
+        {
+            return op(expr[p]);
+        }
+
         T eval() const
         {
             return op(expr.eval());
