@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AddedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Array.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BandCholeskySolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BandLUsolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BandLUsolverNoPivot.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BandLUsolverPartialPivot.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BandMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CholeskySolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ColedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ColumnVector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ConcatenatedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstantSolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstGetRowColMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstGetSubMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ConstPermutedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ConvergenceException.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DiagedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DiagonalMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DiagonalSolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Endpoint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FloatingPointPrecision.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneralMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GetRowColMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GetSubMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GivensQR.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HouseholderQR.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HouseholderQRpivot.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IdentityMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IdentitySolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IncompatibleBandWidthException.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IncompatibleDimensionsException.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexException.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Interval.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="InvertedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="InvScaledMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="KPMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LeastSquareSolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearEquationSolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LogAndSign.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LowerBandMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LowerBandSolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LowerTriangularMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LowerTriangularSolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LUsolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LUsolverCompletePivot.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LUsolverNoPivot.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LUsolverPartialPivot.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MatedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixBandWidth.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixDetails.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixExpression.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixIndex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MatrixType.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MultipliedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NegatedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NegShiftedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NewMat.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalEquationSolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NotSquareException.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NPDException.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PermutedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PermuteMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PermuteSolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramException.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="QRsolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ReversedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RowedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RowVector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ScaledMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ShiftedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleSolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SingularException.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SolvedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SPMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SquareMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="StackedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SubMatrixDimensionException.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SubtractedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SymmetricBandMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SymmetricMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TransposedMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TridiagonalMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UpperBandMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UpperBandSolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UpperTriangularMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UpperTriangularSolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorException.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorExpression.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="_main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BandCholeskySolver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BandLUsolver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BandLUsolverNoPivot.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BandLUsolverPartialPivot.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BandMatrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CholeskySolver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ColumnVector.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstantMatrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstantSolver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DiagonalMatrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DiagonalSolver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneralMatrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="IdentityMatrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="IdentitySolver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LogAndSign.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LowerBandMatrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LowerBandSolver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LowerTriangularMatrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LowerTriangularSolver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LUsolver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LUsolverCompletePivot.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LUsolverNoPivot.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LUsolverPartialPivot.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixExpression.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixIndex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RowVector.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SimpleSolver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SquareMatrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SymmetricBandMatrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SymmetricMatrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TridiagonalMatrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UpperBandMatrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UpperBandSolver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UpperTriangularMatrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UpperTriangularSolver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B634E4B6-9CF9-44A2-8C40-E41E745FC4E4}</ProjectGuid>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MatrixComputation</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AddedMatrix.h" />
+    <ClInclude Include="Array.h" />
+    <ClInclude Include="BandCholeskySolver.h" />
+    <ClInclude Include="BandLUsolver.h" />
+    <ClInclude Include="BandLUsolverNoPivot.h" />
+    <ClInclude Include="BandLUsolverPartialPivot.h" />
+    <ClInclude Include="BandMatrix.h" />
+    <ClInclude Include="BaseMatrix.h" />
+    <ClInclude Include="CholeskySolver.h" />
+    <ClInclude Include="ColedMatrix.h" />
+    <ClInclude Include="ColumnVector.h" />
+    <ClInclude Include="ConcatenatedMatrix.h" />
+    <ClInclude Include="ConstantMatrix.h" />
+    <ClInclude Include="ConstantSolver.h" />
+    <ClInclude Include="ConstGetRowColMatrix.h" />
+    <ClInclude Include="ConstGetSubMatrix.h" />
+    <ClInclude Include="ConstPermutedMatrix.h" />
+    <ClInclude Include="ConvergenceException.h" />
+    <ClInclude Include="DiagedMatrix.h" />
+    <ClInclude Include="DiagonalMatrix.h" />
+    <ClInclude Include="DiagonalSolver.h" />
+    <ClInclude Include="Endpoint.h" />
+    <ClInclude Include="FloatingPointPrecision.h" />
+    <ClInclude Include="GeneralMatrix.h" />
+    <ClInclude Include="GetRowColMatrix.h" />
+    <ClInclude Include="GetSubMatrix.h" />
+    <ClInclude Include="GivensQR.h" />
+    <ClInclude Include="HouseholderQR.h" />
+    <ClInclude Include="HouseholderQRpivot.h" />
+    <ClInclude Include="IdentityMatrix.h" />
+    <ClInclude Include="IdentitySolver.h" />
+    <ClInclude Include="include.h" />
+    <ClInclude Include="IncompatibleBandWidthException.h" />
+    <ClInclude Include="IncompatibleDimensionsException.h" />
+    <ClInclude Include="IndexException.h" />
+    <ClInclude Include="Interval.h" />
+    <ClInclude Include="InvertedMatrix.h" />
+    <ClInclude Include="InvScaledMatrix.h" />
+    <ClInclude Include="KPMatrix.h" />
+    <ClInclude Include="LeastSquareSolver.h" />
+    <ClInclude Include="LinearEquationSolver.h" />
+    <ClInclude Include="LogAndSign.h" />
+    <ClInclude Include="LowerBandMatrix.h" />
+    <ClInclude Include="LowerBandSolver.h" />
+    <ClInclude Include="LowerTriangularMatrix.h" />
+    <ClInclude Include="LowerTriangularSolver.h" />
+    <ClInclude Include="LUsolver.h" />
+    <ClInclude Include="LUsolverCompletePivot.h" />
+    <ClInclude Include="LUsolverNoPivot.h" />
+    <ClInclude Include="LUsolverPartialPivot.h" />
+    <ClInclude Include="MatedMatrix.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MatrixBandWidth.h" />
+    <ClInclude Include="MatrixDetails.h" />
+    <ClInclude Include="MatrixExpression.h" />
+    <ClInclude Include="MatrixIndex.h" />
+    <ClInclude Include="MatrixType.h" />
+    <ClInclude Include="MultipliedMatrix.h" />
+    <ClInclude Include="NegatedMatrix.h" />
+    <ClInclude Include="NegShiftedMatrix.h" />
+    <ClInclude Include="NewMat.h" />
+    <ClInclude Include="NormalEquationSolver.h" />
+    <ClInclude Include="NotSquareException.h" />
+    <ClInclude Include="NPDException.h" />
+    <ClInclude Include="PermutedMatrix.h" />
+    <ClInclude Include="PermuteMatrix.h" />
+    <ClInclude Include="PermuteSolver.h" />
+    <ClInclude Include="ProgramException.h" />
+    <ClInclude Include="QRsolver.h" />
+    <ClInclude Include="ReversedMatrix.h" />
+    <ClInclude Include="RowedMatrix.h" />
+    <ClInclude Include="RowVector.h" />
+    <ClInclude Include="ScaledMatrix.h" />
+    <ClInclude Include="ShiftedMatrix.h" />
+    <ClInclude Include="SimpleSolver.h" />
+    <ClInclude Include="SingularException.h" />
+    <ClInclude Include="SolvedMatrix.h" />
+    <ClInclude Include="SPMatrix.h" />
+    <ClInclude Include="SquareMatrix.h" />
+    <ClInclude Include="StackedMatrix.h" />
+    <ClInclude Include="SubMatrixDimensionException.h" />
+    <ClInclude Include="SubtractedMatrix.h" />
+    <ClInclude Include="SymmetricBandMatrix.h" />
+    <ClInclude Include="SymmetricMatrix.h" />
+    <ClInclude Include="TransposedMatrix.h" />
+    <ClInclude Include="TridiagonalMatrix.h" />
+    <ClInclude Include="UpperBandMatrix.h" />
+    <ClInclude Include="UpperBandSolver.h" />
+    <ClInclude Include="UpperTriangularMatrix.h" />
+    <ClInclude Include="UpperTriangularSolver.h" />
+    <ClInclude Include="Vector.h" />
+    <ClInclude Include="VectorException.h" />
+    <ClInclude Include="VectorExpression.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BandCholeskySolver.cpp" />
+    <ClCompile Include="BandLUsolver.cpp" />
+    <ClCompile Include="BandLUsolverNoPivot.cpp" />
+    <ClCompile Include="BandLUsolverPartialPivot.cpp" />
+    <ClCompile Include="BandMatrix.cpp" />
+    <ClCompile Include="CholeskySolver.cpp" />
+    <ClCompile Include="ColumnVector.cpp" />
+    <ClCompile Include="ConstantMatrix.cpp" />
+    <ClCompile Include="ConstantSolver.cpp" />
+    <ClCompile Include="DiagonalMatrix.cpp" />
+    <ClCompile Include="DiagonalSolver.cpp" />
+    <ClCompile Include="GeneralMatrix.cpp" />
+    <ClCompile Include="IdentityMatrix.cpp" />
+    <ClCompile Include="IdentitySolver.cpp" />
+    <ClCompile Include="LogAndSign.cpp" />
+    <ClCompile Include="LowerBandMatrix.cpp" />
+    <ClCompile Include="LowerBandSolver.cpp" />
+    <ClCompile Include="LowerTriangularMatrix.cpp" />
+    <ClCompile Include="LowerTriangularSolver.cpp" />
+    <ClCompile Include="LUsolver.cpp" />
+    <ClCompile Include="LUsolverCompletePivot.cpp" />
+    <ClCompile Include="LUsolverNoPivot.cpp" />
+    <ClCompile Include="LUsolverPartialPivot.cpp" />
+    <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="MatrixExpression.cpp" />
+    <ClCompile Include="MatrixIndex.cpp" />
+    <ClCompile Include="RowVector.cpp" />
+    <ClCompile Include="SimpleSolver.cpp" />
+    <ClCompile Include="SquareMatrix.cpp" />
+    <ClCompile Include="SymmetricBandMatrix.cpp" />
+    <ClCompile Include="SymmetricMatrix.cpp" />
+    <ClCompile Include="TridiagonalMatrix.cpp" />
+    <ClCompile Include="UpperBandMatrix.cpp" />
+    <ClCompile Include="UpperBandSolver.cpp" />
+    <ClCompile Include="UpperTriangularMatrix.cpp" />
+    <ClCompile Include="UpperTriangularSolver.cpp" />
+    <ClCompile Include="_main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
