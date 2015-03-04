@@ -3,6 +3,7 @@
 void testUpperTriangularMatrix()
 {
     using namespace std;
+    using namespace NewQuant;
     default_random_engine dre;
     normal_distribution<Type> nd;
     UpperTriangularMatrix<Type> up_tr1(10), up_tr2(10);

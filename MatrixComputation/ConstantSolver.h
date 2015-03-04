@@ -3,26 +3,29 @@
 
 #include "SimpleSolver.h"
 
-template <typename TYPE>
-class ConstantSolver : public SimpleSolver < TYPE >
+namespace NewQuant
 {
-public:
-    ConstantSolver(const BaseMatrix<TYPE> &bm, const TYPE &e) : SimpleSolver<TYPE>(bm, e)
+    template <typename TYPE>
+    class ConstantSolver : public SimpleSolver < TYPE >
     {
-        if (bm.Nrows() > 1)
+    public:
+        ConstantSolver(const BaseMatrix<TYPE> &bm, const TYPE &e) : SimpleSolver<TYPE>(bm, e)
         {
-            LinearEquationSolver<TYPE>::fail = true;
+            if (bm.Nrows() > 1)
+            {
+                LinearEquationSolver<TYPE>::fail = true;
+            }
+            else if (fabs(bm(1, 1)) <= e)
+            {
+                LinearEquationSolver<TYPE>::fail = true;
+            }
         }
-        else if (fabs(bm(1, 1)) <= e)
-        {
-            LinearEquationSolver<TYPE>::fail = true;
-        }
-    }
 
-    void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
+        void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
 
-    LogAndSign<TYPE> LogDeterminant() const;
-};
+        LogAndSign<TYPE> LogDeterminant() const;
+    };
+}
 
 #include "ConstantSolver.cpp"
 

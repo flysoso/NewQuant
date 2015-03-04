@@ -3,20 +3,22 @@
 
 #include "SimpleSolver.h"
 
-template <typename TYPE>
-class DiagonalSolver : public SimpleSolver < TYPE >
+namespace NewQuant
 {
-public:
-    DiagonalSolver(const BaseMatrix<TYPE> &bm, const TYPE &e) : SimpleSolver<TYPE>(bm, e)
+    template <typename TYPE>
+    class DiagonalSolver : public SimpleSolver < TYPE >
     {
-        SimpleSolver<TYPE>::TestSingular();
-    }
+    public:
+        DiagonalSolver(const BaseMatrix<TYPE> &bm, const TYPE &e) : SimpleSolver<TYPE>(bm, e)
+        {
+            SimpleSolver<TYPE>::TestSingular();
+        }
 
-    void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
+        void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
 
-    LogAndSign<TYPE> LogDeterminant() const;
-};
-
+        LogAndSign<TYPE> LogDeterminant() const;
+    };
+}
 #include "DiagonalSolver.cpp"
 
 #endif //DIAGONAL_SOLVER_H

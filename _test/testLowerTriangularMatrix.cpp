@@ -3,6 +3,7 @@
 void testLowerTriangularMatrix()
 {
     using namespace std;
+    using namespace NewQuant;
     default_random_engine dre;
     normal_distribution<Type> nd;
     LowerTriangularMatrix<Type> low_tr1(10), low_tr2(10);

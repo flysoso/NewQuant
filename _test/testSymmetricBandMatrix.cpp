@@ -3,6 +3,7 @@
 void testSymmetricBandMatrix()
 {
     using namespace std;
+    using namespace NewQuant;
     default_random_engine dre;
     normal_distribution<Type> nd;
     SymmetricBandMatrix<Type> sym1(10, 6), sym2(10, 2), sym3(10, 1);

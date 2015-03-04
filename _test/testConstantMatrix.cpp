@@ -3,6 +3,7 @@
 void testConstantMatrix()
 {
     using namespace std;
+    using namespace NewQuant;
     Type one(1), one_half(1.5), two(2);
     ConstantMatrix<Type> c1(5, 3, one), c2(1, 3, one), c3(3, 5, two), c4, c5(1, one_half);
 

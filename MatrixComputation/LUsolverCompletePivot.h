@@ -4,21 +4,23 @@
 
 #include "LUsolver.h"
 
-template <typename TYPE>
-class LUsolverCompletePivot : public LUsolver < TYPE >
+namespace NewQuant
 {
-private:
-    void LUdecomposion();
-public:
-    LUsolverCompletePivot(const BaseMatrix<TYPE> &, const TYPE &);
+    template <typename TYPE>
+    class LUsolverCompletePivot : public LUsolver < TYPE >
+    {
+    private:
+        void LUdecomposion();
+    public:
+        LUsolverCompletePivot(const BaseMatrix<TYPE> &, const TYPE &);
 
-    ~LUsolverCompletePivot() {}
+        ~LUsolverCompletePivot() {}
 
-    void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
+        void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
 
-    LogAndSign<TYPE> LogDeterminant() const;
-};
-
+        LogAndSign<TYPE> LogDeterminant() const;
+    };
+}
 #include "LUsolverCompletePivot.cpp"
 
 #endif //LU_SOLVER_COMPLETEPIVOT_H

@@ -3,6 +3,7 @@
 void testUpperBandMatrix()
 {
     using namespace std;
+    using namespace NewQuant;
     default_random_engine dre;
     normal_distribution<Type> nd;
     UpperBandMatrix<Type> up_band1(10, 6), up_band2(10, 3);

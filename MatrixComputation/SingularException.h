@@ -4,22 +4,24 @@
 #include "../ExceptionClass/RuntimeError.h"
 #include "MatrixDetails.h"
 
-template <typename TYPE> class BaseMatrix;
-
-/// Singular matrix exception.
-class SingularException : public RuntimeError
+namespace NewQuant
 {
-public:
-    template <typename TYPE>
-    SingularException(const BaseMatrix<TYPE> &A) : RuntimeError()
+    template <typename TYPE> class BaseMatrix;
+
+    /// Singular matrix exception.
+    class SingularException : public RuntimeError
     {
-        AddMessage("Singular Exception, Matrix Is Singular : -- ");
-        MatrixDetails(A, error);
-        Singleton<Tracer>::Instance()->AddTrace(error);
-    }
-};
+    public:
+        template <typename TYPE>
+        SingularException(const BaseMatrix<TYPE> &A) : RuntimeError()
+        {
+            AddMessage("Singular Exception, Matrix Is Singular : -- ");
+            MatrixDetails(A, error);
+            Singleton<Tracer>::Instance()->AddTrace(error);
+        }
+    };
 
-
+}
 
 
 #endif //SINGULAR_EXCEPTION_H

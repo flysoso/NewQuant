@@ -1,39 +1,39 @@
 #ifndef VECTOR_H
 #define VECTOR_H
 
-#include "../ExceptionClass/NotDefinedException.h"
-
-template <typename TYPE>
-class Vector
+namespace NewQuant
 {
-protected:
-    int length;
-
-    Vector(){}
-
-    Vector(const int &l) : length(l) {}
-
-    Vector(const Vector<TYPE> &v) : length(v.length){}
-
-    void SetLength(const int &l)
+    template <typename TYPE>
+    class Vector
     {
-        length = l;
-    }
-public:
-    ~Vector() {}
+    protected:
+        int length;
 
-    const int & Length() const
-    {
-        return length;
-    }
+        Vector(){}
 
-    virtual void Resize(const int &) = 0;
+        Vector(const int &l) : length(l) {}
 
-    virtual TYPE operator () (const int &) const = 0;
+        Vector(const Vector<TYPE> &v) : length(v.length){}
 
-    virtual TYPE & operator () (const int &) = 0;
+        void SetLength(const int &l)
+        {
+            length = l;
+        }
+    public:
+        ~Vector() {}
 
-};
+        const int & Length() const
+        {
+            return length;
+        }
 
+        virtual void Resize(const int &) = 0;
+
+        virtual TYPE operator () (const int &) const = 0;
+
+        virtual TYPE & operator () (const int &) = 0;
+
+    };
+}
 
 #endif // VECTOR_H

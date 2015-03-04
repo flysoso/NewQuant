@@ -5,30 +5,32 @@
 #include "UpperTriangularSolver.h"
 #include "LowerTriangularMatrix.h"
 
-
-template<typename TYPE>
-class CholeskySolver :public SimpleSolver < TYPE >
+namespace NewQuant
 {
-private:
-    LowerTriangularMatrix<TYPE> lm;
-
-    void CholeskyDecomposition(const BaseMatrix<TYPE> &);
-public:
-    CholeskySolver(const BaseMatrix<TYPE> &bm, const TYPE &e) :
-        SimpleSolver<TYPE>(bm, e), lm(bm.Nrows())
+    template<typename TYPE>
+    class CholeskySolver :public SimpleSolver < TYPE >
     {
-        CholeskyDecomposition(bm);
-    }
+    private:
+        LowerTriangularMatrix<TYPE> lm;
 
-    const LowerTriangularMatrix<TYPE> & Lower() const
-    {
-        return lm;
-    }
+        void CholeskyDecomposition(const BaseMatrix<TYPE> &);
+    public:
+        CholeskySolver(const BaseMatrix<TYPE> &bm, const TYPE &e) :
+            SimpleSolver<TYPE>(bm, e), lm(bm.Nrows())
+        {
+            CholeskyDecomposition(bm);
+        }
 
-    LogAndSign<TYPE> LogDeterminant() const;
+        const LowerTriangularMatrix<TYPE> & Lower() const
+        {
+            return lm;
+        }
 
-    void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
-};
+        LogAndSign<TYPE> LogDeterminant() const;
+
+        void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
+    };
+}
 
 #include "CholeskySolver.cpp"
 

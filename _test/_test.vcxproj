@@ -88,6 +88,7 @@
     <ClInclude Include="testConstantMatrix.h" />
     <ClInclude Include="testDiagonalMatrix.h" />
     <ClInclude Include="testIdentityMatrix.h" />
+    <ClInclude Include="testLeastSquareSolver.h" />
     <ClInclude Include="testLowerBandMatrix.h" />
     <ClInclude Include="testLowerTriangularMatrix.h" />
     <ClInclude Include="testMatrix.h" />
@@ -105,6 +106,7 @@
     <ClCompile Include="testConstantMatrix.cpp" />
     <ClCompile Include="testDiagonalMatrix.cpp" />
     <ClCompile Include="testIdentityMatrix.cpp" />
+    <ClCompile Include="testLeastSquareSolver.cpp" />
     <ClCompile Include="testLowerBandMatrix.cpp" />
     <ClCompile Include="testLowerTriangularMatrix.cpp" />
     <ClCompile Include="testMatrix.cpp" />

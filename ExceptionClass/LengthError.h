@@ -3,23 +3,24 @@
 
 #include "LogicError.h"
 
-
-class LengthError : public LogicError
+namespace NewQuant
 {
-public:
-
-    LengthError(const char *a_what) : LogicError()
+    class LengthError : public LogicError
     {
-        AddMessage("Length error : -- ");
-        AddMessage(a_what);
-        if (a_what)
+    public:
+
+        LengthError(const char *a_what) : LogicError()
         {
-            Singleton<Tracer>::Instance()->AddTrace(error);
+            AddMessage("Length error : -- ");
+            AddMessage(a_what);
+            if (a_what)
+            {
+                Singleton<Tracer>::Instance()->AddTrace(error);
+            }
         }
-    }
 
-};
-
+    };
+}
 
 #endif //LENGTH_ERROR_H
 

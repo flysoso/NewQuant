@@ -13,19 +13,12 @@
 #include "ColumnVector.h"
 #include "ConstantMatrix.h"
 
-#include "NormalEquationSolver.h"
-#include "HouseholderQR.h"
-#include "HouseholderQRpivot.h"
-
-#include "SubtractedMatrix.h"
-#include "StackedMatrix.h"
-#include "InvScaledMatrix.h"
-#include "GivensQR.h"
 
 
 int main()
 {
     using namespace std;
+    using namespace NewQuant;
     std::default_random_engine dre;
     std::normal_distribution<double> nd;
 
@@ -48,33 +41,6 @@ int main()
 
 
 
-
-
-    clock_t t1, t2, t3, t4, t5;
-
-    t1 = clock();
-    NormalEquationSolver<double> nes(A, 1e-7);
-    nes.SolveLS(b, y);
-    t2 = clock();
-    HouseholderQR<double> h_qr(A, 1e-7);
-    h_qr.SolveLS(b, x);
-    t3 = clock();
-    HouseholderQRpivot<double> h_qr_p(A, 1e-7);
-    h_qr_p.SolveLS(b, z);
-    t4 = clock();
-    GivensQR<double> g_qr(A, 1e-7);
-    g_qr.SolveLS(b, w);
-    t5 = clock();
-
-    //cout << scientific << setprecision(20) << (x - z) << endl;
-    //cout << scientific << setprecision(20) << (y - z) << endl;
-    //cout << scientific << setprecision(20) << (y - x) << endl;
-    //cout << scientific << setprecision(20) << (y - w) << endl;
-    cout << t2 - t1 << endl;
-    cout << t3 - t2 << endl;
-    cout << t4 - t3 << endl;
-    cout << t5 - t4 << endl;
-    //cout << setw(10) << A*h_qr_p.Right() - h_qr_p.Q()*(h_qr_p.R()&con) << endl;
     return EXIT_SUCCESS;
 }
 

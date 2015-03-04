@@ -3,19 +3,21 @@
 
 #include "LogicError.h"
 
-class CannotBuildException : public LogicError
+namespace NewQuant
 {
-public:
-    CannotBuildException(const char *a_what) : LogicError()
+    class CannotBuildException : public LogicError
     {
-        AddMessage("Cannot Build Exception : -- ");
-        AddMessage(a_what);
-        if (a_what)
+    public:
+        CannotBuildException(const char *a_what) : LogicError()
         {
-            Singleton<Tracer>::Instance()->AddTrace(error);
+            AddMessage("Cannot Build Exception : -- ");
+            AddMessage(a_what);
+            if (a_what)
+            {
+                Singleton<Tracer>::Instance()->AddTrace(error);
+            }
         }
-    }
-};
-
+    };
+}
 #endif //CANNOT_BUILD_EXCEPTION_H
 

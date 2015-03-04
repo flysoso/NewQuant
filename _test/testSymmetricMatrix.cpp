@@ -3,6 +3,7 @@
 void testSymmetricMatrix()
 {
     using namespace std;
+    using namespace NewQuant;
     default_random_engine dre;
     normal_distribution<Type> nd;
     SymmetricMatrix<Type> sym1(10), sym2(10), sym3(10);

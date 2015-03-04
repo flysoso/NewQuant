@@ -3,6 +3,7 @@
 void testDiagonalMatrix()
 {
     using namespace std;
+    using namespace NewQuant;
     default_random_engine dre;
     normal_distribution<Type> nd;
     DiagonalMatrix<Type> d1(5),d2;

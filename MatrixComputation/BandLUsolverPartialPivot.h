@@ -5,48 +5,51 @@
 #include "LowerTriangularMatrix.h"
 #include "UpperBandMatrix.h"
 
-template <typename TYPE> class BandLUcombine_LtUb;
-template <typename TYPE> class BandLUsolver;
-
-template <typename TYPE>
-class BandLUsolverPartialPivot : public BandLUsolver < TYPE >
+namespace NewQuant
 {
-private:
-    LowerTriangularMatrix<TYPE> lm;
-    UpperBandMatrix<TYPE> um;
-    BandLUcombine_LtUb<TYPE> combine;
+    template <typename TYPE> class BandLUcombine_LtUb;
+    template <typename TYPE> class BandLUsolver;
 
-    void BandLUdecomposion();
-
-public:
-    BandLUsolverPartialPivot(const BaseMatrix<TYPE> &gm, const TYPE &e);
-
-    ~BandLUsolverPartialPivot() {}
-
-    void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
-
-    const LowerTriangularMatrix<TYPE> & Lower() const
+    template <typename TYPE>
+    class BandLUsolverPartialPivot : public BandLUsolver < TYPE >
     {
-        return lm;
-    }
+    private:
+        LowerTriangularMatrix<TYPE> lm;
+        UpperBandMatrix<TYPE> um;
+        BandLUcombine_LtUb<TYPE> combine;
 
-    const UpperBandMatrix<TYPE> & Upper() const
-    {
-        return um;
-    }
+        void BandLUdecomposion();
 
-    void GetLowerPart(GeneralMatrix<TYPE> &out) const
-    {
-        out << lm;
-    }
+    public:
+        BandLUsolverPartialPivot(const BaseMatrix<TYPE> &gm, const TYPE &e);
 
-    void GetUpperPart(GeneralMatrix<TYPE> &out) const
-    {
-        out << um;
-    }
+        ~BandLUsolverPartialPivot() {}
 
-    LogAndSign<TYPE> LogDeterminant() const;
-};
+        void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
+
+        const LowerTriangularMatrix<TYPE> & Lower() const
+        {
+            return lm;
+        }
+
+        const UpperBandMatrix<TYPE> & Upper() const
+        {
+            return um;
+        }
+
+        void GetLowerPart(GeneralMatrix<TYPE> &out) const
+        {
+            out << lm;
+        }
+
+        void GetUpperPart(GeneralMatrix<TYPE> &out) const
+        {
+            out << um;
+        }
+
+        LogAndSign<TYPE> LogDeterminant() const;
+    };
+}
 
 #include "BandLUsolverPartialPivot.cpp"
 

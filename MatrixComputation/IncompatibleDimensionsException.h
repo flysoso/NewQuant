@@ -4,36 +4,38 @@
 #include "../ExceptionClass/LogicError.h"
 #include "MatrixDetails.h"
 
-template <typename TYPE> class BaseMatrix;
-
-/// Incompatible dimensions exception.
-class IncompatibleDimensionsException : public LogicError
+namespace NewQuant
 {
-public:
-    IncompatibleDimensionsException() : LogicError()
-    {
-        AddMessage("Incompatible Dimensions : -- ");
-        Singleton<Tracer>::Instance()->AddTrace(error);
-    }
+    template <typename TYPE> class BaseMatrix;
 
-    template <typename TYPE>
-    IncompatibleDimensionsException(const BaseMatrix<TYPE>& A) : LogicError()
+    /// Incompatible dimensions exception.
+    class IncompatibleDimensionsException : public LogicError
     {
-        AddMessage("Incompatible Dimensions : -- ");
-        MatrixDetails(A, error);
-        Singleton<Tracer>::Instance()->AddTrace(error);
-    }
+    public:
+        IncompatibleDimensionsException() : LogicError()
+        {
+            AddMessage("Incompatible Dimensions : -- ");
+            Singleton<Tracer>::Instance()->AddTrace(error);
+        }
 
-    template <typename TYPE>
-    IncompatibleDimensionsException(const BaseMatrix<TYPE>& A, const BaseMatrix<TYPE>& B) : LogicError()
-    {
-        AddMessage("Incompatible Dimensions : -- ");
-        MatrixDetails(A, error);
-        MatrixDetails(B, error);
-        Singleton<Tracer>::Instance()->AddTrace(error);
-    }
-};
+        template <typename TYPE>
+        IncompatibleDimensionsException(const BaseMatrix<TYPE>& A) : LogicError()
+        {
+            AddMessage("Incompatible Dimensions : -- ");
+            MatrixDetails(A, error);
+            Singleton<Tracer>::Instance()->AddTrace(error);
+        }
 
+        template <typename TYPE>
+        IncompatibleDimensionsException(const BaseMatrix<TYPE>& A, const BaseMatrix<TYPE>& B) : LogicError()
+        {
+            AddMessage("Incompatible Dimensions : -- ");
+            MatrixDetails(A, error);
+            MatrixDetails(B, error);
+            Singleton<Tracer>::Instance()->AddTrace(error);
+        }
+    };
+}
 #endif //INCOMPATIBLE_DIMENSIONS_EXCEPTION_H
 
 

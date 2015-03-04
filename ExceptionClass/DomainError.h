@@ -3,19 +3,21 @@
 
 #include "LogicError.h"
 
-class DomainError : public LogicError
+namespace NewQuant
 {
-public:
-
-    DomainError(const char *a_what) : LogicError()
+    class DomainError : public LogicError
     {
-        AddMessage("Domain error : -- ");
-        AddMessage(a_what);
-        if (a_what)
-        {
-            Singleton<Tracer>::Instance()->AddTrace(error);
-        }
-    }
-};
+    public:
 
+        DomainError(const char *a_what) : LogicError()
+        {
+            AddMessage("Domain error : -- ");
+            AddMessage(a_what);
+            if (a_what)
+            {
+                Singleton<Tracer>::Instance()->AddTrace(error);
+            }
+        }
+    };
+}
 #endif //DOMAIN_ERROE_H

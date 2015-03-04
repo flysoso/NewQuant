@@ -3,21 +3,23 @@
 
 #include "LUsolver.h"
 
-template <typename TYPE>
-class LUsolverNoPivot : public LUsolver < TYPE >
+namespace NewQuant
 {
-private:
-    void LUdecomposion();
-public:
-    LUsolverNoPivot(const BaseMatrix<TYPE> &, const TYPE &);
+    template <typename TYPE>
+    class LUsolverNoPivot : public LUsolver < TYPE >
+    {
+    private:
+        void LUdecomposion();
+    public:
+        LUsolverNoPivot(const BaseMatrix<TYPE> &, const TYPE &);
 
-    ~LUsolverNoPivot() {}
+        ~LUsolverNoPivot() {}
 
-    void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
+        void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
 
-    LogAndSign<TYPE> LogDeterminant() const;
-};
-
+        LogAndSign<TYPE> LogDeterminant() const;
+    };
+}
 #include "LUsolverNoPivot.cpp"
 
 #endif //LU_SOLVER_NOPIVOT_H

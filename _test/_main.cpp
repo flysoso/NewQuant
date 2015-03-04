@@ -13,27 +13,15 @@
 #include "testSquareMatrix.h"
 #include "testPermuteMatrix.h"
 #include "testTridiagonalMatrix.h"
+#include "testLeastSquareSolver.h"
+
 /*---------------*/
-#include "../MatrixComputation/Matrix.h"
-#include "../MatrixComputation/ColumnVector.h"
-#include "../MatrixComputation/ConstantMatrix.h"
-
-#include "../MatrixComputation/NormalEquationSolver.h"
-#include "../MatrixComputation/HouseholderQR.h"
-#include "../MatrixComputation/HouseholderQRpivot.h"
-#include "../MatrixComputation/GivensQR.h"
-
-#include "../MatrixComputation/SubtractedMatrix.h"
-#include "../MatrixComputation/StackedMatrix.h"
-#include "../MatrixComputation/InvScaledMatrix.h"
-#include "../MatrixComputation/GetRowColMatrix.h"
-#include "../MatrixComputation/ConstGetRowColMatrix.h"
 
 #include "../MathematicsExpresssion/ConstantAndVariable.h"
 #include "../MathematicsExpresssion/BinaryExpression.h"
 #include "../MathematicsExpresssion/UnitaryExpression.h"
 #include "../MathematicsExpresssion/MathExpression.h"
-
+/*
 int main()
 {
     using namespace std;
@@ -48,15 +36,17 @@ int main()
 
     cout << expr[para<Type>(c_row(m, 2))] << endl;
 }
+*/
 
-/*
 int main()
 {
     using namespace std;
+    using namespace NewQuant;
     try
     {
         try
         {
+            /*
             testSymmetricMatrix();
             testBandMatrix();
             testLowerBandMatrix();
@@ -72,6 +62,8 @@ int main()
             testSquareMatrix();
             testPermuteMatrix();
             testTridiagonalMatrix();
+            */
+            testLeastSquareSolver();
         }
         catch (BaseException &be)
         {
@@ -86,4 +78,3 @@ int main()
 
     return 0;
 }
-*/

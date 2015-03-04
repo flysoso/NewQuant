@@ -3,20 +3,22 @@
 
 #include "SimpleSolver.h"
 
-template <typename TYPE>
-class UpperBandSolver : public SimpleSolver < TYPE >
+namespace NewQuant
 {
-public:
-    UpperBandSolver(const BaseMatrix<TYPE> &gm, const TYPE &e) : SimpleSolver<TYPE>(gm, e)
+    template <typename TYPE>
+    class UpperBandSolver : public SimpleSolver < TYPE >
     {
-        SimpleSolver<TYPE>::TestSingular();
-    }
+    public:
+        UpperBandSolver(const BaseMatrix<TYPE> &gm, const TYPE &e) : SimpleSolver<TYPE>(gm, e)
+        {
+            SimpleSolver<TYPE>::TestSingular();
+        }
 
-    void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
+        void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
 
-    LogAndSign<TYPE> LogDeterminant() const;
-};
-
+        LogAndSign<TYPE> LogDeterminant() const;
+    };
+}
 #include "UpperBandSolver.cpp"
 
 #endif //SUPPER_BAND_SOLVER_H

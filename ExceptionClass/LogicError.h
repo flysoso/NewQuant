@@ -3,27 +3,29 @@
 
 #include "BaseException.h"
 
-class LogicError : public BaseException
+namespace NewQuant
 {
-protected:
-    LogicError() : BaseException()
+    class LogicError : public BaseException
     {
-        AddMessage("Logic Error : -- ");
-    }
-
-public:
-    LogicError(const char *a_what) : BaseException()
-    {
-        AddMessage("Logic Error : -- ");
-        AddMessage(a_what);
-        if (a_what)
+    protected:
+        LogicError() : BaseException()
         {
-            Singleton<Tracer>::Instance()->AddTrace(error);
+            AddMessage("Logic Error : -- ");
         }
-    }
-};
 
+    public:
+        LogicError(const char *a_what) : BaseException()
+        {
+            AddMessage("Logic Error : -- ");
+            AddMessage(a_what);
+            if (a_what)
+            {
+                Singleton<Tracer>::Instance()->AddTrace(error);
+            }
+        }
+    };
 
+}
 
 #endif //LOGIC_ERROR_H
 

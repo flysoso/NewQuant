@@ -3,27 +3,29 @@
 
 #include "../ExceptionClass/LogicError.h"
 
-template <typename TYPE> class BaseMatrix;
-
-/// Cannot convert to vector exception.
-class VectorException : public LogicError
+namespace NewQuant
 {
-public:
-    VectorException() : LogicError()
-    {
-        AddMessage("Vector Exception, Cannot Convert Matrix To Vector : -- ");
-        Singleton<Tracer>::Instance()->AddTrace(error);
-    }
+    template <typename TYPE> class BaseMatrix;
 
-    template <typename TYPE>
-    VectorException(const BaseMatrix<TYPE>& A) : LogicError()
+    /// Cannot convert to vector exception.
+    class VectorException : public LogicError
     {
-        AddMessage("Vector Exception, Cannot Convert Matrix To Vector : -- ");
-        MatrixDetails(A, error);
-        Singleton<Tracer>::Instance()->AddTrace(error);
-    }
-};
+    public:
+        VectorException() : LogicError()
+        {
+            AddMessage("Vector Exception, Cannot Convert Matrix To Vector : -- ");
+            Singleton<Tracer>::Instance()->AddTrace(error);
+        }
 
+        template <typename TYPE>
+        VectorException(const BaseMatrix<TYPE>& A) : LogicError()
+        {
+            AddMessage("Vector Exception, Cannot Convert Matrix To Vector : -- ");
+            MatrixDetails(A, error);
+            Singleton<Tracer>::Instance()->AddTrace(error);
+        }
+    };
+}
 
 #endif //VECTOR_EXCEPTION_H
 

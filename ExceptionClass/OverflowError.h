@@ -3,19 +3,21 @@
 
 #include "RuntimeError.h"
 
-class OverflowError : public RuntimeError
+namespace NewQuant
 {
-public:
-    OverflowError(const char *a_what) : RuntimeError()
+    class OverflowError : public RuntimeError
     {
-        AddMessage("Overflow Error : -- ");
-        AddMessage(a_what);
-        if (a_what)
+    public:
+        OverflowError(const char *a_what) : RuntimeError()
         {
-            Singleton<Tracer>::Instance()->AddTrace(error);
+            AddMessage("Overflow Error : -- ");
+            AddMessage(a_what);
+            if (a_what)
+            {
+                Singleton<Tracer>::Instance()->AddTrace(error);
+            }
         }
-    }
-};
-
+    };
+}
 
 #endif //OVERFLOW_ERROR_H

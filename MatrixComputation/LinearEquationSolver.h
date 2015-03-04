@@ -2,29 +2,32 @@
 #define LINEAR_EQUATION_SOLVER_H
 
 
-template <typename TYPE> class BaseMatrix;
-template <typename TYPE> class LogAndSign;
-
-///linear equation solving
-template <typename TYPE>
-class LinearEquationSolver
+namespace NewQuant
 {
-protected:
-    bool fail;
-    LinearEquationSolver() :fail(false) {}
-public:
+    template <typename TYPE> class BaseMatrix;
+    template <typename TYPE> class LogAndSign;
 
-    ~LinearEquationSolver() {}
-
-    bool IsFailed() const
+    ///linear equation solving
+    template <typename TYPE>
+    class LinearEquationSolver
     {
-        return fail;
-    }
+    protected:
+        bool fail;
+        LinearEquationSolver() :fail(false) {}
+    public:
 
-    virtual void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const = 0;
+        ~LinearEquationSolver() {}
 
-    virtual LogAndSign<TYPE> LogDeterminant() const = 0;
-};
+        bool IsFailed() const
+        {
+            return fail;
+        }
+
+        virtual void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const = 0;
+
+        virtual LogAndSign<TYPE> LogDeterminant() const = 0;
+    };
+}
 
 #endif //LINEAR_EQUATION_SOLVER_H
 

@@ -3,6 +3,7 @@
 void testMatrix()
 {
     using namespace std;
+    using namespace NewQuant;
     default_random_engine dre;
     normal_distribution<Type> nd;
     Matrix<Type> mat1(10, 10), mat2(10, 10);

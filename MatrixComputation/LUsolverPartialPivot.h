@@ -3,24 +3,26 @@
 
 
 #include "LUsolver.h"
-template <typename TYPE> class LUsolver;
-template <typename TYPE> class LUcombine;
-
-template <typename TYPE>
-class LUsolverPartialPivot : public LUsolver < TYPE >
+namespace NewQuant
 {
-private:
-    void LUdecomposion();
-public:
-    LUsolverPartialPivot(const BaseMatrix<TYPE> &, const TYPE &);
+    template <typename TYPE> class LUsolver;
+    template <typename TYPE> class LUcombine;
 
-    ~LUsolverPartialPivot() {}
+    template <typename TYPE>
+    class LUsolverPartialPivot : public LUsolver < TYPE >
+    {
+    private:
+        void LUdecomposion();
+    public:
+        LUsolverPartialPivot(const BaseMatrix<TYPE> &, const TYPE &);
 
-    void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
+        ~LUsolverPartialPivot() {}
 
-    LogAndSign<TYPE> LogDeterminant() const;
-};
+        void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
 
+        LogAndSign<TYPE> LogDeterminant() const;
+    };
+}
 #include "LUsolverPartialPivot.cpp"
 
 #endif //LU_SOLVER_PARTIALPIVOT_H

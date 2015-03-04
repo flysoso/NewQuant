@@ -3,21 +3,23 @@
 
 #include "LogicError.h"
 
-class OutOfRange : public LogicError
+namespace NewQuant
 {
-public:
-
-    OutOfRange(const char *a_what) : LogicError()
+    class OutOfRange : public LogicError
     {
-        AddMessage("Out of range : --");
-        AddMessage(a_what);
-        if (a_what)
-        {
-            Singleton<Tracer>::Instance()->AddTrace(error);
-        }
-    }
-};
+    public:
 
+        OutOfRange(const char *a_what) : LogicError()
+        {
+            AddMessage("Out of range : --");
+            AddMessage(a_what);
+            if (a_what)
+            {
+                Singleton<Tracer>::Instance()->AddTrace(error);
+            }
+        }
+    };
+}
 
 #endif //OUT_OF_RANGE_H
 

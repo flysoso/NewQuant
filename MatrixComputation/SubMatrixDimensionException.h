@@ -3,16 +3,18 @@
 
 #include "../ExceptionClass/LogicError.h"
 
-class SubMatrixDimensionException : public LogicError
+namespace NewQuant
 {
-public:
-    SubMatrixDimensionException() : LogicError()
+    class SubMatrixDimensionException : public LogicError
     {
-        AddMessage("SubMatrix Dimension Exception, Incompatible Submatrix Dimension : -- ");
-        Singleton<Tracer>::Instance()->AddTrace(error);
-    }
-};
+    public:
+        SubMatrixDimensionException() : LogicError()
+        {
+            AddMessage("SubMatrix Dimension Exception, Incompatible Submatrix Dimension : -- ");
+            Singleton<Tracer>::Instance()->AddTrace(error);
+        }
+    };
 
-
+}
 #endif //SUBMATRIX_DIMENSION_EXCEPTION_H
 

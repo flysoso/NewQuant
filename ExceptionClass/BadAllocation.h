@@ -3,25 +3,27 @@
 
 #include "BaseException.h"
 
-class BadAllocation : public BaseException
+namespace NewQuant
 {
-protected:
-    BadAllocation() : BaseException()
+    class BadAllocation : public BaseException
     {
-        AddMessage("Bad Allocation : -- ");
-    }
-public:
-    BadAllocation(const char *a_what) : BaseException()
-    {
-        AddMessage("Bad Allocation : -- ");
-        AddMessage(a_what);
-        if (a_what)
+    protected:
+        BadAllocation() : BaseException()
         {
-            Singleton<Tracer>::Instance()->AddTrace(error);
+            AddMessage("Bad Allocation : -- ");
         }
-    }
-};
-
+    public:
+        BadAllocation(const char *a_what) : BaseException()
+        {
+            AddMessage("Bad Allocation : -- ");
+            AddMessage(a_what);
+            if (a_what)
+            {
+                Singleton<Tracer>::Instance()->AddTrace(error);
+            }
+        }
+    };
+}
 #endif //BAD_ALLOCATION_H
 
 

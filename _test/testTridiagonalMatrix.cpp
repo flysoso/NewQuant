@@ -3,6 +3,7 @@
 void testTridiagonalMatrix()
 {
     using namespace std;
+    using namespace NewQuant;
     default_random_engine dre;
     normal_distribution<Type> nd;
     TridiagonalMatrix<Type> trid1(10), trid2(10);

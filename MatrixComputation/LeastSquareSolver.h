@@ -2,27 +2,30 @@
 #define LEAST_SQUARE_SOLVER_H
 
 #include <assert.h>
-template<typename TYPE> class BaseMatrix;
 
-template<typename TYPE>
-class LeastSquareSolver
+namespace NewQuant
 {
-protected:
-    bool fail;
-    LeastSquareSolver() :fail(false){}
-public:
-    ~LeastSquareSolver(){}
+    template<typename TYPE> class BaseMatrix;
 
-    bool IsFailed() const
+    template<typename TYPE>
+    class LeastSquareSolver
     {
-        return fail;
-    }
+    protected:
+        bool fail;
+        LeastSquareSolver() :fail(false){}
+    public:
+        ~LeastSquareSolver(){}
 
-    virtual void SolveLS(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const = 0;
-};
+        bool IsFailed() const
+        {
+            return fail;
+        }
+
+        virtual void SolveLS(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const = 0;
+    };
 
 
-
+}
 
 
 #endif //LEAST_SQUARE_SOLVER_H

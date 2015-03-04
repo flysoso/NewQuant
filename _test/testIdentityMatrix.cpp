@@ -3,6 +3,7 @@
 void testIdentityMatrix()
 {
     using namespace std;
+    using namespace NewQuant;
     Type one(1), one_half(1.5), two(2);
     IdentityMatrix<Type> c1(5, one), c2(5, two), c3(5, one_half),c4;
 

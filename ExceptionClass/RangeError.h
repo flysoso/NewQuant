@@ -3,22 +3,23 @@
 
 #include "RuntimeError.h"
 
-
-class RangeError : public RuntimeError
+namespace NewQuant
 {
-public:
-    
-    RangeError(const char *a_what) : RuntimeError()
+    class RangeError : public RuntimeError
     {
-        AddMessage("Range error : --");
-        AddMessage(a_what);
-        if (a_what)
-        {
-            Singleton<Tracer>::Instance()->AddTrace(error);
-        }
-    }
-};
+    public:
 
+        RangeError(const char *a_what) : RuntimeError()
+        {
+            AddMessage("Range error : --");
+            AddMessage(a_what);
+            if (a_what)
+            {
+                Singleton<Tracer>::Instance()->AddTrace(error);
+            }
+        }
+    };
+}
 
 #endif //RANGE_ERROR_H
 

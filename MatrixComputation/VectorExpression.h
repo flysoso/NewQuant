@@ -3,42 +3,44 @@
 
 #include "../ExceptionClass/NotDefinedException.h"
 
-template <typename TYPE> class GeneralMatrix;
-
-template <typename TYPE>
-class VectorExpression
+namespace NewQuant
 {
-protected:
-    int length;
+    template <typename TYPE> class GeneralMatrix;
 
-    VectorExpression(){}
-
-    VectorExpression(const int &l) : length(l) {}
-
-    VectorExpression(const VectorExpression<TYPE> &v) : length(v.length){}
-
-    void SetLength(const int &l)
+    template <typename TYPE>
+    class VectorExpression
     {
-        length = l;
-    }
-public:
-    virtual int Search(const GeneralMatrix<TYPE> &) const = 0;
+    protected:
+        int length;
 
-    ~VectorExpression() {}
+        VectorExpression(){}
 
-    int Length() const
-    {
-        return length;
-    }
+        VectorExpression(const int &l) : length(l) {}
 
-    virtual TYPE operator () (const int &i) const = 0;
+        VectorExpression(const VectorExpression<TYPE> &v) : length(v.length){}
 
-    virtual TYPE & operator () (const int &i)
-    {
-        Singleton<Tracer>::Instance()->AddMessage("TYPE & VectorExpression::operator () (r, c)");
-        throw NotDefinedException("TYPE & operator () (i)", "VectorExpression");
-    }
-};
+        void SetLength(const int &l)
+        {
+            length = l;
+        }
+    public:
+        virtual int Search(const GeneralMatrix<TYPE> &) const = 0;
 
+        ~VectorExpression() {}
+
+        int Length() const
+        {
+            return length;
+        }
+
+        virtual TYPE operator () (const int &i) const = 0;
+
+        virtual TYPE & operator () (const int &i)
+        {
+            Singleton<Tracer>::Instance()->AddMessage("TYPE & VectorExpression::operator () (r, c)");
+            throw NotDefinedException("TYPE & operator () (i)", "VectorExpression");
+        }
+    };
+}
 
 #endif // VECTOR_EXPRESSION_H

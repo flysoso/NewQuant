@@ -3,22 +3,24 @@
 
 #include "LinearEquationSolver.h"
 
-template <typename TYPE> class BaseMatrix;
-
-template <typename TYPE>
-class SimpleSolver : public LinearEquationSolver < TYPE >
+namespace NewQuant
 {
-protected:
-    const BaseMatrix<TYPE> &mat;
-    TYPE epsilon;
-public:
-    SimpleSolver(const BaseMatrix<TYPE> &bm, const TYPE &e) : LinearEquationSolver<TYPE>(), mat(bm), epsilon(e) {}
+    template <typename TYPE> class BaseMatrix;
 
-    virtual LogAndSign<TYPE> LogDeterminant() const = 0;
+    template <typename TYPE>
+    class SimpleSolver : public LinearEquationSolver < TYPE >
+    {
+    protected:
+        const BaseMatrix<TYPE> &mat;
+        TYPE epsilon;
+    public:
+        SimpleSolver(const BaseMatrix<TYPE> &bm, const TYPE &e) : LinearEquationSolver<TYPE>(), mat(bm), epsilon(e) {}
 
-    virtual void TestSingular();
-};
+        virtual LogAndSign<TYPE> LogDeterminant() const = 0;
 
+        virtual void TestSingular();
+    };
+}
 #include "SimpleSolver.cpp"
 
 #endif //SIMPLE_SOLVER_H

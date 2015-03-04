@@ -4,30 +4,32 @@
 #include "SimpleSolver.h"
 #include "LowerBandMatrix.h"
 
-
-template<typename TYPE>
-class BandCholeskySolver :public SimpleSolver < TYPE >
+namespace NewQuant
 {
-private:
-    LowerBandMatrix<TYPE> lm;
-
-    void BandCholeskyDecomposition(const BaseMatrix<TYPE> &);
-public:
-    BandCholeskySolver(const BaseMatrix<TYPE> &bm, const TYPE &e) :
-        SimpleSolver<TYPE>(bm, e), lm(bm.Nrows(),bm.BandWidth().Lower())
+    template<typename TYPE>
+    class BandCholeskySolver :public SimpleSolver < TYPE >
     {
-        BandCholeskyDecomposition(bm);
-    }
+    private:
+        LowerBandMatrix<TYPE> lm;
 
-    const LowerBandMatrix<TYPE> & Lower() const
-    {
-        return lm;
-    }
+        void BandCholeskyDecomposition(const BaseMatrix<TYPE> &);
+    public:
+        BandCholeskySolver(const BaseMatrix<TYPE> &bm, const TYPE &e) :
+            SimpleSolver<TYPE>(bm, e), lm(bm.Nrows(), bm.BandWidth().Lower())
+        {
+            BandCholeskyDecomposition(bm);
+        }
 
-    LogAndSign<TYPE> LogDeterminant() const;
+        const LowerBandMatrix<TYPE> & Lower() const
+        {
+            return lm;
+        }
 
-    void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
-};
+        LogAndSign<TYPE> LogDeterminant() const;
+
+        void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
+    };
+}
 
 #include "BandCholeskySolver.cpp"
 

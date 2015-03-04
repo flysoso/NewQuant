@@ -5,44 +5,47 @@
 #include "LowerBandMatrix.h"
 #include "UpperBandMatrix.h"
 
-template <typename TYPE>
-class BandLUsolverNoPivot : public BandLUsolver < TYPE >
+namespace NewQuant
 {
-private:
-    LowerBandMatrix<TYPE> lm;
-    UpperBandMatrix<TYPE> um;
-    BandLUcombine_LbUb<TYPE> combine;
-
-    void BandLUdecomposion();
-public:
-    BandLUsolverNoPivot(const BaseMatrix<TYPE> &gm, const TYPE &e);
-
-    ~BandLUsolverNoPivot() {}
-
-    void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
-
-    const LowerBandMatrix<TYPE> & Lower() const
+    template <typename TYPE>
+    class BandLUsolverNoPivot : public BandLUsolver < TYPE >
     {
-        return lm;
-    }
+    private:
+        LowerBandMatrix<TYPE> lm;
+        UpperBandMatrix<TYPE> um;
+        BandLUcombine_LbUb<TYPE> combine;
 
-    const UpperBandMatrix<TYPE> & Upper() const
-    {
-        return um;
-    }
+        void BandLUdecomposion();
+    public:
+        BandLUsolverNoPivot(const BaseMatrix<TYPE> &gm, const TYPE &e);
 
-    void GetLowerPart(GeneralMatrix<TYPE> &out) const
-    {
-        out << lm;
-    }
+        ~BandLUsolverNoPivot() {}
 
-    void GetUpperPart(GeneralMatrix<TYPE> &out) const
-    {
-        out << um;
-    }
+        void Solve(const BaseMatrix<TYPE> &, BaseMatrix<TYPE> &) const;
 
-    LogAndSign<TYPE> LogDeterminant() const;
-};
+        const LowerBandMatrix<TYPE> & Lower() const
+        {
+            return lm;
+        }
+
+        const UpperBandMatrix<TYPE> & Upper() const
+        {
+            return um;
+        }
+
+        void GetLowerPart(GeneralMatrix<TYPE> &out) const
+        {
+            out << lm;
+        }
+
+        void GetUpperPart(GeneralMatrix<TYPE> &out) const
+        {
+            out << um;
+        }
+
+        LogAndSign<TYPE> LogDeterminant() const;
+    };
+}
 
 #include "BandLUsolverNoPivot.cpp"
 

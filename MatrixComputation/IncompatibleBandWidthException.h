@@ -3,37 +3,39 @@
 
 #include "../ExceptionClass/LogicError.h"
 
-template <typename TYPE> class BaseMatrix;
-
-/// Incompatible band width exception.
-class IncompatibleBandWidthException : public LogicError
+namespace NewQuant
 {
-public:
-    IncompatibleBandWidthException() : LogicError()
+    template <typename TYPE> class BaseMatrix;
+
+    /// Incompatible band width exception.
+    class IncompatibleBandWidthException : public LogicError
     {
-        AddMessage("Incompatible Band Width : -- ");
-        Singleton<Tracer>::Instance()->AddTrace(error);
-    }
+    public:
+        IncompatibleBandWidthException() : LogicError()
+        {
+            AddMessage("Incompatible Band Width : -- ");
+            Singleton<Tracer>::Instance()->AddTrace(error);
+        }
 
-    template <typename TYPE>
-    IncompatibleBandWidthException(const BaseMatrix<TYPE>& A) : LogicError()
-    {
-        AddMessage("Incompatible Band Width : -- ");
-        MatrixDetails(A, error);
-        Singleton<Tracer>::Instance()->AddTrace(error);
-    }
+        template <typename TYPE>
+        IncompatibleBandWidthException(const BaseMatrix<TYPE>& A) : LogicError()
+        {
+            AddMessage("Incompatible Band Width : -- ");
+            MatrixDetails(A, error);
+            Singleton<Tracer>::Instance()->AddTrace(error);
+        }
 
-    template <typename TYPE>
-    IncompatibleBandWidthException(const BaseMatrix<TYPE>& A, const BaseMatrix<TYPE>& B) : LogicError()
-    {
-        AddMessage("Incompatible Band Width : -- ");
-        MatrixDetails(A, error);
-        MatrixDetails(B, error);
-        Singleton<Tracer>::Instance()->AddTrace(error);
-    }
+        template <typename TYPE>
+        IncompatibleBandWidthException(const BaseMatrix<TYPE>& A, const BaseMatrix<TYPE>& B) : LogicError()
+        {
+            AddMessage("Incompatible Band Width : -- ");
+            MatrixDetails(A, error);
+            MatrixDetails(B, error);
+            Singleton<Tracer>::Instance()->AddTrace(error);
+        }
 
-};
-
+    };
+}
 
 #endif //INCOMPATIBLE_BANDWIDTH_EXCEPTION_H
 

@@ -3,6 +3,7 @@
 void testPermuteMatrix()
 {
     using namespace std;
+    using namespace NewQuant;
     PermuteMatrix<Type> perm1(10), perm2(10);
 
     cout << "perm1(10)" << endl;

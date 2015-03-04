@@ -3,6 +3,7 @@
 void testBandMatrix()
 {
     using namespace std;
+    using namespace NewQuant;
     default_random_engine dre;
     normal_distribution<Type> nd;
     BandMatrix<Type> band1(10, 3, 2), band2(10, 1, 3);

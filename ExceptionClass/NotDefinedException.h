@@ -3,21 +3,22 @@
 
 #include "LogicError.h"
 
-/// Not defined exception.
-class NotDefinedException : public LogicError
+namespace NewQuant
 {
-public:
-
-    NotDefinedException(const char* op, const char* x) : LogicError()
+    class NotDefinedException : public LogicError
     {
-        AddMessage("Not defined exception : -- ");
-        AddMessage(op);
-        AddMessage("is not defined for ");
-        AddMessage(x);
-        Singleton<Tracer>::Instance()->AddTrace(error);
-    }
-};
+    public:
 
+        NotDefinedException(const char* op, const char* x) : LogicError()
+        {
+            AddMessage("Not defined exception : -- ");
+            AddMessage(op);
+            AddMessage("is not defined for ");
+            AddMessage(x);
+            Singleton<Tracer>::Instance()->AddTrace(error);
+        }
+    };
+}
 
 
 #endif //NOT_DEFINED_EXCEPTION_H

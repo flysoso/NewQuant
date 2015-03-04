@@ -3,26 +3,28 @@
 
 #include "BaseException.h"
 
-class RuntimeError : public BaseException
+namespace NewQuant
 {
-protected:
-    RuntimeError() : BaseException()
+    class RuntimeError : public BaseException
     {
-        AddMessage("Runtime Error : -- ");
-    }
-
-public:
-    RuntimeError(const char *a_what) : BaseException()
-    {
-        AddMessage("Runtime Error : -- ");
-        AddMessage(a_what);
-        if (a_what)
+    protected:
+        RuntimeError() : BaseException()
         {
-            Singleton<Tracer>::Instance()->AddTrace(error);
+            AddMessage("Runtime Error : -- ");
         }
-    }
-};
 
+    public:
+        RuntimeError(const char *a_what) : BaseException()
+        {
+            AddMessage("Runtime Error : -- ");
+            AddMessage(a_what);
+            if (a_what)
+            {
+                Singleton<Tracer>::Instance()->AddTrace(error);
+            }
+        }
+    };
+}
 
 
 #endif //RUNTIME_ERROR_H

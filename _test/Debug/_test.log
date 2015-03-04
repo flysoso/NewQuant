@@ -1,65 +1,122 @@
-﻿  _main.cpp
-d:\documents\visual studio 2013\projects\newquant\matrixcomputation\array.h(98): warning C4018: “<=”: 有符号/无符号不匹配
-          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\array.h(97): 编译类 模板 成员函数“const int &Array<int>::operator ()(const int &) const”时
-          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\permutematrix.h(123): 参见对正在编译的函数 模板 实例化“const int &Array<int>::operator ()(const int &) const”的引用
-          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\permutematrix.h(17): 参见对正在编译的类 模板 实例化“Array<int>”的引用
-          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\permutematrix.h(241): 参见对正在编译的类 模板 实例化“PermuteMatrix<TYPE>”的引用
-d:\documents\visual studio 2013\projects\newquant\matrixcomputation\array.h(104): warning C4018: “<=”: 有符号/无符号不匹配
-          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\array.h(103): 编译类 模板 成员函数“int &Array<int>::operator ()(const int &)”时
-          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\permutematrix.h(109): 参见对正在编译的函数 模板 实例化“int &Array<int>::operator ()(const int &)”的引用
-d:\documents\visual studio 2013\projects\newquant\matrixcomputation\array.h(110): warning C4018: “<=”: 有符号/无符号不匹配
-          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\array.h(109): 编译类 模板 成员函数“void Array<int>::Swap(const int &,const int &)”时
-          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\permutematrix.h(184): 参见对正在编译的函数 模板 实例化“void Array<int>::Swap(const int &,const int &)”的引用
-d:\documents\visual studio 2013\projects\newquant\matrixcomputation\matrixindex.h(98): warning C4018: “<”: 有符号/无符号不匹配
-          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\matrixindex.h(97): 编译类 模板 成员函数“void MatrixIndex<TYPE>::Shift(const int &)”时
+﻿  testLeastSquareSolver.cpp
+d:\documents\visual studio 2013\projects\newquant\matrixcomputation\array.h(100): warning C4018: “<=”: 有符号/无符号不匹配
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\array.h(99): 编译类 模板 成员函数“const int &NewQuant::Array<int>::operator ()(const int &) const”时
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\permutematrix.h(125): 参见对正在编译的函数 模板 实例化“const int &NewQuant::Array<int>::operator ()(const int &) const”的引用
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\permutematrix.h(19): 参见对正在编译的类 模板 实例化“NewQuant::Array<int>”的引用
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\permutematrix.h(243): 参见对正在编译的类 模板 实例化“NewQuant::PermuteMatrix<TYPE>”的引用
+d:\documents\visual studio 2013\projects\newquant\matrixcomputation\array.h(106): warning C4018: “<=”: 有符号/无符号不匹配
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\array.h(105): 编译类 模板 成员函数“int &NewQuant::Array<int>::operator ()(const int &)”时
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\permutematrix.h(111): 参见对正在编译的函数 模板 实例化“int &NewQuant::Array<int>::operator ()(const int &)”的引用
+d:\documents\visual studio 2013\projects\newquant\matrixcomputation\generalmatrix.cpp(373): warning C4244: “初始化”: 从“std::streamsize”转换到“int”，可能丢失数据
+          d:\documents\visual studio 2013\projects\newquant\_test\testleastsquaresolver.cpp(51): 参见对正在编译的函数 模板 实例化“std::ostream &NewQuant::operator <<<TYPE>(std::ostream &,const NewQuant::GeneralMatrix<TYPE> &)”的引用
           with
           [
               TYPE=Type
           ]
-          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\getsubmatrix.h(198): 参见对正在编译的函数 模板 实例化“void MatrixIndex<TYPE>::Shift(const int &)”的引用
+d:\documents\visual studio 2013\projects\newquant\matrixcomputation\matrixexpression.cpp(102): warning C4244: “初始化”: 从“std::streamsize”转换到“int”，可能丢失数据
+          d:\documents\visual studio 2013\projects\newquant\_test\testleastsquaresolver.cpp(58): 参见对正在编译的函数 模板 实例化“std::ostream &NewQuant::operator <<<TYPE>(std::ostream &,const NewQuant::MatrixExpression<TYPE> &)”的引用
           with
           [
               TYPE=Type
           ]
-          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\matrix.h(123): 参见对正在编译的类 模板 实例化“MatrixIndex<TYPE>”的引用
+d:\documents\visual studio 2013\projects\newquant\matrixcomputation\matrixindex.cpp(33): warning C4018: “<”: 有符号/无符号不匹配
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\subtractedmatrix.h(29): 参见对正在编译的函数 模板 实例化“void NewQuant::Union<TYPE>(const NewQuant::MatrixIndex<TYPE> &,const NewQuant::MatrixIndex<TYPE> &,NewQuant::MatrixIndex<TYPE> &)”的引用
           with
           [
               TYPE=Type
           ]
-          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\matrix.h(121): 编译类 模板 成员函数“void Matrix<Type>::GetRowIndex(const int &,MatrixIndex<TYPE> &) const”时
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\subtractedmatrix.h(24): 编译类 模板 成员函数“void NewQuant::SubtractedMatrix<TYPE,NewQuant::GeneralMatrix<TYPE>,NewQuant::GeneralMatrix<TYPE>>::GetRowIndex(const int &,NewQuant::MatrixIndex<TYPE> &) const”时
           with
           [
               TYPE=Type
           ]
-          d:\documents\visual studio 2013\projects\newquant\_test\_main.cpp(41): 参见对正在编译的类 模板 实例化“Matrix<Type>”的引用
-d:\documents\visual studio 2013\projects\newquant\matrixcomputation\constgetrowcolmatrix.h(88): warning C4715: “ConstGetRowColMatrix<double,GeneralMatrix<double> >::operator()”: 不是所有的控件路径都返回值
-d:\documents\visual studio 2013\projects\newquant\matrixcomputation\constgetrowcolmatrix.h(101): warning C4715: “ConstGetRowColMatrix<double,GeneralMatrix<double> >::operator()”: 不是所有的控件路径都返回值
+          d:\documents\visual studio 2013\projects\newquant\_test\testleastsquaresolver.cpp(58): 参见对正在编译的类 模板 实例化“NewQuant::SubtractedMatrix<TYPE,NewQuant::GeneralMatrix<TYPE>,NewQuant::GeneralMatrix<TYPE>>”的引用
+          with
+          [
+              TYPE=Type
+          ]
+d:\documents\visual studio 2013\projects\newquant\matrixcomputation\matrixindex.h(108): warning C4018: “<”: 有符号/无符号不匹配
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\matrixindex.h(107): 编译类 模板 成员函数“bool NewQuant::MatrixIndex<TYPE>::HaveIndex(const int &) const”时
+          with
+          [
+              TYPE=Type
+          ]
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\generalmatrix.cpp(381): 参见对正在编译的函数 模板 实例化“bool NewQuant::MatrixIndex<TYPE>::HaveIndex(const int &) const”的引用
+          with
+          [
+              TYPE=Type
+          ]
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\matrix.h(126): 参见对正在编译的类 模板 实例化“NewQuant::MatrixIndex<TYPE>”的引用
+          with
+          [
+              TYPE=Type
+          ]
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\matrix.h(124): 编译类 模板 成员函数“void NewQuant::Matrix<Type>::GetRowIndex(const int &,NewQuant::MatrixIndex<TYPE> &) const”时
+          with
+          [
+              TYPE=Type
+          ]
+          d:\documents\visual studio 2013\projects\newquant\_test\testleastsquaresolver.cpp(11): 参见对正在编译的类 模板 实例化“NewQuant::Matrix<Type>”的引用
+d:\documents\visual studio 2013\projects\newquant\matrixcomputation\array.h(46): warning C4018: “<”: 有符号/无符号不匹配
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\array.h(43): 编译类 模板 成员函数“void NewQuant::Array<TYPE>::Max(TYPE &,int &) const”时
+          with
+          [
+              TYPE=Type
+          ]
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\householderqrpivot.h(97): 参见对正在编译的函数 模板 实例化“void NewQuant::Array<TYPE>::Max(TYPE &,int &) const”的引用
+          with
+          [
+              TYPE=Type
+          ]
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\householderqrpivot.h(89): 参见对正在编译的类 模板 实例化“NewQuant::Array<TYPE>”的引用
+          with
+          [
+              TYPE=Type
+          ]
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\householderqrpivot.h(79): 编译类 模板 成员函数“void NewQuant::HouseholderQRpivot<Type>::HouseholderTransform(void)”时
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\householderqrpivot.h(33): 参见对正在编译的函数 模板 实例化“void NewQuant::HouseholderQRpivot<Type>::HouseholderTransform(void)”的引用
+          d:\documents\visual studio 2013\projects\newquant\_test\testleastsquaresolver.cpp(44): 参见对正在编译的类 模板 实例化“NewQuant::HouseholderQRpivot<Type>”的引用
+d:\documents\visual studio 2013\projects\newquant\matrixcomputation\array.h(112): warning C4018: “<=”: 有符号/无符号不匹配
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\array.h(111): 编译类 模板 成员函数“void NewQuant::Array<int>::Swap(const int &,const int &)”时
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\permutematrix.h(201): 参见对正在编译的函数 模板 实例化“void NewQuant::Array<int>::Swap(const int &,const int &)”的引用
+d:\documents\visual studio 2013\projects\newquant\matrixcomputation\matrixindex.h(100): warning C4018: “<”: 有符号/无符号不匹配
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\matrixindex.h(99): 编译类 模板 成员函数“void NewQuant::MatrixIndex<TYPE>::Shift(const int &)”时
+          with
+          [
+              TYPE=Type
+          ]
+          d:\documents\visual studio 2013\projects\newquant\matrixcomputation\constgetsubmatrix.h(49): 参见对正在编译的函数 模板 实例化“void NewQuant::MatrixIndex<TYPE>::Shift(const int &)”的引用
+          with
+          [
+              TYPE=Type
+          ]
+d:\documents\visual studio 2013\projects\newquant\matrixcomputation\permutedmatrix.h(79): warning C4715: “NewQuant::PermutedMatrix<double,NewQuant::BaseMatrix<double> >::operator()”: 不是所有的控件路径都返回值
+d:\documents\visual studio 2013\projects\newquant\matrixcomputation\permutedmatrix.h(92): warning C4715: “NewQuant::PermutedMatrix<double,NewQuant::BaseMatrix<double> >::operator()”: 不是所有的控件路径都返回值
   _test.vcxproj -> d:\documents\visual studio 2013\Projects\NewQuant\Debug\_test.exe
 
 项目性能摘要: 
-     2429 毫秒  d:\documents\visual studio 2013\Projects\NewQuant\_test\_test.vcxproj   1 次调用
-               2429 毫秒  Build                                      1 次调用
+     4705 毫秒  d:\documents\visual studio 2013\Projects\NewQuant\_test\_test.vcxproj   1 次调用
+               4705 毫秒  Build                                      1 次调用
 
 目标性能摘要: 
         0 毫秒  AfterBuild                                 1 次调用
         0 毫秒  GetCopyToOutputDirectoryXamlAppDefs        1 次调用
         0 毫秒  _CheckForCompileOutputs                    1 次调用
         0 毫秒  GetResolvedWinMD                           1 次调用
-        0 毫秒  _Manifest                                  1 次调用
         0 毫秒  _SelectedFiles                             1 次调用
-        0 毫秒  _PrepareForBuild                           1 次调用
         0 毫秒  PostBuildEvent                             1 次调用
         0 毫秒  _Midl                                      1 次调用
         0 毫秒  SelectCustomBuild                          1 次调用
+        0 毫秒  SelectClCompile                            1 次调用
         0 毫秒  _ClCompile                                 1 次调用
-        0 毫秒  GetReferenceAssemblyPaths                  1 次调用
-        0 毫秒  CreateCustomManifestResourceNames          1 次调用
         0 毫秒  BeforeLink                                 1 次调用
         0 毫秒  ComputeCLInputPDBName                      1 次调用
         0 毫秒  AfterBuildCompileEvent                     1 次调用
         0 毫秒  _BuildLinkAction                           1 次调用
         0 毫秒  BeforeResourceCompile                      1 次调用
-        0 毫秒  SelectClCompile                            1 次调用
+        0 毫秒  AfterMidl                                  1 次调用
+        0 毫秒  PreLinkEvent                               1 次调用
+        0 毫秒  CreateCustomManifestResourceNames          1 次调用
         0 毫秒  ResolveReferences                          1 次调用
         0 毫秒  ComputeManifestGeneratedLinkerInputs       1 次调用
         0 毫秒  AfterBuildGenerateSources                  1 次调用
@@ -70,75 +127,76 @@ d:\documents\visual studio 2013\projects\newquant\matrixcomputation\constgetrowc
         0 毫秒  ComputeCustomBuildOutput                   1 次调用
         0 毫秒  MakeDirsForBscMake                         1 次调用
         0 毫秒  ComputeLinkSwitches                        1 次调用
-        0 毫秒  _GenerateSatelliteAssemblyInputs           1 次调用
-        0 毫秒  AfterMidl                                  1 次调用
         0 毫秒  _ResourceCompile                           1 次调用
+        0 毫秒  ComputeLinkInputsFromProject               1 次调用
+        0 毫秒  Build                                      1 次调用
         0 毫秒  _Link                                      1 次调用
         0 毫秒  BuildLinkTraverse                          1 次调用
-        0 毫秒  ComputeManifestInputsTargets               1 次调用
         0 毫秒  ComputeRCOutputs                           1 次调用
         0 毫秒  _XdcMake                                   1 次调用
         0 毫秒  CreateSatelliteAssemblies                  1 次调用
         0 毫秒  ExpandSDKReferences                        1 次调用
         0 毫秒  BuildCompileTraverse                       1 次调用
-        0 毫秒  Build                                      1 次调用
         0 毫秒  _Deploy                                    1 次调用
-        0 毫秒  ComputeMIDLGeneratedCompileInputs          1 次调用
-        0 毫秒  PrepareForRun                              1 次调用
-        0 毫秒  BeforeClCompile                            1 次调用
-        0 毫秒  AfterResolveReferences                     1 次调用
-        0 毫秒  ComputeCLGeneratedLinkInputs               1 次调用
-        0 毫秒  DoLinkOutputFilesMatch                     1 次调用
         0 毫秒  _PrepareForReferenceResolution             1 次调用
+        0 毫秒  ComputeMIDLGeneratedCompileInputs          1 次调用
+        0 毫秒  _SplitProjectReferencesByFileExistence     1 次调用
+        0 毫秒  BuildLink                                  1 次调用
+        0 毫秒  BeforeClCompile                            1 次调用
+        0 毫秒  ResolveProjectReferences                   1 次调用
+        0 毫秒  AfterResolveReferences                     1 次调用
+        0 毫秒  BeforeResolveReferences                    1 次调用
+        0 毫秒  ComputeReferenceCLInput                    1 次调用
+        0 毫秒  PrepareForRun                              1 次调用
+        0 毫秒  ComputeCLGeneratedLinkInputs               1 次调用
         0 毫秒  PreBuildEvent                              1 次调用
         0 毫秒  MakeDirsForMidl                            1 次调用
         0 毫秒  _BscMake                                   1 次调用
-        0 毫秒  _Appverifier                               1 次调用
-        0 毫秒  BuildGenerateSourcesTraverse               1 次调用
-        0 毫秒  _BuildGenerateSourcesAction                1 次调用
-        0 毫秒  BuildLink                                  1 次调用
-        0 毫秒  ResolveSDKReferences                       1 次调用
         0 毫秒  _ALink                                     1 次调用
-        0 毫秒  _SplitProjectReferencesByFileExistence     1 次调用
+        0 毫秒  ResolveSDKReferences                       1 次调用
+        0 毫秒  _Appverifier                               1 次调用
+        0 毫秒  ComputeCLCompileGeneratedSbrFiles          1 次调用
         0 毫秒  AfterBuildGenerateSourcesEvent             1 次调用
         0 毫秒  PrepareResourceNames                       1 次调用
-        0 毫秒  BeforeResolveReferences                    1 次调用
-        0 毫秒  ResolveProjectReferences                   1 次调用
-        0 毫秒  ComputeRCGeneratedLinkInputs               1 次调用
-        0 毫秒  BuildCompile                               1 次调用
-        0 毫秒  BeforeBuildGenerateSources                 1 次调用
+        0 毫秒  _BuildGenerateSourcesAction                1 次调用
         0 毫秒  _BuildCompileAction                        1 次调用
-        0 毫秒  GetInstalledSDKLocations                   1 次调用
+        0 毫秒  BeforeBuildGenerateSources                 1 次调用
+        0 毫秒  ComputeRCGeneratedLinkInputs               1 次调用
         0 毫秒  AfterClCompile                             1 次调用
         0 毫秒  ResolvedXDCMake                            1 次调用
         0 毫秒  PlatformPrepareForBuild                    1 次调用
-        0 毫秒  AfterLink                                  1 次调用
         0 毫秒  MakeDirsForXdcMake                         1 次调用
-        1 毫秒  PreLinkEvent                               1 次调用
-        1 毫秒  ComputeLinkInputsFromProject               1 次调用
-        1 毫秒  ComputeCLCompileGeneratedSbrFiles          1 次调用
-        1 毫秒  GetCopyToOutputDirectoryItems              1 次调用
-        1 毫秒  RegisterOutput                             1 次调用
-        1 毫秒  SplitResourcesByCulture                    1 次调用
-        1 毫秒  GetFrameworkPaths                          1 次调用
-        1 毫秒  ResolveAssemblyReferences                  1 次调用
-        1 毫秒  MakeDirsForCl                              1 次调用
-        1 毫秒  ComputeLinkImportLibraryOutputsForClean    1 次调用
+        0 毫秒  GetInstalledSDKLocations                   1 次调用
+        0 毫秒  BuildCompile                               1 次调用
+        0 毫秒  AssignProjectConfiguration                 1 次调用
+        0 毫秒  AfterLink                                  1 次调用
+        1 毫秒  _GenerateSatelliteAssemblyInputs           1 次调用
         1 毫秒  ComputeCLCompileGeneratedXDCFiles          1 次调用
-        1 毫秒  ComputeReferenceCLInput                    1 次调用
-        1 毫秒  AssignProjectConfiguration                 1 次调用
-        1 毫秒  MakeDirsForResourceCompile                 1 次调用
-        1 毫秒  ComputeLegacyManifestEmbedding             1 次调用
+        1 毫秒  DoLinkOutputFilesMatch                     1 次调用
         1 毫秒  AssignTargetPaths                          1 次调用
+        1 毫秒  _Manifest                                  1 次调用
+        1 毫秒  GetReferenceAssemblyPaths                  1 次调用
+        1 毫秒  ComputeLegacyManifestEmbedding             1 次调用
+        1 毫秒  ComputeLinkImportLibraryOutputsForClean    1 次调用
+        1 毫秒  MakeDirsForResourceCompile                 1 次调用
+        1 毫秒  GetFrameworkPaths                          1 次调用
+        1 毫秒  BuildGenerateSourcesTraverse               1 次调用
+        1 毫秒  MakeDirsForLink                            1 次调用
+        1 毫秒  RegisterOutput                             1 次调用
         1 毫秒  CopyFilesToOutputDirectory                 1 次调用
-        2 毫秒  SetBuildDefaultEnvironmentVariables        1 次调用
+        1 毫秒  GetCopyToOutputDirectoryItems              1 次调用
+        1 毫秒  MakeDirsForCl                              1 次调用
+        1 毫秒  ComputeManifestInputsTargets               1 次调用
+        1 毫秒  _PrepareForBuild                           1 次调用
+        1 毫秒  SplitResourcesByCulture                    1 次调用
+        1 毫秒  ResolveAssemblyReferences                  1 次调用
         2 毫秒  ComputeCLOutputs                           1 次调用
-        2 毫秒  MakeDirsForLink                            1 次调用
-        5 毫秒  PrepareForBuild                            1 次调用
-        5 毫秒  FinalizeBuildStatus                        1 次调用
-        6 毫秒  WarnCompileDuplicatedFilename              1 次调用
+        2 毫秒  SetBuildDefaultEnvironmentVariables        1 次调用
+        3 毫秒  FinalizeBuildStatus                        1 次调用
+        4 毫秒  PrepareForBuild                            1 次调用
+        5 毫秒  _CheckForInvalidConfigurationAndPlatform   1 次调用
         6 毫秒  InitializeBuildStatus                      1 次调用
-        6 毫秒  _CheckForInvalidConfigurationAndPlatform   1 次调用
-       10 毫秒  SetCABuildNativeEnvironmentVariables       1 次调用
-      512 毫秒  Link                                       1 次调用
-     1852 毫秒  ClCompile                                  1 次调用
+        7 毫秒  WarnCompileDuplicatedFilename              1 次调用
+        9 毫秒  SetCABuildNativeEnvironmentVariables       1 次调用
+      899 毫秒  Link                                       1 次调用
+     3738 毫秒  ClCompile                                  1 次调用

@@ -3,22 +3,24 @@
 
 #include "LogicError.h"
 
-class InternalException : public LogicError
+namespace NewQuant
 {
-public:
-
-    InternalException(const char* a_what) : LogicError()
+    class InternalException : public LogicError
     {
-        AddMessage("Internal Exception, please inform author : -- ");
-        AddMessage(a_what);
-        if (a_what)
+    public:
+
+        InternalException(const char* a_what) : LogicError()
         {
-            Singleton<Tracer>::Instance()->AddTrace(error);
+            AddMessage("Internal Exception, please inform author : -- ");
+            AddMessage(a_what);
+            if (a_what)
+            {
+                Singleton<Tracer>::Instance()->AddTrace(error);
+            }
         }
-    }
 
-};
-
+    };
+}
 
 
 #endif //INERTNAL_EXCEPTION_H

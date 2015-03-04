@@ -3,20 +3,22 @@
 
 #include "LogicError.h"
 
-class InvalidArgument : public LogicError
+namespace NewQuant
 {
-public:
-    InvalidArgument(const char *a_what = NULL) : LogicError()
+    class InvalidArgument : public LogicError
     {
-        AddMessage("Invalid argument : -- ");
-        AddMessage(a_what);
-        if (a_what)
+    public:
+        InvalidArgument(const char *a_what = NULL) : LogicError()
         {
-            Singleton<Tracer>::Instance()->AddTrace(error);
+            AddMessage("Invalid argument : -- ");
+            AddMessage(a_what);
+            if (a_what)
+            {
+                Singleton<Tracer>::Instance()->AddTrace(error);
+            }
         }
-    }
-};
-
+    };
+}
 
 
 #endif //INVALID_ARGUMENT_H

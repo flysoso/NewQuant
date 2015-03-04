@@ -3,6 +3,7 @@
 void testLowerBandMatrix()
 {
     using namespace std;
+    using namespace NewQuant;
     default_random_engine dre;
     normal_distribution<Type> nd;
     LowerBandMatrix<Type> low_band1(10, 6), low_band2(10, 3);
