@@ -13,13 +13,13 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class DiagonalSolver;
-    template <typename TYPE> class LowerBandSolver;
-    template <typename TYPE> class UpperBandSolver;
-    template <typename TYPE> class BandLUsolverPartialPivot;
-    template <typename TYPE> class LUsolverPartialPivot;
+    template<typename TYPE> class DiagonalSolver;
+    template<typename TYPE> class LowerBandSolver;
+    template<typename TYPE> class UpperBandSolver;
+    template<typename TYPE> class BandLUsolverPartialPivot;
+    template<typename TYPE> class LUsolverPartialPivot;
 
-    template <typename TYPE>
+    template<typename TYPE>
     std::shared_ptr<GeneralMatrix<TYPE> > MatrixExpression<TYPE>::MakeInv()const
     {
         assert(nrows == ncols);
@@ -49,7 +49,7 @@ namespace NewQuant
         return inv;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     std::shared_ptr<LinearEquationSolver<TYPE> > MatrixExpression<TYPE>::MakeSolver()const
     {
         assert(nrows == ncols);
@@ -85,7 +85,7 @@ namespace NewQuant
         return solve;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     std::ostream& operator<<(std::ostream& s, const MatrixExpression<TYPE>& X)
     {
         using namespace std;

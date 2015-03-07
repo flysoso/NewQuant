@@ -53,11 +53,13 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -87,6 +89,7 @@
     <ClInclude Include="testBase.h" />
     <ClInclude Include="testConstantMatrix.h" />
     <ClInclude Include="testDiagonalMatrix.h" />
+    <ClInclude Include="testEigenSolver.h" />
     <ClInclude Include="testIdentityMatrix.h" />
     <ClInclude Include="testLeastSquareSolver.h" />
     <ClInclude Include="testLowerBandMatrix.h" />
@@ -105,6 +108,7 @@
     <ClCompile Include="testBandMatrix.cpp" />
     <ClCompile Include="testConstantMatrix.cpp" />
     <ClCompile Include="testDiagonalMatrix.cpp" />
+    <ClCompile Include="testEigenSolver.cpp" />
     <ClCompile Include="testIdentityMatrix.cpp" />
     <ClCompile Include="testLeastSquareSolver.cpp" />
     <ClCompile Include="testLowerBandMatrix.cpp" />

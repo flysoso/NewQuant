@@ -8,7 +8,7 @@
 namespace NewQuant
 {
     /// Lower triangular matrix.
-    template <typename TYPE>
+    template<typename TYPE>
     class LowerTriangularMatrix : public GeneralMatrix < TYPE >
     {
     public:
@@ -107,7 +107,7 @@ namespace NewQuant
         }
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     inline void Swap(LowerTriangularMatrix<TYPE>& A, LowerTriangularMatrix<TYPE>& B)
     {
         A.Swap(B);

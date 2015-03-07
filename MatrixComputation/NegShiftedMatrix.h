@@ -8,7 +8,7 @@ namespace NewQuant
     template<typename TYPE> class MatrixIndex;
 
     /// TYPE minus matrix.
-    template <typename TYPE, typename MATRIX>
+    template<typename TYPE, typename MATRIX>
     class NegShiftedMatrix : public UnitaryMatrixExpression < TYPE, MATRIX >
     {
     public:
@@ -66,26 +66,26 @@ namespace NewQuant
     };
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     NegShiftedMatrix<TYPE, GeneralMatrix<TYPE> > operator - (const GeneralMatrix<TYPE> & mat, const TYPE &x)
     {
         return NegShiftedMatrix<TYPE, GeneralMatrix<TYPE> >(x, mat, NegShiftedMatrix<TYPE, GeneralMatrix<TYPE> >::MinusType::mat_num);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     NegShiftedMatrix<TYPE, GeneralMatrix<TYPE> > operator - (const TYPE &x, const GeneralMatrix<TYPE> & mat)
     {
         return NegShiftedMatrix<TYPE, GeneralMatrix<TYPE> >(x, mat, NegShiftedMatrix<TYPE, GeneralMatrix<TYPE> >::MinusType::num_mat);
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     NegShiftedMatrix<TYPE, MatrixExpression<TYPE> > operator - (const MatrixExpression<TYPE> & mat, const TYPE &x)
     {
         return NegShiftedMatrix<TYPE, MatrixExpression<TYPE> >(x, mat, NegShiftedMatrix<TYPE, MatrixExpression<TYPE> >::MinusType::mat_num);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     NegShiftedMatrix<TYPE, MatrixExpression<TYPE> > operator - (const TYPE &x, const MatrixExpression<TYPE> & mat)
     {
         return NegShiftedMatrix<TYPE, MatrixExpression<TYPE> >(x, mat, NegShiftedMatrix<TYPE, MatrixExpression<TYPE> >::MinusType::num_mat);

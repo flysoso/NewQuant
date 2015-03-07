@@ -8,7 +8,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     BandLUsolverNoPivot<TYPE>::BandLUsolverNoPivot(const BaseMatrix<TYPE> &bm, const TYPE &e) :
         BandLUsolver<TYPE>(bm, e),
         lm(bm.Nrows(), bm.BandWidth().Lower()),
@@ -25,7 +25,7 @@ namespace NewQuant
         BandLUdecomposion();
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void BandLUsolverNoPivot<TYPE>::BandLUdecomposion()
     {
         BandLUcombine_LbUb<TYPE> &m = combine;
@@ -52,7 +52,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void BandLUsolverNoPivot<TYPE>::Solve(const BaseMatrix<TYPE> &in, BaseMatrix<TYPE> &out) const
     {
         assert(in.Nrows() == combine.Ncols());
@@ -67,7 +67,7 @@ namespace NewQuant
         um.Solve(t, out);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     LogAndSign<TYPE> BandLUsolverNoPivot<TYPE>::LogDeterminant() const
     {
         if (LinearEquationSolver<TYPE>::IsFailed())

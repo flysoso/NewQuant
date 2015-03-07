@@ -9,7 +9,7 @@ namespace NewQuant
     template<typename TYPE> class MatrixIndex;
 
     /// A row or column of a matrix.
-    template <typename TYPE, typename MATRIX>
+    template<typename TYPE, typename MATRIX>
     class GetRowColMatrix : public UnitaryMatrixExpression < TYPE, MATRIX >, public VectorExpression < TYPE >
     {
     public:
@@ -325,7 +325,7 @@ namespace NewQuant
 
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     GetRowColMatrix<TYPE, GeneralMatrix<TYPE> > row(GeneralMatrix<TYPE> & mat, const int &r)
     {
         assert(r > 0 && r <= mat.Nrows());
@@ -333,7 +333,7 @@ namespace NewQuant
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     GetRowColMatrix<TYPE, MatrixExpression<TYPE> > row(MatrixExpression<TYPE> & mat, const int &r)
     {
         assert(r > 0 && r <= mat.Nrows());
@@ -341,7 +341,7 @@ namespace NewQuant
     }
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     GetRowColMatrix<TYPE, GeneralMatrix<TYPE> > col(GeneralMatrix<TYPE> & mat, const int &c)
     {
         assert(c > 0 && c <= mat.Ncols());
@@ -349,7 +349,7 @@ namespace NewQuant
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     GetRowColMatrix<TYPE, MatrixExpression<TYPE> > col(MatrixExpression<TYPE> & mat, const int &c)
     {
         assert(c > 0 && c <= mat.Ncols());

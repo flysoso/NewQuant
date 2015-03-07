@@ -6,7 +6,7 @@
 namespace NewQuant
 {
     /// Triangular band matrix.
-    template <typename TYPE>
+    template<typename TYPE>
     class TridiagonalMatrix : public BandMatrix < TYPE >
     {
     public:
@@ -61,7 +61,7 @@ namespace NewQuant
         void Swap(BandMatrix<TYPE>& gm);
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     inline void Swap(TridiagonalMatrix<TYPE>& A, TridiagonalMatrix<TYPE>& B)
     {
         A.Swap(B);

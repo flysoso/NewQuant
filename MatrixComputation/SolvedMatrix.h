@@ -10,7 +10,7 @@ namespace NewQuant
     template<typename TYPE> class MatrixIndex;
 
     /// Inverted matrix multiplies matrix.
-    template <typename TYPE, typename MATRIX1, typename MATRIX2>
+    template<typename TYPE, typename MATRIX1, typename MATRIX2>
     class SolvedMatrix : public BinaryMatrixExpression < TYPE, MATRIX1, MATRIX2 >
     {
     private:
@@ -84,14 +84,14 @@ namespace NewQuant
 
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     SolvedMatrix<TYPE, GeneralMatrix<TYPE>, GeneralMatrix<TYPE> > operator / (const GeneralMatrix<TYPE> & mat1, const GeneralMatrix<TYPE> & mat2)
     {
         assert(mat1.Ncols() == mat2.Nrows() && mat2.BandWidth().Evalued());
         return SolvedMatrix<TYPE, GeneralMatrix<TYPE>, GeneralMatrix<TYPE> >(mat1, mat2);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     SolvedMatrix<TYPE, GeneralMatrix<TYPE>, MatrixExpression<TYPE> > operator / (const GeneralMatrix<TYPE> & mat1, const MatrixExpression<TYPE> & mat2)
     {
         assert(mat1.Ncols() == mat2.Nrows() && mat2.BandWidth().Evalued());
@@ -99,14 +99,14 @@ namespace NewQuant
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     SolvedMatrix<TYPE, MatrixExpression<TYPE>, GeneralMatrix<TYPE> > operator / (const MatrixExpression<TYPE> & mat1, const GeneralMatrix<TYPE> & mat2)
     {
         assert(mat1.Ncols() == mat2.Nrows() && mat2.BandWidth().Evalued());
         return SolvedMatrix<TYPE, MatrixExpression<TYPE>, GeneralMatrix<TYPE> >(mat1, mat2);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     SolvedMatrix<TYPE, MatrixExpression<TYPE>, MatrixExpression<TYPE> > operator / (const MatrixExpression<TYPE> & mat1, const MatrixExpression<TYPE> & mat2)
     {
         assert(mat1.Ncols() == mat2.Nrows() && mat2.BandWidth().Evalued());

@@ -8,7 +8,7 @@ namespace NewQuant
     template<typename TYPE> class MatrixIndex;
 
     /// Product of two matrices.
-    template <typename TYPE, typename MATRIX1, typename MATRIX2>
+    template<typename TYPE, typename MATRIX1, typename MATRIX2>
     class MultipliedMatrix : public BinaryMatrixExpression < TYPE, MATRIX1, MATRIX2 >
     {
     private:
@@ -88,14 +88,14 @@ namespace NewQuant
     };
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     MultipliedMatrix<TYPE, GeneralMatrix<TYPE>, GeneralMatrix<TYPE> > operator * (const GeneralMatrix<TYPE> & mat1, const GeneralMatrix<TYPE> & mat2)
     {
         assert(mat1.Ncols() == mat2.Nrows());
         return MultipliedMatrix<TYPE, GeneralMatrix<TYPE>, GeneralMatrix<TYPE> >(mat1, mat2);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     MultipliedMatrix<TYPE, GeneralMatrix<TYPE>, MatrixExpression<TYPE> > operator * (const GeneralMatrix<TYPE> & mat1, const MatrixExpression<TYPE> & mat2)
     {
         assert(mat1.Ncols() == mat2.Nrows());
@@ -103,14 +103,14 @@ namespace NewQuant
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     MultipliedMatrix<TYPE, MatrixExpression<TYPE>, GeneralMatrix<TYPE> > operator * (const MatrixExpression<TYPE> & mat1, const GeneralMatrix<TYPE> & mat2)
     {
         assert(mat1.Ncols() == mat2.Nrows());
         return MultipliedMatrix<TYPE, MatrixExpression<TYPE>, GeneralMatrix<TYPE> >(mat1, mat2);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     MultipliedMatrix<TYPE, MatrixExpression<TYPE>, MatrixExpression<TYPE> > operator * (const MatrixExpression<TYPE> & mat1, const MatrixExpression<TYPE> & mat2)
     {
         assert(mat1.Ncols() == mat2.Nrows());
@@ -118,7 +118,7 @@ namespace NewQuant
     }
 
     // BaseMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     MultipliedMatrix<TYPE, BaseMatrix<TYPE>, BaseMatrix<TYPE> > operator * (const BaseMatrix<TYPE> & mat1, const BaseMatrix<TYPE> & mat2)
     {
         assert(mat1.Ncols() == mat2.Nrows());

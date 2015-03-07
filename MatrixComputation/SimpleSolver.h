@@ -5,9 +5,9 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class BaseMatrix;
+    template<typename TYPE> class BaseMatrix;
 
-    template <typename TYPE>
+    template<typename TYPE>
     class SimpleSolver : public LinearEquationSolver < TYPE >
     {
     protected:

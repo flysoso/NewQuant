@@ -10,7 +10,7 @@ namespace NewQuant
 {
     /// Return from LogDeterminant function.
     /// Members are the log of the absolute value and the sign (+1, -1 or 0)
-    template <typename TYPE>
+    template<typename TYPE>
     class LogAndSign
     {
     private:

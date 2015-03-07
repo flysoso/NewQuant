@@ -15,7 +15,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     void BandMatrix<TYPE>::CornerClear() const
     {
         int i = GeneralMatrix<TYPE>::band_width.Lower();
@@ -46,14 +46,14 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     BandMatrix<TYPE>::BandMatrix(const int &n, const int &lb, const int &ub) : GeneralMatrix<TYPE>(n, n, n*(lb + 1 + ub))
     {
         GeneralMatrix<TYPE>::band_width.Set(lb, ub, true);
         CornerClear();
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     BandMatrix<TYPE> & BandMatrix<TYPE>::operator=(const BaseMatrix<TYPE> &bm)
     {
         if (&bm == this)
@@ -94,7 +94,7 @@ namespace NewQuant
         return *this;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void BandMatrix<TYPE>::operator<<(const BaseMatrix<TYPE> &bm)
     {
         if (&bm == this)
@@ -135,13 +135,13 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     MatrixType BandMatrix<TYPE>::Type() const
     {
         return MatrixType(MatrixType::Type::BandMatrix);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE& BandMatrix<TYPE>::operator()(const int &m, const int &n)
     {
         int w = GeneralMatrix<TYPE>::band_width.Upper() + GeneralMatrix<TYPE>::band_width.Lower() + 1;
@@ -158,7 +158,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE BandMatrix<TYPE>::operator()(const int &m, const int &n) const
     {
         int w = GeneralMatrix<TYPE>::band_width.Upper() + GeneralMatrix<TYPE>::band_width.Lower() + 1;
@@ -174,7 +174,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     std::shared_ptr<GeneralMatrix<TYPE> > BandMatrix<TYPE>::MakeInv() const
     {
         int lbw = GeneralMatrix<TYPE>::band_width.Lower();
@@ -202,7 +202,7 @@ namespace NewQuant
         return inv;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     std::shared_ptr<LinearEquationSolver<TYPE> > BandMatrix<TYPE>::MakeSolver() const
     {
         std::shared_ptr<LinearEquationSolver<TYPE> > solver;
@@ -235,7 +235,7 @@ namespace NewQuant
         return solver;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void BandMatrix<TYPE>::Solve(const BaseMatrix<TYPE> &in, BaseMatrix<TYPE> &out) const
     {
         int n = GeneralMatrix<TYPE>::nrows;
@@ -246,7 +246,7 @@ namespace NewQuant
         solver->Solve(in, out);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void BandMatrix<TYPE>::Resize(const int &n, const int &lb, const int &ub)
     {
         assert(n > 0 && lb < n && ub < n);

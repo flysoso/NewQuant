@@ -3,7 +3,9 @@ d:\documents\visual studio 2013\projects\newquant\_test\debug\vc120.idb
 d:\documents\visual studio 2013\projects\newquant\_test\debug\testbandmatrix.obj
 d:\documents\visual studio 2013\projects\newquant\_test\debug\testconstantmatrix.obj
 d:\documents\visual studio 2013\projects\newquant\_test\debug\testdiagonalmatrix.obj
+d:\documents\visual studio 2013\projects\newquant\_test\debug\testeigensolver.obj
 d:\documents\visual studio 2013\projects\newquant\_test\debug\testidentitymatrix.obj
+d:\documents\visual studio 2013\projects\newquant\_test\debug\testleastsquaresolver.obj
 d:\documents\visual studio 2013\projects\newquant\_test\debug\testlowerbandmatrix.obj
 d:\documents\visual studio 2013\projects\newquant\_test\debug\testlowertriangularmatrix.obj
 d:\documents\visual studio 2013\projects\newquant\_test\debug\testmatrix.obj
@@ -22,6 +24,6 @@ d:\documents\visual studio 2013\projects\newquant\debug\_test.pdb
 d:\documents\visual studio 2013\projects\newquant\_test\debug\_test.tlog\cl.read.1.tlog
 d:\documents\visual studio 2013\projects\newquant\_test\debug\_test.tlog\cl.write.1.tlog
 d:\documents\visual studio 2013\projects\newquant\_test\debug\_test.tlog\cl.command.1.tlog
+d:\documents\visual studio 2013\projects\newquant\_test\debug\_test.tlog\link.command.1.tlog
 d:\documents\visual studio 2013\projects\newquant\_test\debug\_test.tlog\link.read.1.tlog
 d:\documents\visual studio 2013\projects\newquant\_test\debug\_test.tlog\link.write.1.tlog
-d:\documents\visual studio 2013\projects\newquant\_test\debug\_test.tlog\link.command.1.tlog

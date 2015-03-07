@@ -5,10 +5,10 @@
 #include "LUsolver.h"
 namespace NewQuant
 {
-    template <typename TYPE> class LUsolver;
-    template <typename TYPE> class LUcombine;
+    template<typename TYPE> class LUsolver;
+    template<typename TYPE> class LUcombine;
 
-    template <typename TYPE>
+    template<typename TYPE>
     class LUsolverPartialPivot : public LUsolver < TYPE >
     {
     private:

@@ -5,7 +5,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     RowVector<TYPE>& RowVector<TYPE>::operator=(const BaseMatrix<TYPE> &bm)
     {
         if (&bm == this)
@@ -30,41 +30,41 @@ namespace NewQuant
         return *this;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE& RowVector<TYPE>::operator()(const int &n)
     {
         assert(n > 0 && n <= GeneralMatrix<TYPE>::ncols);
         return GeneralMatrix<TYPE>::store[n - 1];
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE& RowVector<TYPE>::operator()(const int &m, const int &n)
     {
         assert(n > 0 && n <= GeneralMatrix<TYPE>::ncols && m == 1);
         return GeneralMatrix<TYPE>::store[n - 1];
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE RowVector<TYPE>::operator()(const int &n) const
     {
         assert(n > 0 && n <= GeneralMatrix<TYPE>::ncols);
         return GeneralMatrix<TYPE>::store[n - 1];
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE RowVector<TYPE>::operator()(const int &m, const int &n) const
     {
         assert(n > 0 && n <= GeneralMatrix<TYPE>::ncols && m == 1);
         return GeneralMatrix<TYPE>::store[n - 1];
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     MatrixType RowVector<TYPE>::Type() const
     {
         return MatrixType(MatrixType::Type::RowVector);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void RowVector<TYPE>::Resize(const int &nc)
     {
         assert(nc > 0);
@@ -79,14 +79,14 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void RowVector<TYPE>::Resize(const int &nr, const int &nc)
     {
         assert(nc > 0 && nr == 1);
         Resize(nc);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void RowVector<TYPE>::Swap(Matrix<TYPE>& gm)
     {
         assert(gm.Nrows() == 1);

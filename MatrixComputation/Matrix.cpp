@@ -8,13 +8,13 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     Matrix<TYPE>::Matrix() : GeneralMatrix<TYPE>(1, 1, 1)
     {
         GeneralMatrix<TYPE>::band_width.Set(0, 0, true);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     Matrix<TYPE>::Matrix(const int &m, const int &n) : GeneralMatrix<TYPE>(m, n, m*n)
     {
         if (m == n)
@@ -27,7 +27,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     Matrix<TYPE>::Matrix(const int &m, const int &n, const TYPE &a) : GeneralMatrix<TYPE>(m, n, m * n)
     {
         GeneralMatrix<TYPE>::operator << (a);
@@ -42,7 +42,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     Matrix<TYPE>::Matrix(const int &m, const int &n, const TYPE* a) : GeneralMatrix<TYPE>(m, n, m * n)
     {
         this->operator << (a);
@@ -57,7 +57,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     Matrix<TYPE> & Matrix<TYPE>::operator=(const BaseMatrix<TYPE> &bm)
     {
         if (&bm == this)
@@ -96,7 +96,7 @@ namespace NewQuant
         return *this;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void Matrix<TYPE>::operator<<(const BaseMatrix<TYPE> &bm)
     {
         if (&bm == this)
@@ -123,27 +123,27 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     MatrixType Matrix<TYPE>::Type() const
     {
         return MatrixType(MatrixType::Type::Matrix);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE& Matrix<TYPE>::operator()(const int &m, const int &n)
     {
         assert(m > 0 && m <= GeneralMatrix<TYPE>::nrows && n > 0 && n <= GeneralMatrix<TYPE>::ncols);
         return GeneralMatrix<TYPE>::store[(m - 1)*GeneralMatrix<TYPE>::ncols + n - 1];
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE Matrix<TYPE>::operator()(const int &m, const int &n) const
     {
         assert(m > 0 && m <= GeneralMatrix<TYPE>::nrows && n > 0 && n <= GeneralMatrix<TYPE>::ncols);
         return GeneralMatrix<TYPE>::store[(m - 1)*GeneralMatrix<TYPE>::ncols + n - 1];
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void Matrix<TYPE>::Solve(const BaseMatrix<TYPE>& in, BaseMatrix<TYPE>& out) const
     {
         int n = GeneralMatrix<TYPE>::nrows;
@@ -155,7 +155,7 @@ namespace NewQuant
     }
 
 
-    template <typename TYPE>
+    template<typename TYPE>
     void Matrix<TYPE>::Resize(const int &nr, const int &nc)
     {
         assert(nr > 0 && nc > 0);
@@ -172,7 +172,7 @@ namespace NewQuant
 
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void Matrix<TYPE>::SwapRow(const int &r1, const int &r2)
     {
         assert(r1 > 0 && r1 <= GeneralMatrix<TYPE>::nrows);
@@ -190,7 +190,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void Matrix<TYPE>::SwapCol(const int &c1, const int &c2)
     {
         assert(c1 > 0 && c1 <= GeneralMatrix<TYPE>::ncols);

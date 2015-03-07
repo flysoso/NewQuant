@@ -9,7 +9,7 @@ namespace NewQuant
     template<typename TYPE> class MatrixIndex;
 
     /// Schur (elementwise) product of two matrices.
-    template <typename TYPE, typename MATRIX1, typename MATRIX2>
+    template<typename TYPE, typename MATRIX1, typename MATRIX2>
     class SPMatrix : public BinaryMatrixExpression < TYPE, MATRIX1, MATRIX2 >
     {
     public:
@@ -60,14 +60,14 @@ namespace NewQuant
 
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     SPMatrix<TYPE, GeneralMatrix<TYPE>, GeneralMatrix<TYPE> > sp(const GeneralMatrix<TYPE> & mat1, const GeneralMatrix<TYPE> & mat2)
     {
         assert(mat1.Nrows() == mat2.Nrows() && mat1.Ncols() == mat2.Ncols());
         return SPMatrix<TYPE, GeneralMatrix<TYPE>, GeneralMatrix<TYPE> >(mat1, mat2);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     SPMatrix<TYPE, GeneralMatrix<TYPE>, MatrixExpression<TYPE> > sp(const GeneralMatrix<TYPE> & mat1, const MatrixExpression<TYPE> & mat2)
     {
         assert(mat1.Nrows() == mat2.Nrows() && mat1.Ncols() == mat2.Ncols());
@@ -75,14 +75,14 @@ namespace NewQuant
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     SPMatrix<TYPE, MatrixExpression<TYPE>, GeneralMatrix<TYPE> > sp(const MatrixExpression<TYPE> & mat1, const GeneralMatrix<TYPE> & mat2)
     {
         assert(mat1.Nrows() == mat2.Nrows() && mat1.Ncols() == mat2.Ncols());
         return SPMatrix<TYPE, MatrixExpression<TYPE>, GeneralMatrix<TYPE> >(mat1, mat2);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     SPMatrix<TYPE, MatrixExpression<TYPE>, MatrixExpression<TYPE> > sp(const MatrixExpression<TYPE> & mat1, const MatrixExpression<TYPE> & mat2)
     {
         assert(mat1.Nrows() == mat2.Nrows() && mat1.Ncols() == mat2.Ncols());

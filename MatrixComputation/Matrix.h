@@ -16,7 +16,7 @@ namespace NewQuant
     template<typename TYPE> class LUsolverPartialPivot;
 
     /// The usual rectangular matrix.
-    template <typename TYPE>
+    template<typename TYPE>
     class Matrix : public GeneralMatrix < TYPE >
     {
     public:
@@ -135,7 +135,7 @@ namespace NewQuant
         }
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     inline void Swap(Matrix<TYPE>& A, Matrix<TYPE>& B)
     {
         A.Swap(B);

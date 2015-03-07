@@ -6,7 +6,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     ConstantMatrix<TYPE> & ConstantMatrix<TYPE>::operator=(const BaseMatrix<TYPE> &bm)
     {
         if (&bm == this)
@@ -20,7 +20,7 @@ namespace NewQuant
         return *this;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void ConstantMatrix<TYPE>::operator<<(const BaseMatrix<TYPE> &bm)
     {
         assert(bm.Nrows() == GeneralMatrix<TYPE>::nrows && bm.Ncols() == GeneralMatrix<TYPE>::ncols);
@@ -31,27 +31,27 @@ namespace NewQuant
         operator()(1, 1) = bm(1, 1);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE& ConstantMatrix<TYPE>::operator()(const int &m, const int &n)
     {
         assert(n > 0 && m <= GeneralMatrix<TYPE>::nrows && n <= GeneralMatrix<TYPE>::ncols && m > 0);
         return GeneralMatrix<TYPE>::store[0];
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE ConstantMatrix<TYPE>::operator()(const int &m, const int &n) const
     {
         assert(n > 0 && m <= GeneralMatrix<TYPE>::nrows && n <= GeneralMatrix<TYPE>::ncols && m > 0);
         return GeneralMatrix<TYPE>::store[0];
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     MatrixType ConstantMatrix<TYPE>::Type() const
     {
         return MatrixType(MatrixType::Type::ConstantMatrix);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE ConstantMatrix<TYPE>::Trace() const
     {
         int r = GeneralMatrix<TYPE>::nrows, c = GeneralMatrix<TYPE>::ncols;
@@ -60,7 +60,7 @@ namespace NewQuant
         return sum;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     std::shared_ptr<GeneralMatrix<TYPE> > ConstantMatrix<TYPE>::MakeInv() const
     {
         assert(GeneralMatrix<TYPE>::nrows == GeneralMatrix<TYPE>::ncols);
@@ -80,7 +80,7 @@ namespace NewQuant
         return inv;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void ConstantMatrix<TYPE>::Solve(const BaseMatrix<TYPE>& in, BaseMatrix<TYPE>& out) const
     {
         int n = GeneralMatrix<TYPE>::nrows;
@@ -91,7 +91,7 @@ namespace NewQuant
         solver->Solve(in, out);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void ConstantMatrix<TYPE>::Resize(const int &r, const int &c)
     {
         GeneralMatrix<TYPE>::GeneralResize(r, c, 1);

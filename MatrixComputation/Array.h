@@ -7,7 +7,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     class Array
     {
     private:
@@ -122,7 +122,7 @@ namespace NewQuant
         }
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     inline void SwapArray(Array<TYPE> &a, Array<TYPE> &b)
     {
         a.Swap(b);

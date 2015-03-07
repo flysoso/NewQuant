@@ -6,7 +6,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     void Union(const MatrixIndex<TYPE> &mi1, const MatrixIndex<TYPE> &mi2, MatrixIndex<TYPE> &mi)
     {
         using namespace std;
@@ -48,7 +48,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void Intersect(const MatrixIndex<TYPE> &mi1, const MatrixIndex<TYPE> &mi2, MatrixIndex<TYPE> &mi)
     {
         mi.Clear();

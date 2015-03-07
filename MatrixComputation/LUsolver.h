@@ -9,12 +9,12 @@
 
 namespace NewQuant
 {
-    template <typename T> class LUcombine;
-    template <typename T> class LowerTriangularMatrix;
-    template <typename T> class UpperTriangularMatrix;
-    template <typename T> class PermuteMatrix;
+    template<typename T> class LUcombine;
+    template<typename T> class LowerTriangularMatrix;
+    template<typename T> class UpperTriangularMatrix;
+    template<typename T> class PermuteMatrix;
 
-    template <typename TYPE>
+    template<typename TYPE>
     class LUsolver : public LinearEquationSolver < TYPE >
     {
     protected:
@@ -62,7 +62,7 @@ namespace NewQuant
         virtual LogAndSign<TYPE> LogDeterminant() const = 0;
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     class LUcombine : public MatrixExpression < TYPE >
     {
     private:

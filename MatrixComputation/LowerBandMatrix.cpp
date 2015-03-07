@@ -5,7 +5,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     LowerBandMatrix<TYPE> & LowerBandMatrix<TYPE>::operator=(const BaseMatrix<TYPE> &bm)
     {
         if (&bm == this)
@@ -36,20 +36,20 @@ namespace NewQuant
         return *this;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     MatrixType LowerBandMatrix<TYPE>::Type() const
     {
         return MatrixType(MatrixType::Type::LowerBandMatrix);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void LowerBandMatrix<TYPE>::Resize(const int &n, const int &lb, const int &ub)
     {
         assert(n > 0 && ub == 0 && lb >= 0 && lb < n);
         BandMatrix<TYPE>::Resize(n, lb, ub);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE& LowerBandMatrix<TYPE>::operator()(const int &m, const int &n)
     {
         int w = GeneralMatrix<TYPE>::band_width.Lower() + 1;
@@ -66,7 +66,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE LowerBandMatrix<TYPE>::operator()(const int &m, const int &n) const
     {
         int w = GeneralMatrix<TYPE>::band_width.Lower() + 1;
@@ -82,7 +82,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void LowerBandMatrix<TYPE>::Swap(BandMatrix<TYPE>& gm)
     {
         assert(gm.BandWidth().Upper() == 0);

@@ -294,6 +294,18 @@
     <ClInclude Include="VectorExpression.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="EigenSolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="JacobiSolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassicalJacobiSolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CyclicJacobiSolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="_main.cpp">

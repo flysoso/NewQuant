@@ -5,7 +5,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     void SimpleSolver<TYPE>::TestSingular()
     {
         bool not_sig = true;

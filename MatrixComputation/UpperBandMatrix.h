@@ -5,10 +5,10 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class BandMatrix;
+    template<typename TYPE> class BandMatrix;
 
     /// Upper triangular band matrix.
-    template <typename TYPE>
+    template<typename TYPE>
     class UpperBandMatrix : public BandMatrix < TYPE >
     {
     public:
@@ -57,7 +57,7 @@ namespace NewQuant
         void Swap(BandMatrix<TYPE>& gm);
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     inline void Swap(UpperBandMatrix<TYPE>& A, UpperBandMatrix<TYPE>& B)
     {
         A.Swap(B);

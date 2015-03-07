@@ -27,6 +27,18 @@ namespace NewQuant
         virtual void GetRowIndex(const int &, MatrixIndex<TYPE> &) const = 0;
         virtual void GetColIndex(const int &, MatrixIndex<TYPE> &) const = 0;
     };
+
+    template<typename TYPE>
+    TYPE Trace(const BaseMatrix<TYPE> &bm)
+    {
+        assert(bm.Nrows() == bm.Ncols());
+        TYPE trace(0);
+        for (int i = 1; i <= bm.Nrows();++i)
+        {
+            trace += bm(i, i);
+        }
+        return trace;
+    }
 }
 
 #endif //BASE_MATRIX_H

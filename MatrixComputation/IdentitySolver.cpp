@@ -7,7 +7,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     void IdentitySolver<TYPE>::Solve(const BaseMatrix<TYPE> &in, BaseMatrix<TYPE> &out) const
     {
         if (LinearEquationSolver<TYPE>::IsFailed())

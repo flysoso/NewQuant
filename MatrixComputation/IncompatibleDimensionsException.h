@@ -6,7 +6,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class BaseMatrix;
+    template<typename TYPE> class BaseMatrix;
 
     /// Incompatible dimensions exception.
     class IncompatibleDimensionsException : public LogicError
@@ -18,7 +18,7 @@ namespace NewQuant
             Singleton<Tracer>::Instance()->AddTrace(error);
         }
 
-        template <typename TYPE>
+        template<typename TYPE>
         IncompatibleDimensionsException(const BaseMatrix<TYPE>& A) : LogicError()
         {
             AddMessage("Incompatible Dimensions : -- ");
@@ -26,7 +26,7 @@ namespace NewQuant
             Singleton<Tracer>::Instance()->AddTrace(error);
         }
 
-        template <typename TYPE>
+        template<typename TYPE>
         IncompatibleDimensionsException(const BaseMatrix<TYPE>& A, const BaseMatrix<TYPE>& B) : LogicError()
         {
             AddMessage("Incompatible Dimensions : -- ");

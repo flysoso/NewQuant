@@ -6,7 +6,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class BaseMatrix;
+    template<typename TYPE> class BaseMatrix;
 
     class NotSquareException : public LogicError
     {
@@ -17,7 +17,7 @@ namespace NewQuant
             Singleton<Tracer>::Instance()->AddTrace(error);
         }
 
-        template <typename TYPE>
+        template<typename TYPE>
         NotSquareException(const BaseMatrix<TYPE>& A) : LogicError()
         {
             AddMessage("Not Square Exception, Matrix Is Not Square : -- ");

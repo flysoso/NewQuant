@@ -8,7 +8,7 @@ namespace NewQuant
     template<typename TYPE> class MatrixIndex;
 
     /// Any type of matrix interpreted as a DiagonalMatrix.
-    template <typename TYPE, typename MATRIX>
+    template<typename TYPE, typename MATRIX>
     class DiagedMatrix : public UnitaryMatrixExpression < TYPE, MATRIX >
     {
     public:
@@ -76,14 +76,14 @@ namespace NewQuant
 
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     DiagedMatrix<TYPE, GeneralMatrix<TYPE> > diag_by_row(const GeneralMatrix<TYPE> & mat)
     {
         return DiagedMatrix<TYPE, GeneralMatrix<TYPE> >(mat, DiagedMatrix<TYPE, GeneralMatrix<TYPE> >::DiagedType::diag_by_r);
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     DiagedMatrix<TYPE, MatrixExpression<TYPE> > diag_by_row(const MatrixExpression<TYPE> & mat)
     {
         return DiagedMatrix<TYPE, MatrixExpression<TYPE> >(mat, DiagedMatrix<TYPE, MatrixExpression<TYPE> >::DiagedType::diag_by_r);
@@ -91,14 +91,14 @@ namespace NewQuant
 
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     DiagedMatrix<TYPE, GeneralMatrix<TYPE> > diag_by_col(const GeneralMatrix<TYPE> & mat)
     {
         return DiagedMatrix<TYPE, GeneralMatrix<TYPE> >(mat, DiagedMatrix<TYPE, GeneralMatrix<TYPE> >::DiagedType::diag_by_c);
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     DiagedMatrix<TYPE, MatrixExpression<TYPE> > diag_by_col(const MatrixExpression<TYPE> & mat)
     {
         return DiagedMatrix<TYPE, MatrixExpression<TYPE> >(mat, DiagedMatrix<TYPE, MatrixExpression<TYPE> >::DiagedType::diag_by_c);

@@ -5,9 +5,9 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class PermuteMatrix;
+    template<typename TYPE> class PermuteMatrix;
 
-    template <typename TYPE, typename MATRIX>
+    template<typename TYPE, typename MATRIX>
     class PermutedMatrix :public UnitaryMatrixExpression < TYPE, MATRIX >
     {
     public:
@@ -94,21 +94,21 @@ namespace NewQuant
 
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     PermutedMatrix<TYPE, GeneralMatrix<TYPE> > perm(GeneralMatrix<TYPE> &mat, const PermuteMatrix<TYPE> &pm)
     {
         assert(mat.Ncols() == pm.Nrows());
         return PermutedMatrix<TYPE, GeneralMatrix<TYPE> >(mat, pm, PermutedMatrix<TYPE, GeneralMatrix<TYPE> >::PermuteType::col_perm);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     PermutedMatrix<TYPE, GeneralMatrix<TYPE> > perm(const PermuteMatrix<TYPE> &pm, GeneralMatrix<TYPE> &mat)
     {
         assert(mat.Nrows() == pm.Ncols());
         return PermutedMatrix<TYPE, GeneralMatrix<TYPE> >(mat, pm, PermutedMatrix<TYPE, GeneralMatrix<TYPE> >::PermuteType::row_perm);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     PermutedMatrix<TYPE, PermuteMatrix<TYPE> > perm(const PermuteMatrix<TYPE> &pm, PermuteMatrix<TYPE> &mat)
     {
         assert(mat.Nrows() == pm.Ncols());
@@ -116,14 +116,14 @@ namespace NewQuant
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     PermutedMatrix<TYPE, MatrixExpression<TYPE> > perm(MatrixExpression<TYPE> &mat, const PermuteMatrix<TYPE> &pm)
     {
         assert(mat.Ncols() == pm.Nrows());
         return PermutedMatrix<TYPE, MatrixExpression<TYPE> >(mat, pm, PermutedMatrix<TYPE, MatrixExpression<TYPE> >::PermuteType::col_perm);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     PermutedMatrix<TYPE, MatrixExpression<TYPE> > perm(const PermuteMatrix<TYPE> &pm, MatrixExpression<TYPE> &mat)
     {
         assert(mat.Nrows() == pm.Ncols());
@@ -131,14 +131,14 @@ namespace NewQuant
     }
 
     // BaseMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     PermutedMatrix<TYPE, BaseMatrix<TYPE> > perm(BaseMatrix<TYPE> &mat, const PermuteMatrix<TYPE> &pm)
     {
         assert(mat.Ncols() == pm.Nrows());
         return PermutedMatrix<TYPE, BaseMatrix<TYPE> >(mat, pm, PermutedMatrix<TYPE, BaseMatrix<TYPE> >::PermuteType::col_perm);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     PermutedMatrix<TYPE, BaseMatrix<TYPE> > perm(const PermuteMatrix<TYPE> &pm, BaseMatrix<TYPE> &mat)
     {
         assert(mat.Nrows() == pm.Ncols());

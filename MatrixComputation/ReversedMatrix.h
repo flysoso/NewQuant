@@ -9,7 +9,7 @@ namespace NewQuant
     template<typename TYPE> class MatrixIndex;
 
     /// Any type of matrix with order of elements reversed.
-    template <typename TYPE, typename MATRIX>
+    template<typename TYPE, typename MATRIX>
     class ReversedMatrix : public UnitaryMatrixExpression < TYPE, MATRIX >
     {
     public:
@@ -109,28 +109,28 @@ namespace NewQuant
 
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     ReversedMatrix<TYPE, GeneralMatrix<TYPE> > reverse_by_row(const GeneralMatrix<TYPE> & mat)
     {
         return ReversedMatrix<TYPE, GeneralMatrix<TYPE> >(mat, ReversedMatrix<TYPE, GeneralMatrix<TYPE> >::ReversedType::rev_by_r);
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     ReversedMatrix<TYPE, MatrixExpression<TYPE> > reverse_by_row(const MatrixExpression<TYPE> & mat)
     {
         return ReversedMatrix<TYPE, MatrixExpression<TYPE> >(mat, ReversedMatrix<TYPE, MatrixExpression<TYPE> >::ReversedType::rev_by_r);
     }
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     ReversedMatrix<TYPE, GeneralMatrix<TYPE> > reverse_by_col(const GeneralMatrix<TYPE> & mat)
     {
         return ReversedMatrix<TYPE, GeneralMatrix<TYPE> >(mat, ReversedMatrix<TYPE, GeneralMatrix<TYPE> >::ReversedType::rev_by_c);
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     ReversedMatrix<TYPE, MatrixExpression<TYPE> > reverse_by_col(const MatrixExpression<TYPE> & mat)
     {
         return ReversedMatrix<TYPE, MatrixExpression<TYPE> >(mat, ReversedMatrix<TYPE, MatrixExpression<TYPE> >::ReversedType::rev_by_c);

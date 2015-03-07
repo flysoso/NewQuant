@@ -5,7 +5,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     class IdentitySolver : public SimpleSolver < TYPE >
     {
     public:

@@ -10,7 +10,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     BandLUsolverPartialPivot<TYPE>::BandLUsolverPartialPivot(const BaseMatrix<TYPE> &bm, const TYPE &e) :
         BandLUsolver<TYPE>(bm, bm.BandWidth().Lower(), std::min(bm.BandWidth().Lower() + bm.BandWidth().Upper(), bm.Nrows() - 1), e),
         lm(bm.Nrows()), um(bm.Nrows(), BandLUsolver<TYPE>::ubw),
@@ -27,7 +27,7 @@ namespace NewQuant
         BandLUdecomposion();
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void BandLUsolverPartialPivot<TYPE>::BandLUdecomposion()
     {
         BandLUcombine_LtUb<TYPE> &m = combine;
@@ -63,7 +63,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void BandLUsolverPartialPivot<TYPE>::Solve(const BaseMatrix<TYPE> &in, BaseMatrix<TYPE> &out) const
     {
         assert(in.Nrows() == combine.Ncols());
@@ -79,7 +79,7 @@ namespace NewQuant
         um.Solve(t, out);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     LogAndSign<TYPE> BandLUsolverPartialPivot<TYPE>::LogDeterminant() const
     {
         if (LinearEquationSolver<TYPE>::IsFailed())

@@ -7,10 +7,10 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class BandLUcombine_LtUb;
-    template <typename TYPE> class BandLUsolver;
+    template<typename TYPE> class BandLUcombine_LtUb;
+    template<typename TYPE> class BandLUsolver;
 
-    template <typename TYPE>
+    template<typename TYPE>
     class BandLUsolverPartialPivot : public BandLUsolver < TYPE >
     {
     private:

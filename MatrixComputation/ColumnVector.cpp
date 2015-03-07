@@ -5,7 +5,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     ColumnVector<TYPE>& ColumnVector<TYPE>::operator=(const BaseMatrix<TYPE>& bm)
     {
         if (&bm == this)
@@ -30,41 +30,41 @@ namespace NewQuant
         return *this;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE& ColumnVector<TYPE>::operator()(const int &m)
     {
         assert(m > 0 && m <= GeneralMatrix<TYPE>::nrows);
         return GeneralMatrix<TYPE>::store[m - 1];
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE& ColumnVector<TYPE>::operator()(const int &m, const int &n)
     {
         assert(m > 0 && m <= GeneralMatrix<TYPE>::nrows && n == 1);
         return GeneralMatrix<TYPE>::store[m - 1];
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE ColumnVector<TYPE>::operator()(const int & m, const int & n) const
     {
         assert(m > 0 && m <= GeneralMatrix<TYPE>::nrows && n == 1);
         return GeneralMatrix<TYPE>::store[m - 1];
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE ColumnVector<TYPE>::operator()(const int & m) const
     {
         assert(m > 0 && m <= GeneralMatrix<TYPE>::nrows);
         return GeneralMatrix<TYPE>::store[m - 1];
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     MatrixType ColumnVector<TYPE>::Type() const
     {
         return MatrixType(MatrixType::Type::ColumnVector);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void ColumnVector<TYPE>::Resize(const int &nr)
     {
         assert(nr > 0);
@@ -79,7 +79,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void ColumnVector<TYPE>::Resize(const int &nr, const int &nc)
     {
         assert(nc == 1 && nr > 0);
@@ -94,7 +94,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void ColumnVector<TYPE>::Swap(Matrix<TYPE>& gm)
     {
         assert(gm.Ncols() == 1);

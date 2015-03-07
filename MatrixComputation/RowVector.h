@@ -7,7 +7,7 @@
 namespace NewQuant
 {
     /// Row vector.
-    template <typename TYPE>
+    template<typename TYPE>
     class RowVector : public Matrix < TYPE >, public Vector < TYPE >
     {
     public:
@@ -86,7 +86,7 @@ namespace NewQuant
 
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     inline void Swap(RowVector<TYPE>& A, RowVector<TYPE>& B)
     {
         A.Swap(B);

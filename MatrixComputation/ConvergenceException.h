@@ -6,13 +6,13 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class BaseMatrix;
+    template<typename TYPE> class BaseMatrix;
 
     /// Covergence failure exception.
     class ConvergenceException : public RuntimeError
     {
     public:
-        template <typename TYPE>
+        template<typename TYPE>
         ConvergenceException(const BaseMatrix<TYPE>& A) : RuntimeError()
         {
             AddMessage("Detected By NewQuant: Process Fails To Converge\n\n");

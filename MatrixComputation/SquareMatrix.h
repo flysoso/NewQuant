@@ -6,7 +6,7 @@
 namespace NewQuant
 {
     /// Square matrix.
-    template <typename TYPE>
+    template<typename TYPE>
     class SquareMatrix : public Matrix < TYPE >
     {
     public:
@@ -77,7 +77,7 @@ namespace NewQuant
 
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     inline void Swap(SquareMatrix<TYPE>& A, SquareMatrix<TYPE>& B)
     {
         A.Swap(B);

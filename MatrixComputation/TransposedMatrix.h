@@ -8,7 +8,7 @@ namespace NewQuant
     template<typename TYPE> class MatrixIndex;
 
     /// Transposed matrix.
-    template <typename TYPE, typename MATRIX>
+    template<typename TYPE, typename MATRIX>
     class TransposedMatrix : public UnitaryMatrixExpression < TYPE, MATRIX >
     {
     public:
@@ -43,21 +43,21 @@ namespace NewQuant
     };
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     TransposedMatrix<TYPE, GeneralMatrix<TYPE> > t(const GeneralMatrix<TYPE> & mat)
     {
         return TransposedMatrix<TYPE, GeneralMatrix<TYPE> >(mat);
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     TransposedMatrix<TYPE, MatrixExpression<TYPE> > t(const MatrixExpression<TYPE> & mat)
     {
         return TransposedMatrix<TYPE, MatrixExpression<TYPE> >(mat);
     }
 
     // BaseMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     TransposedMatrix<TYPE, BaseMatrix<TYPE> > t(const BaseMatrix<TYPE> & mat)
     {
         return TransposedMatrix<TYPE, BaseMatrix<TYPE> >(mat);

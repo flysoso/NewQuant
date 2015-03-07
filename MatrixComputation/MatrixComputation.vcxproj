@@ -92,6 +92,7 @@
     <ClInclude Include="BandMatrix.h" />
     <ClInclude Include="BaseMatrix.h" />
     <ClInclude Include="CholeskySolver.h" />
+    <ClInclude Include="ClassicalJacobiSolver.h" />
     <ClInclude Include="ColedMatrix.h" />
     <ClInclude Include="ColumnVector.h" />
     <ClInclude Include="ConcatenatedMatrix.h" />
@@ -101,9 +102,11 @@
     <ClInclude Include="ConstGetSubMatrix.h" />
     <ClInclude Include="ConstPermutedMatrix.h" />
     <ClInclude Include="ConvergenceException.h" />
+    <ClInclude Include="CyclicJacobiSolver.h" />
     <ClInclude Include="DiagedMatrix.h" />
     <ClInclude Include="DiagonalMatrix.h" />
     <ClInclude Include="DiagonalSolver.h" />
+    <ClInclude Include="EigenSolver.h" />
     <ClInclude Include="Endpoint.h" />
     <ClInclude Include="FloatingPointPrecision.h" />
     <ClInclude Include="GeneralMatrix.h" />
@@ -121,6 +124,7 @@
     <ClInclude Include="Interval.h" />
     <ClInclude Include="InvertedMatrix.h" />
     <ClInclude Include="InvScaledMatrix.h" />
+    <ClInclude Include="JacobiSolver.h" />
     <ClInclude Include="KPMatrix.h" />
     <ClInclude Include="LeastSquareSolver.h" />
     <ClInclude Include="LinearEquationSolver.h" />

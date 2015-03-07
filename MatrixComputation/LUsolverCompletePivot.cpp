@@ -9,13 +9,13 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     LUsolverCompletePivot<TYPE>::LUsolverCompletePivot(const BaseMatrix<TYPE> &gm, const TYPE &e) : LUsolver<TYPE>(gm, e)
     {
         LUdecomposion();
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void LUsolverCompletePivot<TYPE>::LUdecomposion()
     {
         LUcombine<TYPE> &m = LUsolver<TYPE>::combine;
@@ -55,7 +55,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void LUsolverCompletePivot<TYPE>::Solve(const BaseMatrix<TYPE> &in, BaseMatrix<TYPE> &out) const
     {
         assert(in.Nrows() == combine.Ncols());
@@ -73,7 +73,7 @@ namespace NewQuant
     }
 
 
-    template <typename TYPE>
+    template<typename TYPE>
     LogAndSign<TYPE> LUsolverCompletePivot<TYPE>::LogDeterminant() const
     {
         if (LinearEquationSolver<TYPE>::IsFailed())

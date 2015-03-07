@@ -8,13 +8,13 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     inline TYPE square(const TYPE &x)
     {
         return x*x;
     }
 
-    template <>
+    template<>
     inline int square(const int &x)
     {
         return x*x;
@@ -25,7 +25,7 @@ namespace NewQuant
         return (n*(n + 1)) / 2;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void NewQuantBlockCopy(int n, TYPE* from, TYPE* to)
     {
         int i = (n >> 3);
@@ -47,7 +47,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     class Precision
     {
     private:
@@ -82,10 +82,10 @@ namespace NewQuant
         }
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     std::shared_ptr<TYPE> Precision<TYPE>::precision;
 
-    template <typename TYPE>
+    template<typename TYPE>
     std::shared_ptr<TYPE> Precision<TYPE>::default_precision;
 
 }

@@ -5,7 +5,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     class DiagonalSolver : public SimpleSolver < TYPE >
     {
     public:

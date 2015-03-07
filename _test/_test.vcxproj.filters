@@ -66,6 +66,9 @@
     <ClInclude Include="testLeastSquareSolver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="testEigenSolver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="testBandMatrix.cpp">
@@ -117,6 +120,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="testLeastSquareSolver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="testEigenSolver.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

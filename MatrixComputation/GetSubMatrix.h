@@ -6,7 +6,7 @@
 namespace NewQuant
 {
     /// A submatrix of a matrix.
-    template <typename TYPE, typename MATRIX>
+    template<typename TYPE, typename MATRIX>
     class GetSubMatrix : public UnitaryMatrixExpression < TYPE, MATRIX >
     {
     private:
@@ -238,7 +238,7 @@ namespace NewQuant
 
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     GetSubMatrix<TYPE, GeneralMatrix<TYPE> > sub(GeneralMatrix<TYPE> & mat, int r1, int r2, int c1, int c2)
     {
         assert(r1 > 0 && r2 > 0 && c1 > 0 && c2 > 0 && r1 <= r2 && c1 <= c2);
@@ -247,7 +247,7 @@ namespace NewQuant
     }
 
     //MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     GetSubMatrix<TYPE, MatrixExpression<TYPE> > sub(MatrixExpression<TYPE> & mat, int r1, int r2, int c1, int c2)
     {
         assert(r1 > 0 && r2 > 0 && c1 > 0 && c2 > 0 && r1 <= r2 && c1 <= c2);
@@ -256,7 +256,7 @@ namespace NewQuant
     }
 
     //BaseMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     GetSubMatrix<TYPE, BaseMatrix<TYPE> > sub(BaseMatrix<TYPE> & mat, int r1, int r2, int c1, int c2)
     {
         assert(r1 > 0 && r2 > 0 && c1 > 0 && c2 > 0 && r1 <= r2 && c1 <= c2);

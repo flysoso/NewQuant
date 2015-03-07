@@ -15,7 +15,7 @@ namespace NewQuant
         std::shared_ptr<const BaseExpression<T> > be;
     public:
 
-        template <class ExprT1, class ExprT2, template<typename ELEM> class BinOp>
+        template<class ExprT1, class ExprT2, template<typename ELEM> class BinOp>
         explicit MathExpression(const BinaryExpression<T, ExprT1, ExprT2, BinOp> &b){ be.reset(new BinaryExpression<T, ExprT1, ExprT2, BinOp>(b)); }
 
         MathExpression(const MathExpression<T> &me) : be(me.be){}

@@ -6,13 +6,13 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class BaseMatrix;
+    template<typename TYPE> class BaseMatrix;
 
     /// Singular matrix exception.
     class SingularException : public RuntimeError
     {
     public:
-        template <typename TYPE>
+        template<typename TYPE>
         SingularException(const BaseMatrix<TYPE> &A) : RuntimeError()
         {
             AddMessage("Singular Exception, Matrix Is Singular : -- ");

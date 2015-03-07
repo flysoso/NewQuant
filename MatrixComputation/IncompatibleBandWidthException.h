@@ -5,7 +5,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class BaseMatrix;
+    template<typename TYPE> class BaseMatrix;
 
     /// Incompatible band width exception.
     class IncompatibleBandWidthException : public LogicError
@@ -17,7 +17,7 @@ namespace NewQuant
             Singleton<Tracer>::Instance()->AddTrace(error);
         }
 
-        template <typename TYPE>
+        template<typename TYPE>
         IncompatibleBandWidthException(const BaseMatrix<TYPE>& A) : LogicError()
         {
             AddMessage("Incompatible Band Width : -- ");
@@ -25,7 +25,7 @@ namespace NewQuant
             Singleton<Tracer>::Instance()->AddTrace(error);
         }
 
-        template <typename TYPE>
+        template<typename TYPE>
         IncompatibleBandWidthException(const BaseMatrix<TYPE>& A, const BaseMatrix<TYPE>& B) : LogicError()
         {
             AddMessage("Incompatible Band Width : -- ");

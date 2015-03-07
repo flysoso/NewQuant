@@ -4,11 +4,11 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class BaseMatrix;
-    template <typename TYPE> class LogAndSign;
+    template<typename TYPE> class BaseMatrix;
+    template<typename TYPE> class LogAndSign;
 
     ///linear equation solving
-    template <typename TYPE>
+    template<typename TYPE>
     class LinearEquationSolver
     {
     protected:

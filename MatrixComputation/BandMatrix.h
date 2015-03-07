@@ -5,13 +5,13 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class LUsolverPartialPivot;
-    template <typename TYPE> class BandLUsolverPartialPivot;
-    template <typename TYPE> class LowerTriangularSolver;
-    template <typename TYPE> class UpperTriangularSolver;
+    template<typename TYPE> class LUsolverPartialPivot;
+    template<typename TYPE> class BandLUsolverPartialPivot;
+    template<typename TYPE> class LowerTriangularSolver;
+    template<typename TYPE> class UpperTriangularSolver;
 
     /// Band matrix.
-    template <typename TYPE>
+    template<typename TYPE>
     class BandMatrix : public GeneralMatrix < TYPE >
     {
     protected:
@@ -101,7 +101,7 @@ namespace NewQuant
 
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     inline void Swap(BandMatrix<TYPE>& A, BandMatrix<TYPE>& B)
     {
         A.Swap(B);

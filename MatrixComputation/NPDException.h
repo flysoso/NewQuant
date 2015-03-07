@@ -5,13 +5,13 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class BaseMatrix;
+    template<typename TYPE> class BaseMatrix;
 
     /// Not positive definite exception.
     class NPDException : public RuntimeError
     {
     public:
-        template <typename TYPE>
+        template<typename TYPE>
         NPDException(const BaseMatrix<TYPE>& A) : RuntimeError()
         {
             AddMessage("NPD Exception, Matrix Is Not Positive Definite : -- ");

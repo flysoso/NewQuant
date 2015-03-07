@@ -5,7 +5,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     LogAndSign<TYPE>::LogAndSign(const TYPE &f)
     {
         static const TYPE zero(0);
@@ -27,7 +27,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void LogAndSign<TYPE>::operator*=(const TYPE &x)
     {
         static const TYPE zero(0);
@@ -46,7 +46,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void LogAndSign<TYPE>::PowEq(const int &k)
     {
         if (sign_val)
@@ -57,7 +57,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE LogAndSign<TYPE>::Value() const
     {
         if (log_val >= FloatingPointPrecision<TYPE>::LnMaximum())

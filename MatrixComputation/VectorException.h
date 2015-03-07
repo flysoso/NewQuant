@@ -5,7 +5,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class BaseMatrix;
+    template<typename TYPE> class BaseMatrix;
 
     /// Cannot convert to vector exception.
     class VectorException : public LogicError
@@ -17,7 +17,7 @@ namespace NewQuant
             Singleton<Tracer>::Instance()->AddTrace(error);
         }
 
-        template <typename TYPE>
+        template<typename TYPE>
         VectorException(const BaseMatrix<TYPE>& A) : LogicError()
         {
             AddMessage("Vector Exception, Cannot Convert Matrix To Vector : -- ");

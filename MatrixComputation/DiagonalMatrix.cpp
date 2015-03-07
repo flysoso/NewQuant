@@ -5,19 +5,19 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     DiagonalMatrix<TYPE>::DiagonalMatrix() : GeneralMatrix<TYPE>(1, 1, 1)
     {
         GeneralMatrix<TYPE>::band_width.Set(0, 0, true);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     DiagonalMatrix<TYPE>::DiagonalMatrix(const int &m) : GeneralMatrix<TYPE>(m, m, m)
     {
         GeneralMatrix<TYPE>::band_width.Set(0, 0, true);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     DiagonalMatrix<TYPE> & DiagonalMatrix<TYPE>::operator=(const BaseMatrix<TYPE> &bm)
     {
         if (&bm == this)
@@ -44,7 +44,7 @@ namespace NewQuant
         return *this;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void DiagonalMatrix<TYPE>::operator<<(const BaseMatrix<TYPE> &bm)
     {
         if (&bm == this)
@@ -68,7 +68,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE& DiagonalMatrix<TYPE>::operator()(const int &m, const int &n)
     {
         assert(n > 0 && m <= GeneralMatrix<TYPE>::nrows && n <= GeneralMatrix<TYPE>::ncols && m > 0);
@@ -83,14 +83,14 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE& DiagonalMatrix<TYPE>::operator()(const int &m)
     {
         assert(m > 0 && m <= GeneralMatrix<TYPE>::nrows);
         return GeneralMatrix<TYPE>::store[m - 1];
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE DiagonalMatrix<TYPE>::operator()(const int &m, const int &n) const
     {
         assert(n > 0 && m <= GeneralMatrix<TYPE>::nrows && n <= GeneralMatrix<TYPE>::ncols && m > 0);
@@ -104,20 +104,20 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE DiagonalMatrix<TYPE>::operator()(const int &m) const
     {
         assert(m > 0 && m <= GeneralMatrix<TYPE>::nrows);
         return GeneralMatrix<TYPE>::store[m - 1];
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     MatrixType DiagonalMatrix<TYPE>::Type() const
     {
         return MatrixType(MatrixType::Type::DiagonalMatrix);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE DiagonalMatrix<TYPE>::Trace() const
     {
         int i = GeneralMatrix<TYPE>::nrows;
@@ -131,7 +131,7 @@ namespace NewQuant
         return sum;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void DiagonalMatrix<TYPE>::Solve(const BaseMatrix<TYPE>& in, BaseMatrix<TYPE>& out) const
     {
         int n = GeneralMatrix<TYPE>::nrows;
@@ -142,7 +142,7 @@ namespace NewQuant
         solver->Solve(in, out);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void DiagonalMatrix<TYPE>::Resize(const int &nr)
     {
         assert(nr > 0);

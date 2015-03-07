@@ -8,7 +8,7 @@ namespace NewQuant
     template<typename TYPE> class MatrixIndex;
 
     /// Any type of matrix multiplies TYPE.
-    template <typename TYPE, typename MATRIX>
+    template<typename TYPE, typename MATRIX>
     class InvScaledMatrix : public UnitaryMatrixExpression < TYPE, MATRIX >
     {
     private:
@@ -43,21 +43,21 @@ namespace NewQuant
     };
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     InvScaledMatrix<TYPE, GeneralMatrix<TYPE> > operator / (const GeneralMatrix<TYPE> & mat, const TYPE &x)
     {
         return InvScaledMatrix<TYPE, GeneralMatrix<TYPE> >(x, mat);
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     InvScaledMatrix<TYPE, MatrixExpression<TYPE> > operator / (const MatrixExpression<TYPE> & mat, const TYPE &x)
     {
         return InvScaledMatrix<TYPE, MatrixExpression<TYPE> >(x, mat);
     }
 
     // BaseMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     InvScaledMatrix<TYPE, BaseMatrix<TYPE> > operator / (const BaseMatrix<TYPE> & mat, const TYPE &x)
     {
         return InvScaledMatrix<TYPE, BaseMatrix<TYPE> >(x, mat);

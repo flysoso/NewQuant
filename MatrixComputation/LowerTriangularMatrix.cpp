@@ -5,19 +5,19 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     LowerTriangularMatrix<TYPE>::LowerTriangularMatrix() : GeneralMatrix<TYPE>(1, 1, 1)
     {
         GeneralMatrix<TYPE>::band_width.Set(0, 0, true);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     LowerTriangularMatrix<TYPE>::LowerTriangularMatrix(const int &n) : GeneralMatrix<TYPE>(n, n, tristore(n))
     {
         GeneralMatrix<TYPE>::band_width.Set(n - 1, 0, true);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     LowerTriangularMatrix<TYPE> & LowerTriangularMatrix<TYPE>::operator = (const BaseMatrix<TYPE> &bm)
     {
         if (&bm == this)
@@ -47,7 +47,7 @@ namespace NewQuant
         return *this;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void LowerTriangularMatrix<TYPE>::operator << (const BaseMatrix<TYPE> &bm)
     {
         if (&bm == this)
@@ -74,7 +74,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE& LowerTriangularMatrix<TYPE>::operator()(const int &m, const int &n)
     {
         assert(n > 0 && m <= GeneralMatrix<TYPE>::nrows && n <= GeneralMatrix<TYPE>::ncols && m > 0);
@@ -89,7 +89,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE LowerTriangularMatrix<TYPE>::operator()(const int &m, const int &n) const
     {
         assert(n > 0 && m <= GeneralMatrix<TYPE>::nrows && n <= GeneralMatrix<TYPE>::ncols && m > 0);
@@ -103,13 +103,13 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     MatrixType LowerTriangularMatrix<TYPE>::Type() const
     {
         return MatrixType(MatrixType::Type::LowerTriangularMatrix);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void LowerTriangularMatrix<TYPE>::Solve(const BaseMatrix<TYPE>& in, BaseMatrix<TYPE>& out) const
     {
         int n = GeneralMatrix<TYPE>::nrows;
@@ -121,7 +121,7 @@ namespace NewQuant
     }
 
 
-    template <typename TYPE>
+    template<typename TYPE>
     void LowerTriangularMatrix<TYPE>::Resize(const int &n)
     {
         GeneralMatrix<TYPE>::GeneralResize(n, n, tristore(n));

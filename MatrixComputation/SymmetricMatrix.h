@@ -9,7 +9,7 @@
 namespace NewQuant
 {
     /// Symmetric matrix.
-    template <typename TYPE>
+    template<typename TYPE>
     class SymmetricMatrix : public GeneralMatrix < TYPE >
     {
     public:
@@ -118,7 +118,7 @@ namespace NewQuant
         }
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     inline void Swap(SymmetricMatrix<TYPE>& A, SymmetricMatrix<TYPE>& B)
     {
         A.Swap(B);

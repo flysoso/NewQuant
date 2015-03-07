@@ -8,15 +8,15 @@
 namespace NewQuant
 {
     template<typename TYPE> class MatrixIndex;
-    template <typename T> class BaseMatrix;
-    template <typename T> class LowerBandMatrix;
-    template <typename T> class UpperBandMatrix;
-    template <typename T> class LowerTriangularMatrix;
+    template<typename T> class BaseMatrix;
+    template<typename T> class LowerBandMatrix;
+    template<typename T> class UpperBandMatrix;
+    template<typename T> class LowerTriangularMatrix;
 
-    template <typename T> class BandLUcombine_LbUb;
-    template <typename T> class BandLUcombine_LtUb;
+    template<typename T> class BandLUcombine_LbUb;
+    template<typename T> class BandLUcombine_LtUb;
 
-    template <typename TYPE>
+    template<typename TYPE>
     class BandLUsolver : public LinearEquationSolver < TYPE >
     {
     protected:
@@ -58,7 +58,7 @@ namespace NewQuant
         virtual LogAndSign<TYPE> LogDeterminant() const = 0;
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     class BandLUcombine_LbUb : public MatrixExpression < TYPE >
     {
     private:
@@ -178,11 +178,11 @@ namespace NewQuant
             }
         }
 
-        template <typename FDTYPE> friend class BandLUsolver;
+        template<typename FDTYPE> friend class BandLUsolver;
 
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     class BandLUcombine_LtUb : public MatrixExpression < TYPE >
     {
     private:
@@ -302,7 +302,7 @@ namespace NewQuant
             }
         }
 
-        template <typename FDTYPE> friend class BandLUsolver;
+        template<typename FDTYPE> friend class BandLUsolver;
 
     };
 }

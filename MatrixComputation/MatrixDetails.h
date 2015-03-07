@@ -5,9 +5,9 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class BaseMatrix;
+    template<typename TYPE> class BaseMatrix;
 
-    template <typename TYPE>
+    template<typename TYPE>
     void MatrixDetails(const BaseMatrix<TYPE>& A, std::string &err_str)
     {
         // write matrix details to Exception buffer

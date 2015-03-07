@@ -9,7 +9,7 @@ namespace NewQuant
     template<typename TYPE> class MatrixIndex;
 
     /// Any type of matrix interpreted as a ColumnVector.
-    template <typename TYPE, typename MATRIX>
+    template<typename TYPE, typename MATRIX>
     class ColedMatrix : public UnitaryMatrixExpression < TYPE, MATRIX >
     {
     private:
@@ -55,14 +55,14 @@ namespace NewQuant
     };
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     ColedMatrix<TYPE, GeneralMatrix<TYPE> > as_col(const GeneralMatrix<TYPE> & mat)
     {
         return ColedMatrix<TYPE, GeneralMatrix<TYPE> >(mat);
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     ColedMatrix<TYPE, MatrixExpression<TYPE> > as_col(const MatrixExpression<TYPE> & mat)
     {
         return ColedMatrix<TYPE, MatrixExpression<TYPE> >(mat);

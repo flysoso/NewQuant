@@ -8,7 +8,7 @@
 namespace NewQuant
 {
     /// Floating point precision.
-    template <typename TYPE>
+    template<typename TYPE>
     class FloatingPointPrecision
     {
     public:

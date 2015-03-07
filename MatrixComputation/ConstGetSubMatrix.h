@@ -8,7 +8,7 @@ namespace NewQuant
     template<typename TYPE> class MatrixIndex;
 
     /// A submatrix of a matrix.
-    template <typename TYPE, typename MATRIX>
+    template<typename TYPE, typename MATRIX>
     class ConstGetSubMatrix : public UnitaryMatrixExpression < TYPE, MATRIX >
     {
     private:
@@ -77,7 +77,7 @@ namespace NewQuant
 
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     ConstGetSubMatrix<TYPE, GeneralMatrix<TYPE> > c_sub(const GeneralMatrix<TYPE> & mat, const int &r1, const int &r2, const int &c1, const int &c2)
     {
         assert(r1 > 0 && r2 > 0 && c1 > 0 && c2 > 0 && r1 <= r2 && c1 <= c2);
@@ -86,7 +86,7 @@ namespace NewQuant
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     ConstGetSubMatrix<TYPE, MatrixExpression<TYPE> > c_sub(const MatrixExpression<TYPE> & mat, const int &r1, const int &r2, const int &c1, const int &c2)
     {
         assert(r1 > 0 && r2 > 0 && c1 > 0 && c2 > 0 && r1 <= r2 && c1 <= c2);
@@ -95,7 +95,7 @@ namespace NewQuant
     }
 
     // BaseMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     ConstGetSubMatrix<TYPE, BaseMatrix<TYPE> > c_sub(const BaseMatrix<TYPE> & mat, const int &r1, const int &r2, const int &c1, const int &c2)
     {
         assert(r1 > 0 && r2 > 0 && c1 > 0 && c2 > 0 && r1 <= r2 && c1 <= c2);

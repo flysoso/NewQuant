@@ -13,7 +13,7 @@
 namespace NewQuant
 {
     /// Symmetric band matrix.
-    template <typename TYPE>
+    template<typename TYPE>
     class SymmetricBandMatrix : public GeneralMatrix < TYPE >
     {
     private:
@@ -130,7 +130,7 @@ namespace NewQuant
         }
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     inline void Swap(SymmetricBandMatrix<TYPE>& A, SymmetricBandMatrix<TYPE>& B)
     {
         A.Swap(B);

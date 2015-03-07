@@ -7,9 +7,9 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class MatrixIndexIterator;
+    template<typename TYPE> class MatrixIndexIterator;
 
-    template <typename TYPE>
+    template<typename TYPE>
     class MatrixIndex
     {
     private:
@@ -149,7 +149,7 @@ namespace NewQuant
 
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     class MatrixIndexIterator
     {
     private:
@@ -220,26 +220,26 @@ namespace NewQuant
             return t;
         }
 
-        template <typename T>
+        template<typename T>
         friend bool operator == (const MatrixIndexIterator<T> &i1, const MatrixIndexIterator<T> &i2);
 
-        template <typename T>
+        template<typename T>
         friend bool operator != (const MatrixIndexIterator<T> &i1, const MatrixIndexIterator<T> &i2);
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     void Union(const MatrixIndex<TYPE> &, const MatrixIndex<TYPE> &, MatrixIndex<TYPE> &);
 
-    template <typename TYPE>
+    template<typename TYPE>
     void Intersect(const MatrixIndex<TYPE> &, const MatrixIndex<TYPE> &, MatrixIndex<TYPE> &);
 
-    template <typename TYPE>
+    template<typename TYPE>
     bool operator == (const MatrixIndexIterator<TYPE> &i1, const MatrixIndexIterator<TYPE> &i2)
     {
         return (i1.mat_idx.get() == i2.mat_idx.get()) && (i1.index == i2.index) && (i1.step == i2.step);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     bool operator != (const MatrixIndexIterator<TYPE> &i1, const MatrixIndexIterator<TYPE> &i2)
     {
         return !(i1 == i2);

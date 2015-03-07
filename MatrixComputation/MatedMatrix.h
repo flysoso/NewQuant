@@ -8,7 +8,7 @@ namespace NewQuant
     template<typename TYPE> class MatrixIndex;
 
     /// Any type of matrix interpreted as a (rectangular) Matrix.
-    template <typename TYPE, typename MATRIX>
+    template<typename TYPE, typename MATRIX>
     class MatedMatrix : public UnitaryMatrixExpression < TYPE, MATRIX >
     {
     public:
@@ -71,7 +71,7 @@ namespace NewQuant
 
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     MatedMatrix<TYPE, GeneralMatrix<TYPE> > as_mat_by_row(const GeneralMatrix<TYPE> & mat, int r, int c)
     {
         assert(r*c == mat.Nrows()*mat.Ncols());
@@ -79,7 +79,7 @@ namespace NewQuant
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     MatedMatrix<TYPE, MatrixExpression<TYPE> > as_mat_by_row(const MatrixExpression<TYPE> & mat, int r, int c)
     {
         assert(r*c == mat.Nrows()*mat.Ncols());
@@ -87,7 +87,7 @@ namespace NewQuant
     }
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     MatedMatrix<TYPE, GeneralMatrix<TYPE> > as_mat_by_col(const GeneralMatrix<TYPE> & mat, int r, int c)
     {
         assert(r*c == mat.Nrows()*mat.Ncols());
@@ -95,7 +95,7 @@ namespace NewQuant
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     MatedMatrix<TYPE, MatrixExpression<TYPE> > as_mat_by_col(const MatrixExpression<TYPE> & mat, int r, int c)
     {
         assert(r*c == mat.Nrows()*mat.Ncols());

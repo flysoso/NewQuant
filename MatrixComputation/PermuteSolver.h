@@ -8,9 +8,9 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class PermuteMatrix;
+    template<typename TYPE> class PermuteMatrix;
 
-    template <typename TYPE>
+    template<typename TYPE>
     class PermuteSolver :public SimpleSolver < TYPE >
     {
     private:

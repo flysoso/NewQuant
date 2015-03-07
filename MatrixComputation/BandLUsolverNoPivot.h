@@ -7,7 +7,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     class BandLUsolverNoPivot : public BandLUsolver < TYPE >
     {
     private:

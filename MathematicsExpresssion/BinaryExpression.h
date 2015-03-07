@@ -116,148 +116,148 @@ namespace NewQuant
 
     // operator +
     //c+C
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, constant, Constant<T>, std::plus> operator + (const constant &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, constant, Constant<T>, std::plus>(e1, e2, std::plus<T>());
     }
     //C+c
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, Constant<T>, constant, std::plus> operator + (const Constant<T> &e1, const constant &e2)
     {
         return BinaryExpression<T, Constant<T>, constant, std::plus>(e1, e2, std::plus<T>());
     }
     //C+C
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Constant<T>, Constant<T>, std::plus> operator + (const Constant<T> &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, Constant<T>, Constant<T>, std::plus>(e1, e2, std::plus<T>());
     }
 
     //c+V
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, constant, Variable<T>, std::plus> operator + (const constant &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, constant, Variable<T>, std::plus>(e1, e2, std::plus<T>());
     }
     //V+c
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, Variable<T>, constant, std::plus> operator + (const Variable<T> &e1, const constant &e2)
     {
         return BinaryExpression<T, Variable<T>, constant, std::plus>(e1, e2, std::plus<T>());
     }
     //V+C
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Variable<T>, Constant<T>, std::plus> operator + (const Variable<T> &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, Variable<T>, Constant<T>, std::plus>(e1, e2, std::plus<T>());
     }
     //C+V
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Constant<T>, Variable<T>, std::plus> operator + (const Constant<T> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, Constant<T>, Variable<T>, std::plus>(e1, e2, std::plus<T>());
     }
     //V+V
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Variable<T>, Variable<T>, std::plus> operator + (const Variable<T> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, Variable<T>, Variable<T>, std::plus>(e1, e2, std::plus<T>());
     }
 
     //c+U
-    template <typename T, typename constant, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename constant, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, constant, UnitaryExpression<T, T1, T2>, std::plus> operator + (const constant &e1, const UnitaryExpression<T, T1, T2> &e2)
     {
         return BinaryExpression<T, constant, UnitaryExpression<T, T1, T2>, std::plus>(e1, e2, std::plus<T>());
     }
     //U+c
-    template <typename T, typename constant, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename constant, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, constant, std::plus> operator + (const UnitaryExpression<T, T1, T2> &e1, const constant &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, constant, std::plus>(e1, e2, std::plus<T>());
     }
     //C+U
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, Constant<T>, UnitaryExpression<T, T1, T2>, std::plus> operator + (const Constant<T> &e1, const UnitaryExpression<T, T1, T2> &e2)
     {
         return BinaryExpression<T, Constant<T>, UnitaryExpression<T, T1, T2>, std::plus>(e1, e2, std::plus<T>());
     }
     //U+C
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, Constant<T>, std::plus> operator + (const UnitaryExpression<T, T1, T2> &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, Constant<T>, std::plus>(e1, e2, std::plus<T>());
     }
     //U+V
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, Variable<T>, std::plus> operator + (const UnitaryExpression<T, T1, T2> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, Variable<T>, std::plus>(e1, e2, std::plus<T>());
     }
     //V+U
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, Variable<T>, UnitaryExpression<T, T1, T2>, std::plus> operator + (const Variable<T> &e1, const UnitaryExpression<T, T1, T2> &e2)
     {
         return BinaryExpression<T, Variable<T>, UnitaryExpression<T, T1, T2>, std::plus>(e1, e2, std::plus<T>());
     }
     //U+U
-    template <typename T, typename T1, template<typename ELEM> class T2, typename T3, template<typename ELEM> class T4>
+    template<typename T, typename T1, template<typename ELEM> class T2, typename T3, template<typename ELEM> class T4>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, UnitaryExpression<T, T3, T4>, std::plus> operator + (const UnitaryExpression<T, T1, T2> &e1, const UnitaryExpression<T, T3, T4> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, UnitaryExpression<T, T3, T4>, std::plus>(e1, e2, std::plus<T>());
     }
 
     //c+B
-    template <typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, constant, BinaryExpression<T, T1, T2, T3>, std::plus> operator + (const constant e1, const BinaryExpression<T, T1, T2, T3> &e2)
     {
         return BinaryExpression<T, constant, BinaryExpression<T, T1, T2, T3>, std::plus>(e1, e2, std::plus<T>());
     }
     //B+c
-    template <typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, constant, std::plus> operator + (const BinaryExpression<T, T1, T2, T3> e1, const constant &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, constant, std::plus>(e1, e2, std::plus<T>());
     }
     //C+B
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, Constant<T>, BinaryExpression<T, T1, T2, T3>, std::plus> operator + (const Constant<T> e1, const BinaryExpression<T, T1, T2, T3> &e2)
     {
         return BinaryExpression<T, Constant<T>, BinaryExpression<T, T1, T2, T3>, std::plus>(e1, e2, std::plus<T>());
     }
     //B+C
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Constant<T>, std::plus> operator + (const BinaryExpression<T, T1, T2, T3> e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Constant<T>, std::plus>(e1, e2, std::plus<T>());
     }
     //V+B
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, Variable<T>, BinaryExpression<T, T1, T2, T3>, std::plus> operator + (const Variable<T> &e1, const BinaryExpression<T, T1, T2, T3> &e2)
     {
         return BinaryExpression<T, Variable<T>, BinaryExpression<T, T1, T2, T3>, std::plus>(e1, e2, std::plus<T>());
     }
     //B+V
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Variable<T>, std::plus> operator + (const BinaryExpression<T, T1, T2, T3> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Variable<T>, std::plus>(e1, e2, std::plus<T>());
     }
     //U+B
-    template <typename T, typename T1, template<typename ELEM> class T2, typename T3, typename T4, template<typename ELEM> class T5>
+    template<typename T, typename T1, template<typename ELEM> class T2, typename T3, typename T4, template<typename ELEM> class T5>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, BinaryExpression<T, T3, T4, T5>, std::plus> operator + (const UnitaryExpression<T, T1, T2> &e1, const BinaryExpression<T, T3, T4, T5> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, BinaryExpression<T, T3, T4, T5>, std::plus>(e1, e2, std::plus<T>());
     }
     //B+U
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, template<typename ELEM> class T5>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, template<typename ELEM> class T5>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, UnitaryExpression<T, T4, T5>, std::plus> operator + (const BinaryExpression<T, T1, T2, T3> &e1, const UnitaryExpression<T, T4, T5> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, UnitaryExpression<T, T4, T5>, std::plus>(e1, e2, std::plus<T>());
     }
     //B+B
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, typename T5, template<typename ELEM> class T6>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, typename T5, template<typename ELEM> class T6>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, BinaryExpression<T, T4, T5, T6>, std::plus> operator + (const BinaryExpression<T, T1, T2, T3> &e1, const BinaryExpression<T, T4, T5, T6> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, BinaryExpression<T, T4, T5, T6>, std::plus>(e1, e2, std::plus<T>());
@@ -266,148 +266,148 @@ namespace NewQuant
 
     // operator -
     //c-C
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, constant, Constant<T>, std::minus> operator - (const constant &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, constant, Constant<T>, std::minus>(e1, e2, std::minus<T>());
     }
     //C-c
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, Constant<T>, constant, std::minus> operator - (const Constant<T> &e1, const constant &e2)
     {
         return BinaryExpression<T, Constant<T>, constant, std::minus>(e1, e2, std::minus<T>());
     }
     //C-C
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Constant<T>, Constant<T>, std::minus> operator - (const Constant<T> &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, Constant<T>, Constant<T>, std::minus>(e1, e2, std::minus<T>());
     }
 
     //c-V
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, constant, Variable<T>, std::minus> operator - (const constant &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, constant, Variable<T>, std::minus>(e1, e2, std::minus<T>());
     }
     //V-c
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, Variable<T>, constant, std::minus> operator - (const Variable<T> &e1, const constant &e2)
     {
         return BinaryExpression<T, Variable<T>, constant, std::minus>(e1, e2, std::minus<T>());
     }
     //V-C
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Variable<T>, Constant<T>, std::minus> operator - (const Variable<T> &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, Variable<T>, Constant<T>, std::minus>(e1, e2, std::minus<T>());
     }
     //C-V
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Constant<T>, Variable<T>, std::minus> operator - (const Constant<T> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, Constant<T>, Variable<T>, std::minus>(e1, e2, std::minus<T>());
     }
     //V-V
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Variable<T>, Variable<T>, std::minus> operator - (const Variable<T> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, Variable<T>, Variable<T>, std::minus>(e1, e2, std::minus<T>());
     }
 
     //c-U
-    template <typename T, typename constant, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename constant, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, constant, UnitaryExpression<T, T1, T2>, std::minus> operator - (const constant &e1, const UnitaryExpression<T, T1, T2> &e2)
     {
         return BinaryExpression<T, constant, UnitaryExpression<T, T1, T2>, std::minus>(e1, e2, std::minus<T>());
     }
     //U-c
-    template <typename T, typename constant, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename constant, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, constant, std::minus> operator - (const UnitaryExpression<T, T1, T2> &e1, const constant &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, constant, std::minus>(e1, e2, std::minus<T>());
     }
     //C-U
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, Constant<T>, UnitaryExpression<T, T1, T2>, std::minus> operator - (const Constant<T> &e1, const UnitaryExpression<T, T1, T2> &e2)
     {
         return BinaryExpression<T, Constant<T>, UnitaryExpression<T, T1, T2>, std::minus>(e1, e2, std::minus<T>());
     }
     //U-C
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, Constant<T>, std::minus> operator - (const UnitaryExpression<T, T1, T2> &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, Constant<T>, std::minus>(e1, e2, std::minus<T>());
     }
     //U-V
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, Variable<T>, std::minus> operator - (const UnitaryExpression<T, T1, T2> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, Variable<T>, std::minus>(e1, e2, std::minus<T>());
     }
     //V-U
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, Variable<T>, UnitaryExpression<T, T1, T2>, std::minus> operator - (const Variable<T> &e1, const UnitaryExpression<T, T1, T2> &e2)
     {
         return BinaryExpression<T, Variable<T>, UnitaryExpression<T, T1, T2>, std::minus>(e1, e2, std::minus<T>());
     }
     //U-U
-    template <typename T, typename T1, template<typename ELEM> class T2, typename T3, template<typename ELEM> class T4>
+    template<typename T, typename T1, template<typename ELEM> class T2, typename T3, template<typename ELEM> class T4>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, UnitaryExpression<T, T3, T4>, std::minus> operator - (const UnitaryExpression<T, T1, T2> &e1, const UnitaryExpression<T, T3, T4> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, UnitaryExpression<T, T3, T4>, std::minus>(e1, e2, std::minus<T>());
     }
 
     //c-B
-    template <typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, constant, BinaryExpression<T, T1, T2, T3>, std::minus> operator - (const constant e1, const BinaryExpression<T, T1, T2, T3> &e2)
     {
         return BinaryExpression<T, constant, BinaryExpression<T, T1, T2, T3>, std::minus>(e1, e2, std::minus<T>());
     }
     //B-c
-    template <typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, constant, std::minus> operator - (const BinaryExpression<T, T1, T2, T3> e1, const constant &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, constant, std::minus>(e1, e2, std::minus<T>());
     }
     //C-B
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, Constant<T>, BinaryExpression<T, T1, T2, T3>, std::minus> operator - (const Constant<T> e1, const BinaryExpression<T, T1, T2, T3> &e2)
     {
         return BinaryExpression<T, Constant<T>, BinaryExpression<T, T1, T2, T3>, std::minus>(e1, e2, std::minus<T>());
     }
     //B-C
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Constant<T>, std::minus> operator - (const BinaryExpression<T, T1, T2, T3> e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Constant<T>, std::minus>(e1, e2, std::minus<T>());
     }
     //V-B
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, Variable<T>, BinaryExpression<T, T1, T2, T3>, std::minus> operator - (const Variable<T> &e1, const BinaryExpression<T, T1, T2, T3> &e2)
     {
         return BinaryExpression<T, Variable<T>, BinaryExpression<T, T1, T2, T3>, std::minus>(e1, e2, std::minus<T>());
     }
     //B-V
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Variable<T>, std::minus> operator - (const BinaryExpression<T, T1, T2, T3> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Variable<T>, std::minus>(e1, e2, std::minus<T>());
     }
     //U-B
-    template <typename T, typename T1, template<typename ELEM> class T2, typename T3, typename T4, template<typename ELEM> class T5>
+    template<typename T, typename T1, template<typename ELEM> class T2, typename T3, typename T4, template<typename ELEM> class T5>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, BinaryExpression<T, T3, T4, T5>, std::minus> operator - (const UnitaryExpression<T, T1, T2> &e1, const BinaryExpression<T, T3, T4, T5> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, BinaryExpression<T, T3, T4, T5>, std::minus>(e1, e2, std::minus<T>());
     }
     //B-U
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, template<typename ELEM> class T5>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, template<typename ELEM> class T5>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, UnitaryExpression<T, T4, T5>, std::minus> operator - (const BinaryExpression<T, T1, T2, T3> &e1, const UnitaryExpression<T, T4, T5> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, UnitaryExpression<T, T4, T5>, std::minus>(e1, e2, std::minus<T>());
     }
     //B-B
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, typename T5, template<typename ELEM> class T6>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, typename T5, template<typename ELEM> class T6>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, BinaryExpression<T, T4, T5, T6>, std::minus> operator - (const BinaryExpression<T, T1, T2, T3> &e1, const BinaryExpression<T, T4, T5, T6> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, BinaryExpression<T, T4, T5, T6>, std::minus>(e1, e2, std::minus<T>());
@@ -416,148 +416,148 @@ namespace NewQuant
 
     // operator *
     //c*C
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, constant, Constant<T>, std::multiplies> operator * (const constant &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, constant, Constant<T>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //C*c
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, Constant<T>, constant, std::multiplies> operator * (const Constant<T> &e1, const constant &e2)
     {
         return BinaryExpression<T, Constant<T>, constant, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //C*C
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Constant<T>, Constant<T>, std::multiplies> operator * (const Constant<T> &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, Constant<T>, Constant<T>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
 
     //c*V
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, constant, Variable<T>, std::multiplies> operator * (const constant &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, constant, Variable<T>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //V*c
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, Variable<T>, constant, std::multiplies> operator * (const Variable<T> &e1, const constant &e2)
     {
         return BinaryExpression<T, Variable<T>, constant, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //V*C
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Variable<T>, Constant<T>, std::multiplies> operator * (const Variable<T> &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, Variable<T>, Constant<T>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //C*V
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Constant<T>, Variable<T>, std::multiplies> operator * (const Constant<T> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, Constant<T>, Variable<T>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //V*V
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Variable<T>, Variable<T>, std::multiplies> operator * (const Variable<T> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, Variable<T>, Variable<T>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
 
     //c*U
-    template <typename T, typename constant, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename constant, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, constant, UnitaryExpression<T, T1, T2>, std::multiplies> operator * (const constant &e1, const UnitaryExpression<T, T1, T2> &e2)
     {
         return BinaryExpression<T, constant, UnitaryExpression<T, T1, T2>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //U*c
-    template <typename T, typename constant, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename constant, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, constant, std::multiplies> operator * (const UnitaryExpression<T, T1, T2> &e1, const constant &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, constant, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //C*U
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, Constant<T>, UnitaryExpression<T, T1, T2>, std::multiplies> operator * (const Constant<T> &e1, const UnitaryExpression<T, T1, T2> &e2)
     {
         return BinaryExpression<T, Constant<T>, UnitaryExpression<T, T1, T2>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //U*C
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, Constant<T>, std::multiplies> operator * (const UnitaryExpression<T, T1, T2> &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, Constant<T>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //U*V
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, Variable<T>, std::multiplies> operator * (const UnitaryExpression<T, T1, T2> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, Variable<T>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //V*U
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, Variable<T>, UnitaryExpression<T, T1, T2>, std::multiplies> operator * (const Variable<T> &e1, const UnitaryExpression<T, T1, T2> &e2)
     {
         return BinaryExpression<T, Variable<T>, UnitaryExpression<T, T1, T2>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //U*U
-    template <typename T, typename T1, template<typename ELEM> class T2, typename T3, template<typename ELEM> class T4>
+    template<typename T, typename T1, template<typename ELEM> class T2, typename T3, template<typename ELEM> class T4>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, UnitaryExpression<T, T3, T4>, std::multiplies> operator * (const UnitaryExpression<T, T1, T2> &e1, const UnitaryExpression<T, T3, T4> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, UnitaryExpression<T, T3, T4>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
 
     //c*B
-    template <typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, constant, BinaryExpression<T, T1, T2, T3>, std::multiplies> operator * (const constant e1, const BinaryExpression<T, T1, T2, T3> &e2)
     {
         return BinaryExpression<T, constant, BinaryExpression<T, T1, T2, T3>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //B*c
-    template <typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, constant, std::multiplies> operator * (const BinaryExpression<T, T1, T2, T3> e1, const constant &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, constant, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //C*B
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, Constant<T>, BinaryExpression<T, T1, T2, T3>, std::multiplies> operator * (const Constant<T> e1, const BinaryExpression<T, T1, T2, T3> &e2)
     {
         return BinaryExpression<T, Constant<T>, BinaryExpression<T, T1, T2, T3>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //B*C
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Constant<T>, std::multiplies> operator * (const BinaryExpression<T, T1, T2, T3> e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Constant<T>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //V*B
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, Variable<T>, BinaryExpression<T, T1, T2, T3>, std::multiplies> operator * (const Variable<T> &e1, const BinaryExpression<T, T1, T2, T3> &e2)
     {
         return BinaryExpression<T, Variable<T>, BinaryExpression<T, T1, T2, T3>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //B*V
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Variable<T>, std::multiplies> operator * (const BinaryExpression<T, T1, T2, T3> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Variable<T>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //U*B
-    template <typename T, typename T1, template<typename ELEM> class T2, typename T3, typename T4, template<typename ELEM> class T5>
+    template<typename T, typename T1, template<typename ELEM> class T2, typename T3, typename T4, template<typename ELEM> class T5>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, BinaryExpression<T, T3, T4, T5>, std::multiplies> operator * (const UnitaryExpression<T, T1, T2> &e1, const BinaryExpression<T, T3, T4, T5> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, BinaryExpression<T, T3, T4, T5>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //B*U
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, template<typename ELEM> class T5>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, template<typename ELEM> class T5>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, UnitaryExpression<T, T4, T5>, std::multiplies> operator * (const BinaryExpression<T, T1, T2, T3> &e1, const UnitaryExpression<T, T4, T5> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, UnitaryExpression<T, T4, T5>, std::multiplies>(e1, e2, std::multiplies<T>());
     }
     //B*B
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, typename T5, template<typename ELEM> class T6>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, typename T5, template<typename ELEM> class T6>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, BinaryExpression<T, T4, T5, T6>, std::multiplies> operator * (const BinaryExpression<T, T1, T2, T3> &e1, const BinaryExpression<T, T4, T5, T6> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, BinaryExpression<T, T4, T5, T6>, std::multiplies>(e1, e2, std::multiplies<T>());
@@ -566,148 +566,148 @@ namespace NewQuant
 
     // operator /
     //c/C
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, constant, Constant<T>, std::divides> operator / (const constant &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, constant, Constant<T>, std::divides>(e1, e2, std::divides<T>());
     }
     //C/c
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, Constant<T>, constant, std::divides> operator / (const Constant<T> &e1, const constant &e2)
     {
         return BinaryExpression<T, Constant<T>, constant, std::divides>(e1, e2, std::divides<T>());
     }
     //C/C
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Constant<T>, Constant<T>, std::divides> operator / (const Constant<T> &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, Constant<T>, Constant<T>, std::divides>(e1, e2, std::divides<T>());
     }
 
     //c/V
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, constant, Variable<T>, std::divides> operator / (const constant &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, constant, Variable<T>, std::divides>(e1, e2, std::divides<T>());
     }
     //V/c
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, Variable<T>, constant, std::divides> operator / (const Variable<T> &e1, const constant &e2)
     {
         return BinaryExpression<T, Variable<T>, constant, std::divides>(e1, e2, std::divides<T>());
     }
     //V/C
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Variable<T>, Constant<T>, std::divides> operator / (const Variable<T> &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, Variable<T>, Constant<T>, std::divides>(e1, e2, std::divides<T>());
     }
     //C/V
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Constant<T>, Variable<T>, std::divides> operator / (const Constant<T> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, Constant<T>, Variable<T>, std::divides>(e1, e2, std::divides<T>());
     }
     //V/V
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Variable<T>, Variable<T>, std::divides> operator / (const Variable<T> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, Variable<T>, Variable<T>, std::divides>(e1, e2, std::divides<T>());
     }
 
     //c/U
-    template <typename T, typename constant, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename constant, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, constant, UnitaryExpression<T, T1, T2>, std::divides> operator / (const constant &e1, const UnitaryExpression<T, T1, T2> &e2)
     {
         return BinaryExpression<T, constant, UnitaryExpression<T, T1, T2>, std::divides>(e1, e2, std::divides<T>());
     }
     //U/c
-    template <typename T, typename constant, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename constant, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, constant, std::divides> operator / (const UnitaryExpression<T, T1, T2> &e1, const constant &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, constant, std::divides>(e1, e2, std::divides<T>());
     }
     //C/U
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, Constant<T>, UnitaryExpression<T, T1, T2>, std::divides> operator / (const Constant<T> &e1, const UnitaryExpression<T, T1, T2> &e2)
     {
         return BinaryExpression<T, Constant<T>, UnitaryExpression<T, T1, T2>, std::divides>(e1, e2, std::divides<T>());
     }
     //U/C
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, Constant<T>, std::divides> operator / (const UnitaryExpression<T, T1, T2> &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, Constant<T>, std::divides>(e1, e2, std::divides<T>());
     }
     //U/V
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, Variable<T>, std::divides> operator / (const UnitaryExpression<T, T1, T2> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, Variable<T>, std::divides>(e1, e2, std::divides<T>());
     }
     //V/U
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, Variable<T>, UnitaryExpression<T, T1, T2>, std::divides> operator / (const Variable<T> &e1, const UnitaryExpression<T, T1, T2> &e2)
     {
         return BinaryExpression<T, Variable<T>, UnitaryExpression<T, T1, T2>, std::divides>(e1, e2, std::divides<T>());
     }
     //U/U
-    template <typename T, typename T1, template<typename ELEM> class T2, typename T3, template<typename ELEM> class T4>
+    template<typename T, typename T1, template<typename ELEM> class T2, typename T3, template<typename ELEM> class T4>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, UnitaryExpression<T, T3, T4>, std::divides> operator / (const UnitaryExpression<T, T1, T2> &e1, const UnitaryExpression<T, T3, T4> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, UnitaryExpression<T, T3, T4>, std::divides>(e1, e2, std::divides<T>());
     }
 
     //c/B
-    template <typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, constant, BinaryExpression<T, T1, T2, T3>, std::divides> operator / (const constant e1, const BinaryExpression<T, T1, T2, T3> &e2)
     {
         return BinaryExpression<T, constant, BinaryExpression<T, T1, T2, T3>, std::divides>(e1, e2, std::divides<T>());
     }
     //B/c
-    template <typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, constant, std::divides> operator / (const BinaryExpression<T, T1, T2, T3> e1, const constant &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, constant, std::divides>(e1, e2, std::divides<T>());
     }
     //C/B
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, Constant<T>, BinaryExpression<T, T1, T2, T3>, std::divides> operator / (const Constant<T> e1, const BinaryExpression<T, T1, T2, T3> &e2)
     {
         return BinaryExpression<T, Constant<T>, BinaryExpression<T, T1, T2, T3>, std::divides>(e1, e2, std::divides<T>());
     }
     //B/C
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Constant<T>, std::divides> operator / (const BinaryExpression<T, T1, T2, T3> e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Constant<T>, std::divides>(e1, e2, std::divides<T>());
     }
     //V/B
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, Variable<T>, BinaryExpression<T, T1, T2, T3>, std::divides> operator / (const Variable<T> &e1, const BinaryExpression<T, T1, T2, T3> &e2)
     {
         return BinaryExpression<T, Variable<T>, BinaryExpression<T, T1, T2, T3>, std::divides>(e1, e2, std::divides<T>());
     }
     //B/V
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Variable<T>, std::divides> operator / (const BinaryExpression<T, T1, T2, T3> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Variable<T>, std::divides>(e1, e2, std::divides<T>());
     }
     //U/B
-    template <typename T, typename T1, template<typename ELEM> class T2, typename T3, typename T4, template<typename ELEM> class T5>
+    template<typename T, typename T1, template<typename ELEM> class T2, typename T3, typename T4, template<typename ELEM> class T5>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, BinaryExpression<T, T3, T4, T5>, std::divides> operator / (const UnitaryExpression<T, T1, T2> &e1, const BinaryExpression<T, T3, T4, T5> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, BinaryExpression<T, T3, T4, T5>, std::divides>(e1, e2, std::divides<T>());
     }
     //B/U
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, template<typename ELEM> class T5>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, template<typename ELEM> class T5>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, UnitaryExpression<T, T4, T5>, std::divides> operator / (const BinaryExpression<T, T1, T2, T3> &e1, const UnitaryExpression<T, T4, T5> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, UnitaryExpression<T, T4, T5>, std::divides>(e1, e2, std::divides<T>());
     }
     //B/B
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, typename T5, template<typename ELEM> class T6>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, typename T5, template<typename ELEM> class T6>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, BinaryExpression<T, T4, T5, T6>, std::divides> operator / (const BinaryExpression<T, T1, T2, T3> &e1, const BinaryExpression<T, T4, T5, T6> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, BinaryExpression<T, T4, T5, T6>, std::divides>(e1, e2, std::divides<T>());
@@ -716,148 +716,148 @@ namespace NewQuant
 
     // operator ^
     //c^C
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, constant, Constant<T>, pow_func> pow(const constant &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, constant, Constant<T>, pow_func>(e1, e2, pow_func<T>());
     }
     //C^c
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, Constant<T>, constant, pow_func> pow(const Constant<T> &e1, const constant &e2)
     {
         return BinaryExpression<T, Constant<T>, constant, pow_func>(e1, e2, pow_func<T>());
     }
     //C^C
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Constant<T>, Constant<T>, pow_func> pow(const Constant<T> &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, Constant<T>, Constant<T>, pow_func>(e1, e2, pow_func<T>());
     }
 
     //c^V
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, constant, Variable<T>, pow_func> pow(const constant &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, constant, Variable<T>, pow_func>(e1, e2, pow_func<T>());
     }
     //V^c
-    template <typename T, typename constant>
+    template<typename T, typename constant>
     BinaryExpression<T, Variable<T>, constant, pow_func> pow(const Variable<T> &e1, const constant &e2)
     {
         return BinaryExpression<T, Variable<T>, constant, pow_func>(e1, e2, pow_func<T>());
     }
     //V^C
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Variable<T>, Constant<T>, pow_func> pow(const Variable<T> &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, Variable<T>, Constant<T>, pow_func>(e1, e2, pow_func<T>());
     }
     //C^V
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Constant<T>, Variable<T>, pow_func> pow(const Constant<T> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, Constant<T>, Variable<T>, pow_func>(e1, e2, pow_func<T>());
     }
     //V^V
-    template <typename T>
+    template<typename T>
     BinaryExpression<T, Variable<T>, Variable<T>, pow_func> pow(const Variable<T> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, Variable<T>, Variable<T>, pow_func>(e1, e2, pow_func<T>());
     }
 
     //c^U
-    template <typename T, typename constant, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename constant, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, constant, UnitaryExpression<T, T1, T2>, pow_func> pow(const constant &e1, const UnitaryExpression<T, T1, T2> &e2)
     {
         return BinaryExpression<T, constant, UnitaryExpression<T, T1, T2>, pow_func>(e1, e2, pow_func<T>());
     }
     //U^c
-    template <typename T, typename constant, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename constant, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, constant, pow_func> pow(const UnitaryExpression<T, T1, T2> &e1, const constant &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, constant, pow_func>(e1, e2, pow_func<T>());
     }
     //C^U
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, Constant<T>, UnitaryExpression<T, T1, T2>, pow_func> pow(const Constant<T> &e1, const UnitaryExpression<T, T1, T2> &e2)
     {
         return BinaryExpression<T, Constant<T>, UnitaryExpression<T, T1, T2>, pow_func>(e1, e2, pow_func<T>());
     }
     //U^C
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, Constant<T>, pow_func> pow(const UnitaryExpression<T, T1, T2> &e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, Constant<T>, pow_func>(e1, e2, pow_func<T>());
     }
     //U^V
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, Variable<T>, pow_func> pow(const UnitaryExpression<T, T1, T2> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, Variable<T>, pow_func>(e1, e2, pow_func<T>());
     }
     //V^U
-    template <typename T, typename T1, template<typename ELEM> class T2>
+    template<typename T, typename T1, template<typename ELEM> class T2>
     BinaryExpression<T, Variable<T>, UnitaryExpression<T, T1, T2>, pow_func> pow(const Variable<T> &e1, const UnitaryExpression<T, T1, T2> &e2)
     {
         return BinaryExpression<T, Variable<T>, UnitaryExpression<T, T1, T2>, pow_func>(e1, e2, pow_func<T>());
     }
     //U^U
-    template <typename T, typename T1, template<typename ELEM> class T2, typename T3, template<typename ELEM> class T4>
+    template<typename T, typename T1, template<typename ELEM> class T2, typename T3, template<typename ELEM> class T4>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, UnitaryExpression<T, T3, T4>, pow_func> pow(const UnitaryExpression<T, T1, T2> &e1, const UnitaryExpression<T, T3, T4> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, UnitaryExpression<T, T3, T4>, pow_func>(e1, e2, pow_func<T>());
     }
 
     //c^B
-    template <typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, constant, BinaryExpression<T, T1, T2, T3>, pow_func> pow(const constant e1, const BinaryExpression<T, T1, T2, T3> &e2)
     {
         return BinaryExpression<T, constant, BinaryExpression<T, T1, T2, T3>, pow_func>(e1, e2, pow_func<T>());
     }
     //B^c
-    template <typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename constant, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, constant, pow_func> pow(const BinaryExpression<T, T1, T2, T3> e1, const constant &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, constant, pow_func>(e1, e2, pow_func<T>());
     }
     //C^B
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, Constant<T>, BinaryExpression<T, T1, T2, T3>, pow_func> pow(const Constant<T> e1, const BinaryExpression<T, T1, T2, T3> &e2)
     {
         return BinaryExpression<T, Constant<T>, BinaryExpression<T, T1, T2, T3>, pow_func>(e1, e2, pow_func<T>());
     }
     //B^C
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Constant<T>, pow_func> pow(const BinaryExpression<T, T1, T2, T3> e1, const Constant<T> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Constant<T>, pow_func>(e1, e2, pow_func<T>());
     }
     //V^B
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, Variable<T>, BinaryExpression<T, T1, T2, T3>, pow_func> pow(const Variable<T> &e1, const BinaryExpression<T, T1, T2, T3> &e2)
     {
         return BinaryExpression<T, Variable<T>, BinaryExpression<T, T1, T2, T3>, pow_func>(e1, e2, pow_func<T>());
     }
     //B^V
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Variable<T>, pow_func> pow(const BinaryExpression<T, T1, T2, T3> &e1, const Variable<T> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, Variable<T>, pow_func>(e1, e2, pow_func<T>());
     }
     //U^B
-    template <typename T, typename T1, template<typename ELEM> class T2, typename T3, typename T4, template<typename ELEM> class T5>
+    template<typename T, typename T1, template<typename ELEM> class T2, typename T3, typename T4, template<typename ELEM> class T5>
     BinaryExpression<T, UnitaryExpression<T, T1, T2>, BinaryExpression<T, T3, T4, T5>, pow_func> pow(const UnitaryExpression<T, T1, T2> &e1, const BinaryExpression<T, T3, T4, T5> &e2)
     {
         return BinaryExpression<T, UnitaryExpression<T, T1, T2>, BinaryExpression<T, T3, T4, T5>, pow_func>(e1, e2, pow_func<T>());
     }
     //B^U
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, template<typename ELEM> class T5>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, template<typename ELEM> class T5>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, UnitaryExpression<T, T4, T5>, pow_func> pow(const BinaryExpression<T, T1, T2, T3> &e1, const UnitaryExpression<T, T4, T5> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, UnitaryExpression<T, T4, T5>, pow_func>(e1, e2, pow_func<T>());
     }
     //B^B
-    template <typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, typename T5, template<typename ELEM> class T6>
+    template<typename T, typename T1, typename T2, template<typename ELEM> class T3, typename T4, typename T5, template<typename ELEM> class T6>
     BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, BinaryExpression<T, T4, T5, T6>, pow_func> pow(const BinaryExpression<T, T1, T2, T3> &e1, const BinaryExpression<T, T4, T5, T6> &e2)
     {
         return BinaryExpression<T, BinaryExpression<T, T1, T2, T3>, BinaryExpression<T, T4, T5, T6>, pow_func>(e1, e2, pow_func<T>());

@@ -5,9 +5,9 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class PermuteMatrix;
+    template<typename TYPE> class PermuteMatrix;
 
-    template <typename TYPE, typename MATRIX>
+    template<typename TYPE, typename MATRIX>
     class ConstPermutedMatrix :public UnitaryMatrixExpression < TYPE, MATRIX >
     {
     public:
@@ -83,21 +83,21 @@ namespace NewQuant
 
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     ConstPermutedMatrix<TYPE, GeneralMatrix<TYPE> > c_perm(const GeneralMatrix<TYPE> &mat, const PermuteMatrix<TYPE> &pm)
     {
         assert(mat.Ncols() == pm.Nrows());
         return ConstPermutedMatrix<TYPE, GeneralMatrix<TYPE> >(mat, pm, ConstPermutedMatrix<TYPE, GeneralMatrix<TYPE> >::PermuteType::col_perm);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     ConstPermutedMatrix<TYPE, GeneralMatrix<TYPE> > c_perm(const PermuteMatrix<TYPE> &pm, const GeneralMatrix<TYPE> &mat)
     {
         assert(mat.Ncols() == pm.Nrows());
         return ConstPermutedMatrix<TYPE, GeneralMatrix<TYPE> >(mat, pm, ConstPermutedMatrix<TYPE, GeneralMatrix<TYPE> >::PermuteType::row_perm);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     ConstPermutedMatrix<TYPE, PermuteMatrix<TYPE> > c_perm(const PermuteMatrix<TYPE> &pm, const PermuteMatrix<TYPE> &mat)
     {
         assert(mat.Ncols() == pm.Nrows());
@@ -105,14 +105,14 @@ namespace NewQuant
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     ConstPermutedMatrix<TYPE, MatrixExpression<TYPE> > c_perm(const MatrixExpression<TYPE> &mat, const PermuteMatrix<TYPE> &pm)
     {
         assert(mat.Ncols() == pm.Nrows());
         return ConstPermutedMatrix<TYPE, MatrixExpression<TYPE> >(mat, pm, ConstPermutedMatrix<TYPE, MatrixExpression<TYPE> >::PermuteType::col_perm);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     ConstPermutedMatrix<TYPE, MatrixExpression<TYPE> > c_perm(const PermuteMatrix<TYPE> &pm, const MatrixExpression<TYPE> &mat)
     {
         assert(mat.Ncols() == pm.Nrows());
@@ -120,14 +120,14 @@ namespace NewQuant
     }
 
     // BaseMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     ConstPermutedMatrix<TYPE, BaseMatrix<TYPE> > c_perm(const BaseMatrix<TYPE> &mat, const PermuteMatrix<TYPE> &pm)
     {
         assert(mat.Ncols() == pm.Nrows());
         return ConstPermutedMatrix<TYPE, BaseMatrix<TYPE> >(mat, pm, ConstPermutedMatrix<TYPE, BaseMatrix<TYPE> >::PermuteType::col_perm);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     ConstPermutedMatrix<TYPE, BaseMatrix<TYPE> > c_perm(const PermuteMatrix<TYPE> &pm, const BaseMatrix<TYPE> &mat)
     {
         assert(mat.Ncols() == pm.Nrows());

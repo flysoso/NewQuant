@@ -7,10 +7,10 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     const TYPE GeneralMatrix<TYPE>::zero(0);
 
-    template <typename TYPE>
+    template<typename TYPE>
     GeneralMatrix<TYPE>::GeneralMatrix()
     {
         store = NULL;
@@ -20,7 +20,7 @@ namespace NewQuant
         zero_buff = zero;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     GeneralMatrix<TYPE>::GeneralMatrix(const int &r, const int &c, const int &s, const MatrixBandWidth<TYPE> &mbw)
     {
         if (s == 0)
@@ -43,7 +43,7 @@ namespace NewQuant
         band_width = mbw;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     GeneralMatrix<TYPE>::GeneralMatrix(const int &r, const int &c, const int &s)
     {
         if (s == 0)
@@ -65,7 +65,7 @@ namespace NewQuant
         zero_buff = zero;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     GeneralMatrix<TYPE>::~GeneralMatrix()
     {
         if (store)
@@ -74,7 +74,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void GeneralMatrix<TYPE>::operator << (const TYPE &f)
     {
         int i = storage;
@@ -85,7 +85,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void GeneralMatrix<TYPE>::operator << (const int &f)
     {
         int i = storage;
@@ -96,7 +96,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void GeneralMatrix<TYPE>::operator *= (const TYPE &r)
     {
         int i = storage;
@@ -107,7 +107,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void GeneralMatrix<TYPE>::Add(const TYPE &f)
     {
         TYPE* s = store;
@@ -126,7 +126,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void GeneralMatrix<TYPE>::NegAdd(const TYPE &f)
     {
         TYPE* s = store;
@@ -150,7 +150,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void GeneralMatrix<TYPE>::Multiply(const TYPE &f)
     {
         TYPE* s = store;
@@ -169,7 +169,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void GeneralMatrix<TYPE>::Negate()
     {
         TYPE* s = store;
@@ -193,7 +193,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void GeneralMatrix<TYPE>::ReverseElements()
     {
         // reversing in place
@@ -209,7 +209,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void GeneralMatrix<TYPE>::CopyMatrix(const GeneralMatrix<TYPE> &gmx)
     {
         if (&gmx == this)
@@ -229,7 +229,7 @@ namespace NewQuant
         NewQuantBlockCopy(storage, gmx.store, store);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void GeneralMatrix<TYPE>::GeneralResize(const int &nr, const int &nc, const int &s)
     {
         if (s != 0)
@@ -263,28 +263,28 @@ namespace NewQuant
 
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void GeneralMatrix<TYPE>::PlusEqual(const GeneralMatrix<TYPE>& gm)
     {
         assert(nrows == gm.nrows && ncols == gm.ncols);
         AddTo(gm, *this);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void GeneralMatrix<TYPE>::SP_Equal(const GeneralMatrix<TYPE>& gm)
     {
         assert(nrows == gm.nrows && ncols == gm.ncols);
         SP(this, &gm);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void GeneralMatrix<TYPE>::MinusEqual(const GeneralMatrix<TYPE>& gm)
     {
         assert(nrows == gm.nrows && ncols == gm.ncols);
         SubtractFrom(this, &gm);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void GeneralMatrix<TYPE>::Swap(GeneralMatrix<TYPE>& gm)
     {
         int t;
@@ -308,7 +308,7 @@ namespace NewQuant
         gm.band_width = mbw;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     bool GeneralMatrix<TYPE>::IsZero() const
     {
         TYPE* s = store;
@@ -343,7 +343,7 @@ namespace NewQuant
         return true;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE GeneralMatrix<TYPE>::Trace() const
     {
         assert(ncols == nrows);
@@ -356,7 +356,7 @@ namespace NewQuant
         return trace;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     std::ostream& operator<<(std::ostream& s, const GeneralMatrix<TYPE>& X)
     {
         using namespace std;

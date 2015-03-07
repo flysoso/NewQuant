@@ -9,7 +9,7 @@ namespace NewQuant
     class MatrixType;
 
     /// Column vector.
-    template <typename TYPE>
+    template<typename TYPE>
     class ColumnVector : public Matrix < TYPE >, public Vector < TYPE >
     {
     public:
@@ -87,7 +87,7 @@ namespace NewQuant
         void Swap(Matrix<TYPE>& gm);
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     inline void Swap(ColumnVector<TYPE>& A, ColumnVector<TYPE>& B)
     {
         A.Swap(B);

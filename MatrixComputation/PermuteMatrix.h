@@ -8,9 +8,9 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class PermuteSolver;
+    template<typename TYPE> class PermuteSolver;
 
-    template <typename TYPE>
+    template<typename TYPE>
     class PermuteMatrix :public GeneralMatrix < TYPE >
     {
     private:
@@ -242,10 +242,10 @@ namespace NewQuant
         void operator /= (const TYPE &x){}
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     const TYPE PermuteMatrix<TYPE>::one(1);
 
-    template <typename TYPE>
+    template<typename TYPE>
     void Swap(PermuteMatrix<TYPE> &p1, PermuteMatrix<TYPE> &p2)
     {
         p1.Swap(p2);

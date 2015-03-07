@@ -7,10 +7,10 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class IdentityMatrix;
+    template<typename TYPE> class IdentityMatrix;
 
     /// Diagonal matrix.
-    template <typename TYPE>
+    template<typename TYPE>
     class DiagonalMatrix : public GeneralMatrix < TYPE >
     {
     public:
@@ -115,7 +115,7 @@ namespace NewQuant
         }
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     inline void Swap(DiagonalMatrix<TYPE>& A, DiagonalMatrix<TYPE>& B)
     {
         A.Swap(B);

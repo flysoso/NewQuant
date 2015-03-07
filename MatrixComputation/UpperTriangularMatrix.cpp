@@ -5,19 +5,19 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     UpperTriangularMatrix<TYPE>::UpperTriangularMatrix() : GeneralMatrix<TYPE>(1, 1, 1)
     {
         GeneralMatrix<TYPE>::band_width.Set(0, 0, true);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     UpperTriangularMatrix<TYPE>::UpperTriangularMatrix(const int &n) : GeneralMatrix<TYPE>(n, n, tristore(n))
     {
         GeneralMatrix<TYPE>::band_width.Set(0, n - 1, true);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     UpperTriangularMatrix<TYPE> & UpperTriangularMatrix<TYPE>::operator = (const BaseMatrix<TYPE> &bm)
     {
         if (&bm == this)
@@ -47,7 +47,7 @@ namespace NewQuant
         return *this;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void UpperTriangularMatrix<TYPE>::operator << (const BaseMatrix<TYPE> &bm)
     {
         if (&bm == this)
@@ -74,7 +74,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE& UpperTriangularMatrix<TYPE>::operator()(const int &m, const int &n)
     {
         assert(n > 0 && m <= GeneralMatrix<TYPE>::nrows && n <= GeneralMatrix<TYPE>::ncols && m > 0);
@@ -89,7 +89,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE UpperTriangularMatrix<TYPE>::operator()(const int &m, const int &n) const
     {
         assert(n > 0 && m <= GeneralMatrix<TYPE>::nrows && n <= GeneralMatrix<TYPE>::ncols && m > 0);
@@ -103,13 +103,13 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     MatrixType UpperTriangularMatrix<TYPE>::Type() const
     {
         return MatrixType(MatrixType::Type::UpperTriangularMatrix);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void UpperTriangularMatrix<TYPE>::Solve(const BaseMatrix<TYPE>& in, BaseMatrix<TYPE>& out) const
     {
         int n = GeneralMatrix<TYPE>::nrows;
@@ -121,7 +121,7 @@ namespace NewQuant
     }
 
 
-    template <typename TYPE>
+    template<typename TYPE>
     void UpperTriangularMatrix<TYPE>::Resize(const int &n)
     {
         assert(n > 0);

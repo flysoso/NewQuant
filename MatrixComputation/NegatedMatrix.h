@@ -9,7 +9,7 @@ namespace NewQuant
     template<typename TYPE> class MatrixIndex;
 
     /// Any type of matrix multiplies -1.
-    template <typename TYPE, typename MATRIX>
+    template<typename TYPE, typename MATRIX>
     class NegatedMatrix : public UnitaryMatrixExpression < TYPE, MATRIX >
     {
     public:
@@ -41,14 +41,14 @@ namespace NewQuant
     };
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     NegatedMatrix<TYPE, GeneralMatrix<TYPE> > operator - (const GeneralMatrix<TYPE> & mat)
     {
         return NegatedMatrix<TYPE, GeneralMatrix<TYPE> >(mat);
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     NegatedMatrix<TYPE, MatrixExpression<TYPE> > operator - (const MatrixExpression<TYPE> & mat)
     {
         return NegatedMatrix<TYPE, MatrixExpression<TYPE> >(mat);

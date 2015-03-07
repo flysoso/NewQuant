@@ -5,9 +5,9 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class GeneralMatrix;
+    template<typename TYPE> class GeneralMatrix;
 
-    template <typename TYPE>
+    template<typename TYPE>
     class VectorExpression
     {
     protected:

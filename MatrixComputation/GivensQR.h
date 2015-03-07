@@ -70,7 +70,6 @@ namespace NewQuant
         }
     }
 
-
     template<typename TYPE>
     void GivensQR<TYPE>::GivensTransform()
     {

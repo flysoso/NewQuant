@@ -9,7 +9,7 @@ namespace NewQuant
     template<typename TYPE> class MatrixIndex;
 
     /// Inverse of matrix.
-    template <typename TYPE, typename MATRIX>
+    template<typename TYPE, typename MATRIX>
     class InvertedMatrix : public UnitaryMatrixExpression < TYPE, MATRIX >
     {
     private:
@@ -46,7 +46,7 @@ namespace NewQuant
     };
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     InvertedMatrix<TYPE, GeneralMatrix<TYPE> > inv(const GeneralMatrix<TYPE> & mat)
     {
         assert(mat.Nrows() == mat.Ncols());
@@ -54,7 +54,7 @@ namespace NewQuant
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     InvertedMatrix<TYPE, MatrixExpression<TYPE> > inv(const MatrixExpression<TYPE> & mat)
     {
         assert(mat.Nrows() == mat.Ncols());

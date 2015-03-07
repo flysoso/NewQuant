@@ -5,7 +5,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     LUsolver<TYPE>::LUsolver(const BaseMatrix<TYPE> &bm, const TYPE &e) :
         LinearEquationSolver<TYPE>(), lm(bm.Nrows()), um(bm.Nrows()),
         combine(lm, um), epsilon(e), left(bm.Nrows()), right(bm.Nrows()),
@@ -23,7 +23,7 @@ namespace NewQuant
     }
 
     /***** LUcombine *****/
-    template <typename TYPE>
+    template<typename TYPE>
     LUcombine<TYPE>::LUcombine(LowerTriangularMatrix<TYPE> &lm, UpperTriangularMatrix<TYPE> &um) : l(lm), u(um), MatrixExpression<TYPE>()
     {
         dim = lm.Nrows();

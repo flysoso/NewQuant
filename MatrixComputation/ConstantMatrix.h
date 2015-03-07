@@ -7,7 +7,7 @@
 namespace NewQuant
 {
     /// Constant matrix.
-    template <typename TYPE>
+    template<typename TYPE>
     class ConstantMatrix : public GeneralMatrix < TYPE >
     {
     public:
@@ -130,7 +130,7 @@ namespace NewQuant
         }
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     inline void Swap(ConstantMatrix<TYPE>& A, ConstantMatrix<TYPE>& B)
     {
         A.Swap(B);

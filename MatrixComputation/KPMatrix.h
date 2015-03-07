@@ -9,7 +9,7 @@ namespace NewQuant
     template<typename TYPE> class MatrixIndex;
 
     /// Kronecker product of two matrices.
-    template <typename TYPE, typename MATRIX1, typename MATRIX2>
+    template<typename TYPE, typename MATRIX1, typename MATRIX2>
     class KPMatrix : public BinaryMatrixExpression < TYPE, MATRIX1, MATRIX2 >
     {
     private:
@@ -65,26 +65,26 @@ namespace NewQuant
 
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     KPMatrix<TYPE, GeneralMatrix<TYPE>, GeneralMatrix<TYPE> > kp(const GeneralMatrix<TYPE> & mat1, const GeneralMatrix<TYPE> & mat2)
     {
         return KPMatrix<TYPE, GeneralMatrix<TYPE>, GeneralMatrix<TYPE> >(mat1, mat2);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     KPMatrix<TYPE, GeneralMatrix<TYPE>, MatrixExpression<TYPE> > kp(const GeneralMatrix<TYPE> & mat1, const MatrixExpression<TYPE> & mat2)
     {
         return KPMatrix<TYPE, GeneralMatrix<TYPE>, MatrixExpression<TYPE> >(mat1, mat2);
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     KPMatrix<TYPE, MatrixExpression<TYPE>, GeneralMatrix<TYPE> > kp(const MatrixExpression<TYPE> & mat1, const GeneralMatrix<TYPE> & mat2)
     {
         return KPMatrix<TYPE, MatrixExpression<TYPE>, GeneralMatrix<TYPE> >(mat1, mat2);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     KPMatrix<TYPE, MatrixExpression<TYPE>, MatrixExpression<TYPE> > kp(const MatrixExpression<TYPE> & mat1, const MatrixExpression<TYPE> & mat2)
     {
         return KPMatrix<TYPE, MatrixExpression<TYPE>, MatrixExpression<TYPE> >(mat1, mat2);

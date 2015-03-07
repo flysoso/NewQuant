@@ -10,28 +10,28 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class LinearEquationSolver;
+    template<typename TYPE> class LinearEquationSolver;
 
-    template <typename TYPE> class MatrixExpression;
+    template<typename TYPE> class MatrixExpression;
 
-    template <typename TYPE> class Matrix;
-    template <typename TYPE> class SquareMatrix;
+    template<typename TYPE> class Matrix;
+    template<typename TYPE> class SquareMatrix;
 
-    template <typename TYPE> class RowVector;
-    template <typename TYPE> class ColumnVector;
-    template <typename TYPE> class SymmetricMatrix;
-    template <typename TYPE> class UpperTriangularMatrix;
-    template <typename TYPE> class LowerTriangularMatrix;
-    template <typename TYPE> class DiagonalMatrix;
+    template<typename TYPE> class RowVector;
+    template<typename TYPE> class ColumnVector;
+    template<typename TYPE> class SymmetricMatrix;
+    template<typename TYPE> class UpperTriangularMatrix;
+    template<typename TYPE> class LowerTriangularMatrix;
+    template<typename TYPE> class DiagonalMatrix;
 
-    template <typename TYPE> class BandMatrix;
-    template <typename TYPE> class LowerBandMatrix;
-    template <typename TYPE> class UpperBandMatrix;
-    template <typename TYPE> class SymmetricBandMatrix;
-    template <typename TYPE> class TridiagonalMatrix;
+    template<typename TYPE> class BandMatrix;
+    template<typename TYPE> class LowerBandMatrix;
+    template<typename TYPE> class UpperBandMatrix;
+    template<typename TYPE> class SymmetricBandMatrix;
+    template<typename TYPE> class TridiagonalMatrix;
 
     /// The classes for matrices that can contain data are derived from this.
-    template <typename TYPE>
+    template<typename TYPE>
     class GeneralMatrix :public BaseMatrix < TYPE >
     {
     protected:
@@ -155,13 +155,13 @@ namespace NewQuant
 
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     inline bool IsZero(const GeneralMatrix<TYPE>& A)
     {
         return A.IsZero();
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void AddTo(const GeneralMatrix<TYPE> &from, GeneralMatrix<TYPE> &to)
     {
         assert(from.Storage() == to.Storage());
@@ -182,10 +182,10 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     std::ostream& operator<<(std::ostream& s, const GeneralMatrix<TYPE>& X);
 
-    template <typename TYPE>
+    template<typename TYPE>
     void FindAbsMax(const GeneralMatrix<TYPE> &m, TYPE &x, int &r, int &c)
     {
         int row = m.Nrows();

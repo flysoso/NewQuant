@@ -5,19 +5,19 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     SymmetricMatrix<TYPE>::SymmetricMatrix() : GeneralMatrix<TYPE>(1, 1, 1)
     {
         GeneralMatrix<TYPE>::band_width.Set(0, 0, true);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     SymmetricMatrix<TYPE>::SymmetricMatrix(const int &n) : GeneralMatrix<TYPE>(n, n, tristore(n))
     {
         GeneralMatrix<TYPE>::band_width.Set(n - 1, n - 1, true);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     SymmetricMatrix<TYPE> & SymmetricMatrix<TYPE>::operator=(const BaseMatrix<TYPE>& bm)
     {
         if (&bm == this)
@@ -47,7 +47,7 @@ namespace NewQuant
         return *this;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void SymmetricMatrix<TYPE>::operator << (const BaseMatrix<TYPE> &bm)
     {
         if (&bm == this)
@@ -75,7 +75,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE& SymmetricMatrix<TYPE>::operator()(const int &m, const int &n)
     {
         assert(m > 0 && n > 0 && m <= GeneralMatrix<TYPE>::nrows && n <= GeneralMatrix<TYPE>::ncols);
@@ -89,7 +89,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE SymmetricMatrix<TYPE>::operator()(const int &m, const int &n) const
     {
         assert(m > 0 && n > 0 && m <= GeneralMatrix<TYPE>::nrows && n <= GeneralMatrix<TYPE>::ncols);
@@ -103,13 +103,13 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     MatrixType SymmetricMatrix<TYPE>::Type() const
     {
         return MatrixType(MatrixType::Type::SymmetricMatrix);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void SymmetricMatrix<TYPE>::Solve(const BaseMatrix<TYPE>& in, BaseMatrix<TYPE>& out) const
     {
         int n = GeneralMatrix<TYPE>::nrows;
@@ -120,7 +120,7 @@ namespace NewQuant
         solver->Solve(in, out);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void SymmetricMatrix<TYPE>::Resize(const int &n)
     {
         assert(n > 0);

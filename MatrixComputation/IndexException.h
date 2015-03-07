@@ -5,13 +5,13 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class BaseMatrix;
+    template<typename TYPE> class BaseMatrix;
 
     /// Index exception.
     class IndexException : public LogicError
     {
     public:
-        template <typename TYPE>
+        template<typename TYPE>
         IndexException(int i, const BaseMatrix<TYPE>& A) : LogicError()
         {
             AddMessage("Index Excetopn, Requested Index = ");
@@ -20,7 +20,7 @@ namespace NewQuant
             Singleton<Tracer>::Instance()->AddTrace(error);
         }
 
-        template <typename TYPE>
+        template<typename TYPE>
         IndexException(int i, int j, const BaseMatrix<TYPE>& A) : LogicError()
         {
             AddMessage("Index Excetopn, Requested Indices = ");

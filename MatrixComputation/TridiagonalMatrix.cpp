@@ -5,7 +5,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     TridiagonalMatrix<TYPE> & TridiagonalMatrix<TYPE>::operator=(const BaseMatrix<TYPE> &bm)
     {
         if (&bm == this)
@@ -47,20 +47,20 @@ namespace NewQuant
         return *this;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     MatrixType TridiagonalMatrix<TYPE>::Type() const
     {
         return MatrixType(MatrixType::Type::TridiagonalMatrix);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void TridiagonalMatrix<TYPE>::Resize(const int &n, const int &lb, const int &ub)
     {
         assert(n > 0 && lb == 1 && ub == 1);
         BandMatrix<TYPE>::Resize(n, lb, ub);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void TridiagonalMatrix<TYPE>::Swap(BandMatrix<TYPE>& gm)
     {
         assert(gm.BandWidth().Upper() == 1 && gm.BandWidth().Lower() == 1);

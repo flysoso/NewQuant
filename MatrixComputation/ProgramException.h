@@ -6,7 +6,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class BaseMatrix;
+    template<typename TYPE> class BaseMatrix;
 
     /// Miscellaneous exception (details in character string).
     class ProgramException : public LogicError
@@ -24,7 +24,7 @@ namespace NewQuant
             }
         }
 
-        template <typename TYPE>
+        template<typename TYPE>
         ProgramException(const char* c, const BaseMatrix<TYPE>& A) : LogicError()
         {
             AddMessage("Program Exception : -- ");
@@ -36,7 +36,7 @@ namespace NewQuant
             }
         }
 
-        template <typename TYPE>
+        template<typename TYPE>
         ProgramException(const char* c, const BaseMatrix<TYPE>& A, const BaseMatrix<TYPE>& B) : LogicError()
         {
             AddMessage("Program Exception : -- ");

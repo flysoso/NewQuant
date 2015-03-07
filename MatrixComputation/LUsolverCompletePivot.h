@@ -6,7 +6,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     class LUsolverCompletePivot : public LUsolver < TYPE >
     {
     private:

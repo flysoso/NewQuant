@@ -8,7 +8,7 @@ namespace NewQuant
     template<typename TYPE> class MatrixIndex;
 
     /// Any type of matrix interpreted as a RowVector.
-    template <typename TYPE, typename MATRIX>
+    template<typename TYPE, typename MATRIX>
     class RowedMatrix : public UnitaryMatrixExpression < TYPE, MATRIX >
     {
     public:
@@ -53,14 +53,14 @@ namespace NewQuant
 
 
     // GeneralMatrix
-    template <typename TYPE>
+    template<typename TYPE>
     RowedMatrix<TYPE, GeneralMatrix<TYPE> > as_row(const GeneralMatrix<TYPE> & mat)
     {
         return RowedMatrix<TYPE, GeneralMatrix<TYPE> >(mat);
     }
 
     // MatrixExpression
-    template <typename TYPE>
+    template<typename TYPE>
     RowedMatrix<TYPE, MatrixExpression<TYPE> > as_row(const MatrixExpression<TYPE> & mat)
     {
         return RowedMatrix<TYPE, MatrixExpression<TYPE> >(mat);

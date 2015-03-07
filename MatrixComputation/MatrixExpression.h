@@ -11,13 +11,13 @@
 
 namespace NewQuant
 {
-    template <typename TYPE> class LinearEquationSolver;
-    template <typename TYPE> class Matrix;
-    template <typename TYPE> class DiagonalMatrix;
-    template <typename TYPE> class LowerTriangularMatrix;
-    template <typename TYPE> class SquareMatrix;
+    template<typename TYPE> class LinearEquationSolver;
+    template<typename TYPE> class Matrix;
+    template<typename TYPE> class DiagonalMatrix;
+    template<typename TYPE> class LowerTriangularMatrix;
+    template<typename TYPE> class SquareMatrix;
 
-    template <typename TYPE>
+    template<typename TYPE>
     class MatrixExpression :public BaseMatrix < TYPE >
     {
     protected:
@@ -86,7 +86,7 @@ namespace NewQuant
         }
     };
 
-    template <typename TYPE, typename MATRIX>
+    template<typename TYPE, typename MATRIX>
     class UnitaryMatrixExpression : public MatrixExpression < TYPE >
     {
     protected:
@@ -105,7 +105,7 @@ namespace NewQuant
         }
     };
 
-    template <typename TYPE, typename MATRIX1, typename MATRIX2>
+    template<typename TYPE, typename MATRIX1, typename MATRIX2>
     class BinaryMatrixExpression : public MatrixExpression < TYPE >
     {
     protected:
@@ -125,10 +125,10 @@ namespace NewQuant
         }
     };
 
-    template <typename TYPE>
+    template<typename TYPE>
     std::ostream& operator<<(std::ostream& s, const MatrixExpression<TYPE>&);
 
-    template <typename TYPE>
+    template<typename TYPE>
     void FindAbsMax(const MatrixExpression<TYPE> &m, TYPE &x, int &r, int &c)
     {
         int row = m.Nrows();

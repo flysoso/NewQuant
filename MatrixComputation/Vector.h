@@ -3,7 +3,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     class Vector
     {
     protected:

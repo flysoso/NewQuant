@@ -5,7 +5,7 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     IdentityMatrix<TYPE> & IdentityMatrix<TYPE>::operator=(const BaseMatrix<TYPE> &bm)
     {
         if (&bm == this)
@@ -30,7 +30,7 @@ namespace NewQuant
         return *this;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void IdentityMatrix<TYPE>::operator<<(const BaseMatrix<TYPE> &bm)
     {
         if (&bm == this)
@@ -41,7 +41,7 @@ namespace NewQuant
         operator()(1, 1) = bm(1, 1);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE& IdentityMatrix<TYPE>::operator()(const int &m, const int &n)
     {
         assert(n > 0 && m <= GeneralMatrix<TYPE>::nrows && n <= GeneralMatrix<TYPE>::ncols && m > 0);
@@ -56,14 +56,14 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE& IdentityMatrix<TYPE>::operator()(const int &m)
     {
         assert(m > 0 && m <= GeneralMatrix<TYPE>::nrows);
         return GeneralMatrix<TYPE>::store[0];
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE IdentityMatrix<TYPE>::operator()(const int &m, const int &n) const
     {
         assert(n > 0 && m <= GeneralMatrix<TYPE>::nrows && n <= GeneralMatrix<TYPE>::ncols && m > 0);
@@ -77,27 +77,27 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE IdentityMatrix<TYPE>::operator()(const int &m) const
     {
         assert(m > 0 && m <= GeneralMatrix<TYPE>::nrows);
         return GeneralMatrix<TYPE>::store[0];
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     MatrixType IdentityMatrix<TYPE>::Type() const
     {
         return MatrixType(MatrixType::Type::IdentityMatrix);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE IdentityMatrix<TYPE>::Trace() const
     {
         TYPE sum = GeneralMatrix<TYPE>::store[0] * TYPE(GeneralMatrix<TYPE>::nrows);
         return sum;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void IdentityMatrix<TYPE>::Solve(const BaseMatrix<TYPE>& in, BaseMatrix<TYPE>& out) const
     {
         int n = GeneralMatrix<TYPE>::nrows;
@@ -109,7 +109,7 @@ namespace NewQuant
     }
 
 
-    template <typename TYPE>
+    template<typename TYPE>
     void IdentityMatrix<TYPE>::Resize(const int &n)
     {
         assert(n > 0);

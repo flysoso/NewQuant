@@ -5,21 +5,21 @@
 
 namespace NewQuant
 {
-    template <typename TYPE>
+    template<typename TYPE>
     SymmetricBandMatrix<TYPE>::SymmetricBandMatrix() : GeneralMatrix<TYPE>(1, 1, 1)
     {
         GeneralMatrix<TYPE>::band_width.Set(0, 0, true);
         CornerClear();
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     SymmetricBandMatrix<TYPE>::SymmetricBandMatrix(const int &n, const int &b) : GeneralMatrix<TYPE>(n, n, n*(b + 1))
     {
         GeneralMatrix<TYPE>::band_width.Set(b, b, true);
         CornerClear();
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void SymmetricBandMatrix<TYPE>::CornerClear() const
     {
         // set unused parts of BandMatrix to zero
@@ -45,7 +45,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     SymmetricBandMatrix<TYPE> & SymmetricBandMatrix<TYPE>::operator=(const BaseMatrix<TYPE>& bm)
     {
         if (&bm == this)
@@ -75,7 +75,7 @@ namespace NewQuant
         return *this;
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void SymmetricBandMatrix<TYPE>::operator<<(const BaseMatrix<TYPE>& bm)
     {
         if (&bm == this)
@@ -102,7 +102,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE& SymmetricBandMatrix<TYPE>::operator()(const int &m, const int &n)
     {
         int lower_val = GeneralMatrix<TYPE>::band_width.Lower();
@@ -131,7 +131,7 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     TYPE SymmetricBandMatrix<TYPE>::operator()(const int &m, const int &n) const
     {
         int lower_val = GeneralMatrix<TYPE>::band_width.Lower();
@@ -158,13 +158,13 @@ namespace NewQuant
         }
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     MatrixType SymmetricBandMatrix<TYPE>::Type() const
     {
         return MatrixType(MatrixType::Type::SymmetricBandMatrix);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void SymmetricBandMatrix<TYPE>::Solve(const BaseMatrix<TYPE>& in, BaseMatrix<TYPE>& out) const
     {
         int n = GeneralMatrix<TYPE>::nrows;
@@ -176,7 +176,7 @@ namespace NewQuant
     }
 
 
-    template <typename TYPE>
+    template<typename TYPE>
     void SymmetricBandMatrix<TYPE>::Resize(const int &n, const int &b)
     {
         assert(n > 0 && b >= 0 && b < n);
@@ -184,7 +184,7 @@ namespace NewQuant
         GeneralMatrix<TYPE>::band_width.Set(b, b, true);
     }
 
-    template <typename TYPE>
+    template<typename TYPE>
     void SymmetricBandMatrix<TYPE>::Swap(SymmetricBandMatrix<TYPE>& gm)
     {
         GeneralMatrix<TYPE>::Swap((GeneralMatrix<TYPE>&)gm);
