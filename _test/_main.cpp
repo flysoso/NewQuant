@@ -15,6 +15,7 @@
 #include "testTridiagonalMatrix.h"
 #include "testLeastSquareSolver.h"
 #include "testEigenSolver.h"
+#include "testSVDsolver.h"
 
 /*---------------*/
 
@@ -23,10 +24,19 @@
 #include "../MathematicsExpresssion/UnitaryExpression.h"
 #include "../MathematicsExpresssion/MathExpression.h"
 
-#include "../MatrixComputation/ClassicalJacobiSolver.h"
-#include "../MatrixComputation/CyclicJacobiSolver.h"
-#define NDEBUG
 
+/*
+int main()
+{
+using namespace std;
+using namespace NewQuant;
+
+default_random_engine dre;
+normal_distribution<Type> nd;
+
+return EXIT_SUCCESS;
+}
+*/
 
 int main()
 {
@@ -36,8 +46,8 @@ int main()
     {
         try
         {
-
-            /*testSymmetricMatrix();
+            
+            testSymmetricMatrix();
             testBandMatrix();
             testLowerBandMatrix();
             testUpperBandMatrix();
@@ -53,8 +63,9 @@ int main()
             testPermuteMatrix();
             testTridiagonalMatrix();
             testLeastSquareSolver();
-            */
             testEigenSolver();
+            
+            testSVDsolver();
         }
         catch (BaseException &be)
         {
@@ -69,4 +80,5 @@ int main()
 
     return 0;
 }
+
 

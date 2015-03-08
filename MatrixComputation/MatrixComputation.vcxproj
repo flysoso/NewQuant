@@ -169,6 +169,7 @@
     <ClInclude Include="StackedMatrix.h" />
     <ClInclude Include="SubMatrixDimensionException.h" />
     <ClInclude Include="SubtractedMatrix.h" />
+    <ClInclude Include="SVDsolver.h" />
     <ClInclude Include="SymmetricBandMatrix.h" />
     <ClInclude Include="SymmetricMatrix.h" />
     <ClInclude Include="TransposedMatrix.h" />

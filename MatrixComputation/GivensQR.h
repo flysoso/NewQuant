@@ -60,12 +60,12 @@ namespace NewQuant
             if (fabs(b) >= fabs(a))
             {
                 t = -a / b;
-                s = one / (sqrt(one + t*t)), c = t*s;
+                s = one / (std::sqrt(one + t*t)), c = t*s;
             }
             else
             {
                 t = -b / a;
-                c = one / (sqrt(one + t*t)), s = c*t;
+                c = one / (std::sqrt(one + t*t)), s = c*t;
             }
         }
     }
@@ -74,7 +74,6 @@ namespace NewQuant
     void GivensQR<TYPE>::GivensTransform()
     {
         QRcombine<TYPE> &A = QRsolver<TYPE>::combine;
-        SquareMatrix<TYPE> &Q = QRsolver<TYPE>::qr_q;
         const TYPE &e = QRsolver<TYPE>::epsilon;
         int m = A.Nrows(), n = A.Ncols();
 

@@ -99,7 +99,7 @@ namespace NewQuant
             s.setf(ios::fixed, ios::floatfield);
         }
 
-        int w = s.width();
+        std::streamsize w = s.width();
         int nr = X.Nrows(), nc = X.Ncols();
         MatrixIndex<TYPE> mi;
         for (int i = 1; i <= nr; ++i)

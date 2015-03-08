@@ -46,7 +46,6 @@ namespace NewQuant
     {
         assert(x.Ncols() == 1);
         static const TYPE one(1), zero(0), two(2);
-        int n = x.Nrows();
         TYPE sigma = (t(x)*x)(1, 1) - x(1, 1)*x(1, 1);
         hv = x;
         hv(1) = one;

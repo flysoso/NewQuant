@@ -26,7 +26,7 @@ namespace NewQuant
     {
         const TYPE &e = JacobiSolver<TYPE>::epsilon;
         int n = JacobiSolver<TYPE>::combine.Nrows();
-        TYPE max, norm;
+        TYPE norm;
         TYPE c, s;
         norm = JacobiSolver<TYPE>::JacobiNorm();
         while (norm > e)

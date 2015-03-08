@@ -57,9 +57,10 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4512</DisableSpecificWarnings>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -97,6 +98,7 @@
     <ClInclude Include="testMatrix.h" />
     <ClInclude Include="testPermuteMatrix.h" />
     <ClInclude Include="testSquareMatrix.h" />
+    <ClInclude Include="testSVDsolver.h" />
     <ClInclude Include="testSymmetricBandMatrix.h" />
     <ClInclude Include="testSymmetricMatrix.h" />
     <ClInclude Include="testTridiagonalMatrix.h" />
@@ -116,6 +118,7 @@
     <ClCompile Include="testMatrix.cpp" />
     <ClCompile Include="testPermuteMatrix.cpp" />
     <ClCompile Include="testSquareMatrix.cpp" />
+    <ClCompile Include="testSVDsolver.cpp" />
     <ClCompile Include="testSymmetricBandMatrix.cpp" />
     <ClCompile Include="testSymmetricMatrix.cpp" />
     <ClCompile Include="testTridiagonalMatrix.cpp" />
