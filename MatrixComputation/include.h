@@ -1,5 +1,5 @@
-#ifndef INCLUDE_H
-#define INCLUDE_H
+#ifndef MC_INCLUDE_H
+#define MC_INCLUDE_H
 
 #include <memory>
 #include <limits>
@@ -89,6 +89,6 @@ namespace NewQuant
     std::shared_ptr<TYPE> Precision<TYPE>::default_precision;
 
 }
-#endif //INCLUDE_H
+#endif //MC_INCLUDE_H
 
 

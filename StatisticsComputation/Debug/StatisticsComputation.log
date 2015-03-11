@@ -1,0 +1,21 @@
+﻿
+项目性能摘要: 
+      173 毫秒  d:\documents\visual studio 2013\Projects\NewQuant\StatisticsComputation\StatisticsComputation.vcxproj   1 次调用
+                173 毫秒  Clean                                      1 次调用
+
+目标性能摘要: 
+        0 毫秒  AfterClean                                 1 次调用
+        0 毫秒  BeforeClean                                1 次调用
+        0 毫秒  AfterCppClean                              1 次调用
+        0 毫秒  Clean                                      1 次调用
+        0 毫秒  BeforeCppClean                             1 次调用
+        0 毫秒  _SplitProjectReferencesByFileExistence     1 次调用
+        0 毫秒  CleanReferencedProjects                    1 次调用
+        0 毫秒  CleanPublishFolder                         1 次调用
+        0 毫秒  CppClean                                   1 次调用
+        1 毫秒  PGInstrumentedClean                        1 次调用
+        2 毫秒  AssignProjectConfiguration                 1 次调用
+       18 毫秒  _PrepareForClean                           1 次调用
+       40 毫秒  CoreClean                                  1 次调用
+       44 毫秒  CoreCppClean                               1 次调用
+       58 毫秒  _CheckForInvalidConfigurationAndPlatform   1 次调用

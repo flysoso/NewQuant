@@ -11,25 +11,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MathematicsExpresssion", "M
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExceptionClass", "ExceptionClass\ExceptionClass.vcxproj", "{435685EC-A53A-4234-B49A-624DB2567F4D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpecialFunction", "SpecialFunction\SpecialFunction.vcxproj", "{172D05A4-FFFA-47E8-9DD5-8AB443A6DCAB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StatisticsComputation", "StatisticsComputation\StatisticsComputation.vcxproj", "{79FDD124-57A7-4642-9933-BD43A36B54C6}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://newquant.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = MatrixComputation\\MatrixComputation.vcxproj
-		SccProjectName1 = MatrixComputation
-		SccLocalPath1 = MatrixComputation
-		SccProjectUniqueName2 = _test\\_test.vcxproj
-		SccProjectName2 = _test
-		SccLocalPath2 = _test
-		SccProjectUniqueName3 = MathematicsExpresssion\\MathematicsExpresssion.vcxproj
-		SccProjectName3 = MathematicsExpresssion
-		SccLocalPath3 = MathematicsExpresssion
-		SccProjectUniqueName4 = ExceptionClass\\ExceptionClass.vcxproj
-		SccProjectName4 = ExceptionClass
-		SccLocalPath4 = ExceptionClass
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
 		Release|Win32 = Release|Win32
@@ -51,6 +37,14 @@ Global
 		{435685EC-A53A-4234-B49A-624DB2567F4D}.Debug|Win32.Build.0 = Debug|Win32
 		{435685EC-A53A-4234-B49A-624DB2567F4D}.Release|Win32.ActiveCfg = Release|Win32
 		{435685EC-A53A-4234-B49A-624DB2567F4D}.Release|Win32.Build.0 = Release|Win32
+		{172D05A4-FFFA-47E8-9DD5-8AB443A6DCAB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{172D05A4-FFFA-47E8-9DD5-8AB443A6DCAB}.Debug|Win32.Build.0 = Debug|Win32
+		{172D05A4-FFFA-47E8-9DD5-8AB443A6DCAB}.Release|Win32.ActiveCfg = Release|Win32
+		{172D05A4-FFFA-47E8-9DD5-8AB443A6DCAB}.Release|Win32.Build.0 = Release|Win32
+		{79FDD124-57A7-4642-9933-BD43A36B54C6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{79FDD124-57A7-4642-9933-BD43A36B54C6}.Debug|Win32.Build.0 = Debug|Win32
+		{79FDD124-57A7-4642-9933-BD43A36B54C6}.Release|Win32.ActiveCfg = Release|Win32
+		{79FDD124-57A7-4642-9933-BD43A36B54C6}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
