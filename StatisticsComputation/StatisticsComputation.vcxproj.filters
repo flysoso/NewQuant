@@ -30,5 +30,17 @@
     <ClInclude Include="Student.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Logistic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Exponential.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Weibull.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LnNormal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

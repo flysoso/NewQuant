@@ -3,6 +3,7 @@
 
 #include "../SpecialFunction/ErrorFunction.h"
 #include "../SpecialFunction/ComplementErrorFunction.h"
+
 namespace NewQuant
 {
     template<typename TYPE>

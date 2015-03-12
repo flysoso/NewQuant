@@ -80,9 +80,13 @@
   <ItemGroup>
     <ClInclude Include="Beta.h" />
     <ClInclude Include="Cauchy.h" />
+    <ClInclude Include="Exponential.h" />
     <ClInclude Include="Gamma.h" />
+    <ClInclude Include="LnNormal.h" />
+    <ClInclude Include="Logistic.h" />
     <ClInclude Include="Normal.h" />
     <ClInclude Include="Student.h" />
+    <ClInclude Include="Weibull.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -120,5 +120,4 @@ namespace NewQuant
 }
 
 
-
 #endif //SC_GAMMA_H
