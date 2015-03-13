@@ -42,5 +42,11 @@
     <ClInclude Include="LnNormal.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ChiSquare.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="F.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

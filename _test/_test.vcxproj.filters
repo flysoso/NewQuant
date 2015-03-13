@@ -72,6 +72,12 @@
     <ClInclude Include="testSVDsolver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="testSpeFuncAndStatComp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="testSDEandSP.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="testBandMatrix.cpp">
@@ -129,6 +135,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="testSVDsolver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="testSpecFuncAndStatComp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="testSDEandSP.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -97,6 +97,8 @@
     <ClInclude Include="testLowerTriangularMatrix.h" />
     <ClInclude Include="testMatrix.h" />
     <ClInclude Include="testPermuteMatrix.h" />
+    <ClInclude Include="testSDEandSP.h" />
+    <ClInclude Include="testSpeFuncAndStatComp.h" />
     <ClInclude Include="testSquareMatrix.h" />
     <ClInclude Include="testSVDsolver.h" />
     <ClInclude Include="testSymmetricBandMatrix.h" />
@@ -117,6 +119,8 @@
     <ClCompile Include="testLowerTriangularMatrix.cpp" />
     <ClCompile Include="testMatrix.cpp" />
     <ClCompile Include="testPermuteMatrix.cpp" />
+    <ClCompile Include="testSDEandSP.cpp" />
+    <ClCompile Include="testSpecFuncAndStatComp.cpp" />
     <ClCompile Include="testSquareMatrix.cpp" />
     <ClCompile Include="testSVDsolver.cpp" />
     <ClCompile Include="testSymmetricBandMatrix.cpp" />

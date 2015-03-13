@@ -1,5 +1,5 @@
-#ifndef MC_INCLUDE_H
-#define MC_INCLUDE_H
+#ifndef MAT_C_INCLUDE_H
+#define MAT_C_INCLUDE_H
 
 #include <memory>
 #include <limits>

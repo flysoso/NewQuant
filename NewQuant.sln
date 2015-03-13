@@ -15,6 +15,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpecialFunction", "SpecialF
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StatisticsComputation", "StatisticsComputation\StatisticsComputation.vcxproj", "{79FDD124-57A7-4642-9933-BD43A36B54C6}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MonteCarlo", "MonteCarlo\MonteCarlo.vcxproj", "{A5C20BB1-4E3D-4490-B20D-94313032684D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Regression", "Regression\Regression.vcxproj", "{7FF0B441-8BEF-404B-BFB4-292760275892}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -45,6 +49,14 @@ Global
 		{79FDD124-57A7-4642-9933-BD43A36B54C6}.Debug|Win32.Build.0 = Debug|Win32
 		{79FDD124-57A7-4642-9933-BD43A36B54C6}.Release|Win32.ActiveCfg = Release|Win32
 		{79FDD124-57A7-4642-9933-BD43A36B54C6}.Release|Win32.Build.0 = Release|Win32
+		{A5C20BB1-4E3D-4490-B20D-94313032684D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A5C20BB1-4E3D-4490-B20D-94313032684D}.Debug|Win32.Build.0 = Debug|Win32
+		{A5C20BB1-4E3D-4490-B20D-94313032684D}.Release|Win32.ActiveCfg = Release|Win32
+		{A5C20BB1-4E3D-4490-B20D-94313032684D}.Release|Win32.Build.0 = Release|Win32
+		{7FF0B441-8BEF-404B-BFB4-292760275892}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7FF0B441-8BEF-404B-BFB4-292760275892}.Debug|Win32.Build.0 = Debug|Win32
+		{7FF0B441-8BEF-404B-BFB4-292760275892}.Release|Win32.ActiveCfg = Release|Win32
+		{7FF0B441-8BEF-404B-BFB4-292760275892}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

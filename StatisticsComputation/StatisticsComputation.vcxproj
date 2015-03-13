@@ -80,7 +80,9 @@
   <ItemGroup>
     <ClInclude Include="Beta.h" />
     <ClInclude Include="Cauchy.h" />
+    <ClInclude Include="ChiSquare.h" />
     <ClInclude Include="Exponential.h" />
+    <ClInclude Include="F.h" />
     <ClInclude Include="Gamma.h" />
     <ClInclude Include="LnNormal.h" />
     <ClInclude Include="Logistic.h" />

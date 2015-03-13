@@ -18,8 +18,8 @@ namespace NewQuant
         TYPE operator () (const TYPE &alpha, const TYPE &beta, const TYPE &x) const
         {
             static const TYPE one(1);
-            TYPE r = (alpha - one)*std::log(x) - alpha*std::log(beta);
-            return alpha*std::exp()r;
+            TYPE r = (alpha - one)*std::log(x) - alpha*std::log(beta) - std::pow(x / beta, alpha);
+            return alpha*std::exp(r);
         }
     };
 
@@ -35,6 +35,7 @@ namespace NewQuant
 
         TYPE operator () (const TYPE &alpha, const TYPE &beta, const TYPE &x) const
         {
+            static const TYPE one(1);
             return one - std::exp(-std::pow(x / beta, alpha));
         }
     };
