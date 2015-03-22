@@ -30,25 +30,7 @@ void testSDEandSP()
     gbm.SetRange(0.0, 1.0, 1000);
     gbm.SetInitialValue(1.1);
     */
-
-    Type theta1 = 0.04*0.04, theta2 = 0.04, theta3 = 0.17;
-    shared_ptr<CIRtype1<Type> > drift(new CIRtype1drift<Type>(theta1, theta2, theta3));
-    shared_ptr<CIRtype1<Type> > diffusion(new CIRtype1diffusion<Type>(theta1, theta2, theta3));
-    shared_ptr<CIRtype1<Type> > drift_x(new CIRtype1drift_x<Type>(theta1, theta2, theta3));
-    shared_ptr<CIRtype1<Type> > diffusion_x(new CIRtype1diffusion_x<Type>(theta1, theta2, theta3));
-    shared_ptr<CIRtype1<Type> > drift_xx(new CIRtype1drift_x<Type>(theta1, theta2, theta3));
-    shared_ptr<CIRtype1<Type> > diffusion_xx(new CIRtype1diffusion_x<Type>(theta1, theta2, theta3));
-
-    ItoDiffusion1D<Type, CIRtype1<Type> > cir(drift, diffusion);
-    cir.SetDriftX(drift_x);
-    cir.SetDiffusionX(diffusion_x);
-    cir.SetDriftXX(drift_xx);
-    cir.SetDiffusionXX(diffusion_xx);
-
-    cir.SetRange(0.0, 1.0, 1000);
-    cir.SetInitialValue(0.04);
-
-    /*
+    
     Type theta1 = 0.04*0.04, theta2 = 0.04, theta3 = 0.17;
     shared_ptr<OUtype1<Type> > drift          (new OUtype1drift<Type>(theta1, theta2, theta3));
     shared_ptr<OUtype1<Type> > diffusion      (new OUtype1diffusion<Type>(theta1, theta2, theta3));
@@ -65,7 +47,7 @@ void testSDEandSP()
 
     ou.SetRange(0.0, 1.0, 1000);
     ou.SetInitialValue(0.04);
-    */
+    
     EulerMethod1D<Type>                       euler;
     MilsteinMethod1D<Type>                    milstein;
     PredictorCorrectorMethod1D<Type>          pc_method(0.5, 0.5);
@@ -85,18 +67,18 @@ void testSDEandSP()
     ofstream fout1, fout2;
     fout1.open("E:/SDE/test1.txt");
     fout2.open("E:/SDE/test2.txt");
-
-
-
-    //milstein.Simulate(cir, random, v);
-    bm.GetPath(v, random);
+    
+    euler.Simulate(ou, random, v);
+    //bm.GetPath(v, random);
     for (int i = 1; i <= v.Length(); ++i)
         fout1 << v(i) << endl;
 
-    //taylor.Simulate(cir, c_random, random, v);
-    bm.GetPath(v, random);
+    taylor.Simulate(ou, c_random, random, v);
+    //bm.GetPath(v, random);
     for (int i = 1; i <= v.Length(); ++i)
         fout2 << v(i) << endl;
+
+    cout << "TEST IS OVER" << endl;
 
 }
 

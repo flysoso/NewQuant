@@ -14,7 +14,7 @@ namespace NewQuant
         GBM(TYPE d1, TYPE d2) : drift_(d1), diffusion_(d2){}
     public:
         virtual TYPE operator () (const TYPE &x) const = 0;
-        ~GBM(){}
+        virtual ~GBM(){}
     };
 
     template <typename TYPE>

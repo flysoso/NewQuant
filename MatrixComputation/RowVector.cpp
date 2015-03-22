@@ -77,6 +77,7 @@ namespace NewQuant
         {
             GeneralMatrix<TYPE>::band_width.Set(-1, -1, false);
         }
+        Vector<TYPE>::SetLength(nc);
     }
 
     template<typename TYPE>

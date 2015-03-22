@@ -14,7 +14,7 @@ namespace NewQuant
         ModifiedCIR(TYPE t1, TYPE t2) : theta1_(t1), theta2_(t2){}
     public:
         virtual TYPE operator () (const TYPE &x) const = 0;
-        ~ModifiedCIR(){}
+        virtual ~ModifiedCIR(){}
     };
 
     template <typename TYPE>

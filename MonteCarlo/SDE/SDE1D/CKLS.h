@@ -16,7 +16,7 @@ namespace NewQuant
         CKLS(TYPE t1, TYPE t2, TYPE t3, TYPE t4) : theta1_(t1), theta2_(t2), theta3_(t3), theta4_(t4){}
     public:
         virtual TYPE operator () (const TYPE &x) const = 0;
-        ~CKLS(){}
+        virtual ~CKLS(){}
     };
 
     template <typename TYPE>

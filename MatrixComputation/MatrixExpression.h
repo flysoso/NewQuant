@@ -35,7 +35,7 @@ namespace NewQuant
             nrows = r, ncols = c;
         }
     public:
-        ~MatrixExpression() {}
+        virtual ~MatrixExpression() {}
 
         int Nrows() const
         {

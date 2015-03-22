@@ -77,21 +77,14 @@ namespace NewQuant
         {
             GeneralMatrix<TYPE>::band_width.Set(-1, -1, false);
         }
+        Vector<TYPE>::SetLength(nr);
     }
 
     template<typename TYPE>
     void ColumnVector<TYPE>::Resize(const int &nr, const int &nc)
     {
         assert(nc == 1 && nr > 0);
-        GeneralMatrix<TYPE>::GeneralResize(nr, 1, nr);
-        if (nr == 1)
-        {
-            GeneralMatrix<TYPE>::band_width.Set(0, 0, true);
-        }
-        else
-        {
-            GeneralMatrix<TYPE>::band_width.Set(-1, -1, false);
-        }
+        Resize(nr);
     }
 
     template<typename TYPE>

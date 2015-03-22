@@ -13,7 +13,7 @@ namespace NewQuant
         LLM() {}
     public:
         virtual double operator () (const double &x) const = 0;
-        ~LLM(){}
+        virtual ~LLM(){}
     };
 
     

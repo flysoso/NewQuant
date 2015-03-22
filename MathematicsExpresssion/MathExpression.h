@@ -3,7 +3,11 @@
 
 #include <memory>
 #include <vector>
-#include "BaseExpression.h"
+
+#include "ConstantAndVariable.h"
+#include "BinaryExpression.h"
+#include "UnitaryExpression.h"
+#include "Parameter.h"
 
 namespace NewQuant
 {
@@ -14,11 +18,55 @@ namespace NewQuant
     private:
         std::shared_ptr<const BaseExpression<T> > be;
     public:
+        MathExpression(){}
+
+        explicit MathExpression(const Constant<T> &c)
+        {
+            be.reset(new Constant<T>(c));
+        }
+
+        explicit MathExpression(const Variable<T> &v)
+        {
+            be.reset(new Variable<T>(v));
+        }
 
         template<class ExprT1, class ExprT2, template<typename ELEM> class BinOp>
-        explicit MathExpression(const BinaryExpression<T, ExprT1, ExprT2, BinOp> &b){ be.reset(new BinaryExpression<T, ExprT1, ExprT2, BinOp>(b)); }
+        explicit MathExpression(const BinaryExpression<T, ExprT1, ExprT2, BinOp> &b)
+        {
+            be.reset(new BinaryExpression<T, ExprT1, ExprT2, BinOp>(b));
+        }
+
+        template<class ExprT, template<typename ELEM> class BinOp>
+        explicit MathExpression(const UnitaryExpression<T, ExprT, BinOp> &b)
+        {
+            be.reset(new UnitaryExpression<T, ExprT, BinOp>(b));
+        }
 
         MathExpression(const MathExpression<T> &me) : be(me.be){}
+
+        MathExpression<T> & operator = (const MathExpression<T> &me)
+        {
+            if (me == this)
+            {
+                return *this;
+            }
+            be.reset(me.be);
+            return *this;
+        }
+
+        template<class ExprT1, class ExprT2, template<typename ELEM> class BinOp>
+        MathExpression<T> & operator = (const BinaryExpression<T, ExprT1, ExprT2, BinOp> &b)
+        {
+            be.reset(new BinaryExpression<T, ExprT1, ExprT2, BinOp>(b));
+            return *this;
+        }
+
+        template<class ExprT, template<typename ELEM> class BinOp>
+        MathExpression<T> & operator = (const UnitaryExpression<T, ExprT, BinOp> &b)
+        {
+            be.reset(new UnitaryExpression<T, ExprT, BinOp>(b));
+            return *this;
+        }
 
         ~MathExpression(){}
 

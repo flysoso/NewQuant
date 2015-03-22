@@ -32,7 +32,7 @@ namespace NewQuant
             }
             else
             {
-                lm(i, i) = sqrt(temp);
+                lm(i, i) = std::sqrt(temp);
                 for (int j = i + 1; j <= n; ++j)
                 {
                     if (i == 1)

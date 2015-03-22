@@ -77,7 +77,7 @@ namespace NewQuant
 
         void Swap(GeneralMatrix<TYPE>& gm);                // Swap values
     public:
-        ~GeneralMatrix();   // delete store if set
+        virtual ~GeneralMatrix();   // delete store if set
 
         virtual void operator << (const BaseMatrix<TYPE> &) = 0;
 

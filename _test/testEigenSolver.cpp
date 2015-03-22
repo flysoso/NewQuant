@@ -23,11 +23,11 @@ void testEigenSolver()
     Type e = Precision<Type>::GetPrecision();
     ClassicalJacobiSolver<Type> cl_j(sym, e);
     cout << "test ClassicalJacobiSolver" << endl;
-    cout << setw(10) << sym - cl_j.EigenVector()*cl_j.EigenValue()*t(cl_j.EigenVector()) << endl;
+    cout << setw(10) << setprecision(5) << sym - cl_j.EigenVector()*cl_j.EigenValue()*t(cl_j.EigenVector()) << endl;
 
     CyclicJacobiSolver<Type> cy_j(sym, e);
     cout << "test CyclicJacobiSolver" << endl;
-    cout << setw(10) << sym - cy_j.EigenVector()*cy_j.EigenValue()*t(cy_j.EigenVector()) << endl;
+    cout << setw(10) << setprecision(5) << sym - cy_j.EigenVector()*cy_j.EigenValue()*t(cy_j.EigenVector()) << endl;
 
     cout << "TEST IS OVER" << endl;
 }

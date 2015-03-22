@@ -78,6 +78,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="LinearRegression.h" />
+    <ClInclude Include="ParametricRegression.h" />
+    <ClInclude Include="ParameterInformation.h" />
+    <ClInclude Include="RidgeRegression.h" />
+    <ClInclude Include="RegressionData.h" />
+    <ClInclude Include="RegressionExpression.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

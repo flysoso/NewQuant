@@ -15,7 +15,7 @@ namespace NewQuant
         OUtype1(TYPE t1, TYPE t2, TYPE t3) : theta1_(t1), theta2_(t2), theta3_(t3){}
     public:
         virtual TYPE operator () (const TYPE &x) const = 0;
-        ~OUtype1(){}
+        virtual ~OUtype1(){}
     };
 
     template <typename TYPE>

@@ -77,7 +77,7 @@ namespace NewQuant
 
         TYPE operator () (const TYPE &free, const TYPE &mu, const TYPE &sigma, const TYPE &p) const
         {
-            static const TYPE half(0.5), one(1),two(2);
+            static const TYPE half(0.5), one(1), two(2);
             TYPE x, t;
             if (p <= half)
             {
@@ -90,6 +90,13 @@ namespace NewQuant
                 t = mu + sigma*std::sqrt(free / x - free);
             }
             return t;
+        }
+
+        TYPE operator () (const TYPE &free, const TYPE &p) const
+        {
+            static const TYPE mu(0), sigma(1);
+
+            return this->operator()(free, mu, sigma, p);
         }
     };
 

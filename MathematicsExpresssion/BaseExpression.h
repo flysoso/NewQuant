@@ -15,7 +15,7 @@ namespace NewQuant
         BaseExpression(){}
         //BaseExpression(const BaseExpression<T> &be){}
     public:
-        ~BaseExpression(){}
+        virtual ~BaseExpression(){}
 
         virtual T operator[](const Parameter<T> &) const = 0;
 

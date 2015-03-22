@@ -17,6 +17,7 @@ namespace NewQuant
     protected:
         BaseMatrix(){}
     public:
+        virtual ~BaseMatrix(){}
         virtual TYPE & operator()(const int &, const int &) = 0;
         virtual TYPE operator () (const int &, const int &) const = 0;
         virtual int Nrows()const = 0;
@@ -33,7 +34,7 @@ namespace NewQuant
     {
         assert(bm.Nrows() == bm.Ncols());
         TYPE trace(0);
-        for (int i = 1; i <= bm.Nrows();++i)
+        for (int i = 1; i <= bm.Nrows(); ++i)
         {
             trace += bm(i, i);
         }

@@ -78,6 +78,9 @@
     <ClInclude Include="testSDEandSP.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="testRegression.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="testBandMatrix.cpp">
@@ -141,6 +144,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="testSDEandSP.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="testRegression.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

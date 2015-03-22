@@ -126,6 +126,14 @@ namespace NewQuant
         return ConstGetRowColMatrix<TYPE, MatrixExpression<TYPE> >(mat, r, ConstGetRowColMatrix<TYPE, MatrixExpression<TYPE> >::RowColType::get_row);
     }
 
+    // BaseMatrix
+    template<typename TYPE>
+    ConstGetRowColMatrix<TYPE, BaseMatrix<TYPE> > c_row(const BaseMatrix<TYPE> & mat, const int &r)
+    {
+        assert(r > 0 && r <= mat.Nrows());
+        return ConstGetRowColMatrix<TYPE, BaseMatrix<TYPE> >(mat, r, ConstGetRowColMatrix<TYPE, BaseMatrix<TYPE> >::RowColType::get_row);
+    }
+
     // GeneralMatrix
     template<typename TYPE>
     ConstGetRowColMatrix<TYPE, GeneralMatrix<TYPE> > c_col(const GeneralMatrix<TYPE> & mat, const int &c)
@@ -140,6 +148,14 @@ namespace NewQuant
     {
         assert(c > 0 && c <= mat.Nrows());
         return ConstGetRowColMatrix<TYPE, MatrixExpression<TYPE> >(mat, c, ConstGetRowColMatrix<TYPE, MatrixExpression<TYPE> >::RowColType::get_col);
+    }
+
+    // BaseMatrix
+    template<typename TYPE>
+    ConstGetRowColMatrix<TYPE, BaseMatrix<TYPE> > c_col(const BaseMatrix<TYPE> & mat, const int &c)
+    {
+        assert(c > 0 && c <= mat.Nrows());
+        return ConstGetRowColMatrix<TYPE, BaseMatrix<TYPE> >(mat, c, ConstGetRowColMatrix<TYPE, BaseMatrix<TYPE> >::RowColType::get_col);
     }
 
 }
